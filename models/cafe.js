@@ -15,8 +15,7 @@ const cafeSchema = new Schema({
   reviews: [reviewSchema],
 })
 
-const Cafe = mongoose.model('User', cafeSchema)
-const Review = mongoose.model('User', reviewSchema)
+const Cafe = mongoose.model('Cafe', cafeSchema)
 
 export {
   Cafe
