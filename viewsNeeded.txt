@@ -1,0 +1,11 @@
+AUTH related:
+Login 
+Logout
+View profile details
+
+CAFE related:
+All cafes - index
+Specific Cafe Page - show
+
+PROFILE related:
+Profile details - index

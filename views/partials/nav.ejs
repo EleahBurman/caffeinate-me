@@ -1,14 +1,9 @@
 </head>
 <body>
   <nav>
-    <a
-      href="/profiles" class=<%= title === 'profile'  ? 'active' : '' %>
-    >
-      Profile
-    </a>
-    <a 
-      href="/cafes" class=<%= title === 'All Cafes' ? 'active' : '' %>
-    >
-      Cafes
+    <a href="/profiles">Profiles</a>
+    <a href="/cafes" >Cafes</a>
+    <a href="/auth/logout">
+      <button id="logout-btn" type="submit">Log Out</button>
     </a>
   </nav>

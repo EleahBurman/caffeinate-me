@@ -6,7 +6,7 @@ const reviewSchema = new Schema({
   favoriteCoffee: String,
   leastFavoriteCoffee: String,
   priceLatte: Number,
-  reviewer: [{ type: Schema.Types.ObjectId, ref: 'Profile' }],
+  reviewer: { type: Schema.Types.ObjectId, ref: 'Profile' },
 })
 
 const cafeSchema = new Schema({

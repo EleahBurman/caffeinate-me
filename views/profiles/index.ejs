@@ -2,16 +2,6 @@
 <link rel="stylesheet" href="/stylesheets/profiles/index.css" />
 <%- include('../partials/nav') %>
 
-<main>
-  <h1><%= title %></h1>
-  <div id ="profile-container">
-    <% profiles.forEach(profile => { %>
-      <h2><%= profile.name %>'s Profile</h2>
-      <img src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
-    <% }) %>
-      <h2><%= ((profile.name)'s Favorite Cafes)%> </h2>
-      <%# here is where the favorite cafes would be added once the cafe page is made %>
-    </div>
-</main>
+<h1>This is my profiles index view</h1>
 
 <%- include('../partials/footer') %>

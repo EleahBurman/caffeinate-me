@@ -1,0 +1,10 @@
+AAU - As a user, I want to add my favorite cafe to the website's list of cafes, so that I can keep track of my favorite cafes
+
+AAU - As a user, I want to add a review to my favorite cafe's page, so I can remember my thoughts on them for the future
+
+AAU - As a user, I want to be able to edit my review, so that if my opinion changes on a cafe, I will remember it
+
+AAU - As a user, I want to be able to delete a review, so that I can remove a review that no longer aligns with my opinion
+
+AAU - As a user, I want a profile page that displays my photo, and favorite cafes to properly represent my cafe interests
+
