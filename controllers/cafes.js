@@ -19,7 +19,7 @@ function newCafe(req, res) {
   })
 }
 
-function create(){
+function create(req, res){
   //if an empty string is added to create a cafe, delete that string
   for (let key in req.body) {
     if (req.body[key] === '') delete req.body[key]
@@ -35,7 +35,7 @@ function create(){
   })
 }
 
-function update(){
+function update(req, res){
   for (let key in req.body) {
     if (req.body[key] === '') delete req.body[key]
   }
