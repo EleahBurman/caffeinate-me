@@ -3,11 +3,10 @@ function index(req, res) {
   Profile.find({})
   .then(profiles => {
     //I want a view of my profiles/index
-    res.render('profiles/index')
-    // {
-    //   profiles: profiles,
-    //   title: 'All Profiles'
-    // })
+    res.render('profiles/index', {
+    profiles: profiles,
+    title: 'All Profiles'
+    })
   })
   .catch(err => {
     console.log(err)
@@ -17,12 +16,9 @@ function index(req, res) {
 function show(req, res) {
   Profile.findById(req.params.profileId)
   .then(profile => {
-      res.render('profiles/show') 
-    //   {
-    //     profile: profile,
-    //     title: 'My Profile'
-    //   });
-    // })
+      res.render('profiles/show', {
+        profileId: req.params.profileId
+      })
   })
   .catch(err => {
     console.log(err)
