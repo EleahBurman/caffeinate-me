@@ -1,5 +1,43 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/cafes/index.css" />
 <%- include('../partials/nav') %>
-<h1>This is my cafe index view</h1>
+<main>
+  <h1>All Cafes</h1>
+  <table id="listnames">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Location</th>
+      </tr>
+    </thead>
+  </table>
+  <table id="cafeButtons">
+    <tbody>
+      <% cafes.forEach((cafe) => {  %>
+        <tr>
+          <td><%= cafe.name %></td>
+          <td><%= cafe.location %></td>
+          <%# button for reviews %>
+          <td><button></button></td>
+          <%# button for add reviews %>
+          <td><button></button></td>
+          <%# button for edit reviews %>
+          <td><button></button></td>
+          <%# button for meetups%>
+          <td><button></button></td>
+          <%# button for delete%>
+          <td><button></button></td>
+        </tr>
+      <% }); %>
+      <h1>Add Cafe</h1>
+      <form id="new-form" action="/cafes" method="POST">
+        <label for="name-input">Name:</label>
+        <input type="text" name="name" id="name-input">
+        <label for="location-input">Location:</label>
+        <input type="text" name="location" id="location-input">
+        <button type="submit">Add Cafe</button>
+      </form>
+      <tbody>
+  </table>
+</main>
 <%- include('../partials/footer') %>
