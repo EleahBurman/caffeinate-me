@@ -44,22 +44,23 @@ function show(req, res){
   Cafe.findById(req.params.cafeId)
   .then(cafe=> {
     res.render('cafes/show', {
+      title: 'Cafe Detail',
       cafe,
-      title: `${cafe.name}`
-  })
+    })
+  }) 
   .catch(err => {
-    console.log(err)
-    res.redirect('/cafes')
+  console.log(err)
+  res.redirect('/cafes')
   })
-})
-
 }
 
 function update(req, res) {
   console.log('update is working')
   //the id is called via the parameters
+  console.log('id', req.params.id)
     Cafe.findById(req.params.id)
     .then(cafe => {
+      console.log('cafe', cafe)
       //updates the document in the body
         cafe.updateOne(req.body)
           .then(() => {
@@ -69,6 +70,25 @@ function update(req, res) {
     .catch(err => {
       console.log(err)
       res.redirect('/cafes')
+    })
+  }
+
+  function createReview(req, res) {
+    Cafe.findById(req.params.cafeId)
+    .then(cafe => {
+      cafe.reviews.push(req.body)
+      cafe.save()
+      .then(()=> {
+        res.redirect(`/cafes/${cafe._id}`)
+      })
+      .catch(err => {
+        console.log(err)
+        res.redirect('/')
+      })
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/')
     })
   }
 
@@ -89,5 +109,6 @@ export {
   create,
   show,
   update,
+  createReview,
   deleteCafe as delete
 }

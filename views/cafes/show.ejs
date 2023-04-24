@@ -1,6 +1,23 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/cafes/index.css" />
 <%- include('../partials/nav') %>
-<h1><%= cafe.name %></h1>
-<p>Each cafe's information and review will go here</p>
+<main>
+  <h1><%= cafe.name %></h1>
+  <h2><%= cafe.location %></h2>
+    <br></br>
+  <h2>Reviews</h2>
+  <form 
+    id="add-review-form"
+    action="/cafes/<%= cafe._id%>/reviews"
+    method="POST"
+  >
+  <label for="favoriteCoffee">Favorite Coffee:</label>
+  <input type="text" id="favoriteCoffee"></input>
+  <label for="leastCoffee">Least Favorite Coffee:</label>
+  <input type="text" id="leastCoffee"></input>
+  <label for="priceLatte">Price:</label>
+  <input type="number" id="priceLatte"></input>
+  <button type="submit">Add Review</button>
+  </form>
+</main>
 <%- include('../partials/footer') %>
