@@ -5,7 +5,7 @@ import { isLoggedIn } from '../middleware/middleware.js'
 const router = Router ()
 
 //GET localhost: 3000/profiles
-router.get('/', profilesCtrl.index)
+router.get('/', isLoggedIn, profilesCtrl.index)
 //read a specific blog
 router.get('/:profileId', isLoggedIn, profilesCtrl.show)
 

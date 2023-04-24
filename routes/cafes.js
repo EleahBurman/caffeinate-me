@@ -10,5 +10,5 @@ router.get('/new', cafesCtrl.new)
 // POST localhost:3000/cafes
 router.post('/', isLoggedIn, cafesCtrl.create)
 // PUT localhost:3000/cafes/:cafeId
-router.put('/:cafeId', cafesCtrl.update)
+router.put('/:cafeId', isLoggedIn, cafesCtrl.update)
 export { router }
