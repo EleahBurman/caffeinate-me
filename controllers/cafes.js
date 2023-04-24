@@ -10,13 +10,13 @@ function index(req, res) {
   })
   .catch(err => {
     console.log(err)
-    res.redirect('/cafes/new')
+    res.redirect('/cafes')
   })
 }
 
 function newCafe(req, res) {
   console.log('newcafe is working')
-  res.render('cafes/new', {
+  res.render('cafes', {
     title: 'Add Cafe'
   })
 }
@@ -36,9 +36,11 @@ function create(req, res){
   })
   .catch(err => {
     console.log(err)
-    res.redirect('/cafes/new')
+    res.redirect('/cafes')
   })
 }
+
+
 
 function update(req, res) {
   console.log('update is working')
