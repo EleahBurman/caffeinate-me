@@ -7,6 +7,8 @@ const router = Router ()
 router.get('/', cafesCtrl.index)
 // GET localhost:3000/cafes/new
 router.get('/new', cafesCtrl.new)
+// GET localhost:3000/cafes/:cafeId
+router.get('/:cafeId', cafesCtrl.show)
 // POST localhost:3000/cafes
 router.post('/', isLoggedIn, cafesCtrl.create)
 // PUT localhost:3000/cafes/:cafeId

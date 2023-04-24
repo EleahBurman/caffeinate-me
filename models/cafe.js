@@ -4,7 +4,6 @@ const Schema = mongoose.Schema
 
 const reviewSchema = new Schema({
   favoriteCoffee: String,
-  leastFavoriteCoffee: String,
   priceLatte: Number,
   reviewer: { type: Schema.Types.ObjectId, ref: 'Profile' },
   owner: {type: Schema.Types.ObjectId, ref: 'Profile'}
