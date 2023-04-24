@@ -72,10 +72,22 @@ function update(req, res) {
     })
   }
 
+  function deleteCafe(req, res){
+    Cafe.findByIdAndDelete(req.params.cafeId)
+    .then(cafe =>{
+      res.redirect('/cafes')
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/cafes')
+    })
+  }
+
 export {
   index,
   newCafe as new,
   create,
   show,
   update,
+  deleteCafe as delete
 }

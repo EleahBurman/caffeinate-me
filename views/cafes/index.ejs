@@ -24,7 +24,11 @@
           <%# button for meetups%>
           <td><button></button></td>
           <%# button for delete%>
-          <td><button></button></td>
+          <td>
+            <form action="/cafes/<%= cafe._id %>?_method=DELETE" method="POST">
+              <button type="submit">X</button>
+          </form>
+          </td>
         </tr>
       <% }); %>
     </tbody>

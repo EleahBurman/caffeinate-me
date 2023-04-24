@@ -11,6 +11,8 @@ router.get('/new', cafesCtrl.new)
 router.get('/:cafeId', cafesCtrl.show)
 // POST localhost:3000/cafes
 router.post('/', isLoggedIn, cafesCtrl.create)
+// DELETE localhost:3000/cafes/:cafeId
+router.delete('/:cafeId', cafesCtrl.delete )
 // PUT localhost:3000/cafes/:cafeId
 router.put('/:cafeId', isLoggedIn, cafesCtrl.update)
 export { router }
