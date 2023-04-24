@@ -15,15 +15,18 @@ function index(req, res) {
 }
 function show(req, res) {
   Profile.findById(req.params.profileId)
-  .then(profile => {
+    .then(profile => {
       res.render('profiles/show', {
-        profileId: req.params.profileId
-      })
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect('/profiles')
-  })
+        // Pass the retrieved profile object to the view
+        profile: profile, 
+        // Set the title of the page to the profile name
+        title: profile.name
+      });
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/profiles')
+    })
 }
 
 export {

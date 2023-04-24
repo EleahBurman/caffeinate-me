@@ -16,7 +16,8 @@
           <td><%= cafe.name %></td>
           <td><%= cafe.location %></td>
           <%# button for reviews %>
-          <td><button></button></td>
+          <td>
+            <form id="add-review" action="/cafes/<%= cafe._id %>" method="GET"><button>ADD REVIEW</button></td>
           <%# button for add reviews %>
           <td><button></button></td>
           <%# button for edit reviews %>

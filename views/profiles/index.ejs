@@ -6,6 +6,9 @@
   <% profiles.forEach(profile => { %>
     <img src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
     <h2><%= profile.name %></h2>
+    <form action="/<%= profile._id %>" method="GET">
+      <button><%= profile.name %></button>
+    </form>
   <% }) %>  
   </div>
 <%- include('../partials/footer') %>
