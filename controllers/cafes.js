@@ -43,6 +43,7 @@ function show(req, res){
   console.log('show is working')
   Cafe.findById(req.params.cafeId)
   .then(cafe=> {
+    console.log('CAFE OBJ', cafe)
     res.render('cafes/show', {
       title: 'Cafe Detail',
       cafe,
@@ -71,11 +72,15 @@ function update(req, res) {
       console.log(err)
       res.redirect('/cafes')
     })
-  }
-
-  function createReview(req, res) {
+}
+// favoriteCoffee: String,
+// leastCoffee: String,
+// priceLatte: Number,
+function createReview(req, res) {
+  console.log(req.body)
     Cafe.findById(req.params.cafeId)
-    .then(cafe => {
+    .then((cafe) => {
+      console.log(cafe)
       cafe.reviews.push(req.body)
       cafe.save()
       .then(()=> {
@@ -90,9 +95,11 @@ function update(req, res) {
       console.log(err)
       res.redirect('/')
     })
-  }
+}
 
-  function deleteCafe(req, res){
+//function editReview
+//function deleteReview
+function deleteCafe(req, res){
     Cafe.findByIdAndDelete(req.params.cafeId)
     .then(cafe =>{
       res.redirect('/cafes')

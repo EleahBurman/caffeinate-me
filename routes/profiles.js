@@ -6,7 +6,7 @@ const router = Router ()
 
 //GET localhost: 3000/profiles
 router.get('/', isLoggedIn, profilesCtrl.index)
-//read a specific blog
+//read a specific blog - blogs/blogid
 router.get('/:profileId', isLoggedIn, profilesCtrl.show)
 
 export { router }

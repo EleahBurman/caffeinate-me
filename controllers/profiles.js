@@ -17,10 +17,10 @@ function show(req, res) {
   Profile.findById(req.params.profileId)
     .then(profile => {
       res.render('profiles/show', {
-        // Pass the retrieved profile object to the view
-        profile: profile, 
         // Set the title of the page to the profile name
-        title: profile.name
+        title: profile.name,
+        // Pass the retrieved profile object to the view
+        profile
       });
     })
     .catch(err => {

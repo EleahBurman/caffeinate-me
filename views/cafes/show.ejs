@@ -6,17 +6,22 @@
   <h2><%= cafe.location %></h2>
     <br></br>
   <h2>Reviews</h2>
+<% cafe.reviews.forEach(review => { %>
+  <li>☕️Favorite Coffee: <%= review.favoriteCoffee %></li>
+  <li>☕️Least Favorite Coffee: <%= review.leastCoffee %></li>
+  <li>☕️Price of Latte: <%= review.priceLatte %></li>
+<% }) %>
   <form 
     id="add-review-form"
     action="/cafes/<%= cafe._id%>/reviews"
     method="POST"
   >
   <label for="favoriteCoffee">Favorite Coffee:</label>
-  <input type="text" id="favoriteCoffee"></input>
+  <input type="text" name="favoriteCoffee" id="favoriteCoffee"></input>
   <label for="leastCoffee">Least Favorite Coffee:</label>
-  <input type="text" id="leastCoffee"></input>
-  <label for="priceLatte">Price:</label>
-  <input type="number" id="priceLatte"></input>
+  <input type="text" name="leastCoffee" id="leastCoffee"></input>
+  <label for="priceLatte">Price of Latte:</label>
+  <input type="number" name="priceLatte" id="priceLatte"></input>
   <button type="submit">Add Review</button>
   </form>
 </main>
