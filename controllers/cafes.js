@@ -1,4 +1,6 @@
-import { Cafe } from "../models/cafe.js"
+import { Cafe } from '../models/cafe.js';
+import { User } from '../models/user.js';
+
 function index(req, res) {
   console.log('index is working!')
   Cafe.find({})
@@ -40,14 +42,19 @@ function create(req, res){
 }
 
 function show(req, res){
+  console.log(req.user, 'requser')
   console.log('show is working')
   Cafe.findById(req.params.cafeId)
+  .populate('reviews.reviewer')
   .then(cafe=> {
+    // reviewer.find({_id})
+    // .then(reviewers => {
     console.log('CAFE OBJ', cafe)
     res.render('cafes/show', {
       title: 'Cafe Detail',
-      cafe,
+      cafe: cafe,
     })
+    // })
   }) 
   .catch(err => {
   console.log(err)
@@ -67,32 +74,37 @@ function update(req, res) {
           .then(() => {
             res.redirect(`/cafes/${cafe._id}`)
           })
-      })
+          
+    })
     .catch(err => {
       console.log(err)
       res.redirect('/cafes')
     })
 }
-// favoriteCoffee: String,
-// leastCoffee: String,
-// priceLatte: Number,
+
+
 function createReview(req, res) {
   Cafe.findById(req.params.cafeId)
-    .populate('reviews.reviewer')
     .then((cafe) => {
-      req.body.reviewer = req.user._id;
+      // store reviewer's objectId
+      req.body.reviewer = req.user.profile;
       cafe.reviews.push(req.body);
-      console.log(req.body.reviewer, 'is reviewer working')
-      cafe.save();
-    })
-    .then(() => {
-      res.redirect(`/cafes/${req.params.cafeId}`);
-    })
+      // save the changes to the cafe document and return the promise
+      cafe.save()
+      .then(() => {
+      res.redirect(`/cafes/${cafe._id}`)
+      })
+      .catch((err) => {
+        console.log(err)
+        res.redirect('/')
+      })
     .catch((err) => {
-      console.log(err);
-      res.redirect('/');
-    });
+    console.log(err);
+    res.redirect('/')
+    })
+  })
 }
+// get rid of the populate in the createReview controller, fix the syntax, and add it to the controller for the view being rendered
 
 //function editReview
 //function deleteReview
