@@ -6,11 +6,14 @@
   <h2><%= cafe.location %></h2>
     <br></br>
   <h2>Reviews</h2>
-<% cafe.reviews.forEach(review => { %>
-  <li>☕️Favorite Coffee: <%= review.favoriteCoffee %></li>
-  <li>☕️Least Favorite Coffee: <%= review.leastCoffee %></li>
-  <li>☕️Price of Latte: <%= review.priceLatte %></li>
-<% }) %>
+  <% cafe.reviews.forEach(review => { %>
+    <li>☕️Favorite Coffee: <%= review.favoriteCoffee %></li>
+    <li>☕️Least Favorite Coffee: <%= review.leastCoffee %></li>
+    <li>☕️Price of Latte: <%= review.priceLatte %></li>
+    <% if (review.reviewer) { %>
+      <li>☕️Name: <%= review.reviewer.name %></li>
+    <% } %>
+  <% }) %>
   <form 
     id="add-review-form"
     action="/cafes/<%= cafe._id%>/reviews"

@@ -77,24 +77,21 @@ function update(req, res) {
 // leastCoffee: String,
 // priceLatte: Number,
 function createReview(req, res) {
-  console.log(req.body)
-    Cafe.findById(req.params.cafeId)
+  Cafe.findById(req.params.cafeId)
+    .populate('reviews.reviewer')
     .then((cafe) => {
-      console.log(cafe)
-      cafe.reviews.push(req.body)
-      cafe.save()
-      .then(()=> {
-        res.redirect(`/cafes/${cafe._id}`)
-      })
-      .catch(err => {
-        console.log(err)
-        res.redirect('/')
-      })
+      req.body.reviewer = req.user._id;
+      cafe.reviews.push(req.body);
+      console.log(req.body.reviewer, 'is reviewer working')
+      cafe.save();
     })
-    .catch(err => {
-      console.log(err)
-      res.redirect('/')
+    .then(() => {
+      res.redirect(`/cafes/${req.params.cafeId}`);
     })
+    .catch((err) => {
+      console.log(err);
+      res.redirect('/');
+    });
 }
 
 //function editReview
