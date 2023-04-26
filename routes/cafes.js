@@ -21,4 +21,6 @@ router.delete('/:cafeId', cafesCtrl.delete )
 router.delete('/:cafeId/reviews/:reviewId', cafesCtrl.deleteReview)
 // PUT localhost:3000/cafes/:cafeId
 router.put('/:cafeId', isLoggedIn, cafesCtrl.update)
+// PUT localhost:3000/blogs/:blogId/comments/:commentId
+router.put('/:cafeId/reviews/:reviewId', isLoggedIn, cafesCtrl.updateReview)
 export { router }

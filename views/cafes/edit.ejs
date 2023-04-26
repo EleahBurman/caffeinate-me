@@ -3,21 +3,18 @@
 <%- include('../partials/nav') %>
 <main>
 <h1>Edit Review</h1>
-
-<% cafe.reviews.forEach(review => { %>
   <form
-    id="add-review-form"
-    action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>?_method=PUT" 
+    id="edit-review-form"
+    action="/cafes/<%= cafe._id %>?_method=PUT" 
     method="POST"
->
+  >
     <label for="favoriteCoffee">Favorite Coffee:</label>
     <input type="text" name="favoriteCoffee" id="favoriteCoffee"></input>
     <label for="leastCoffee">Least Favorite Coffee:</label>
     <input type="text" name="leastCoffee" id="leastCoffee"></input>
     <label for="priceLatte">Price of Latte:</label>
     <input type="number" name="priceLatte" id="priceLatte"></input>
-    <button type="submit">Add Review</button>
+    <button type="submit">Save Review</button>
   </form>
-<% }) %>
 </main>
 <%- include('../partials/footer') %>

@@ -66,7 +66,6 @@ function update(req, res) {
   //the id is called via the parameters
   console.log('id', req.params.id)
     Cafe.findById(req.params.id)
-    .populate('reviews')
     .then(cafe => {
       console.log('cafe', cafe)
       //updates the document in the body
@@ -122,6 +121,29 @@ function editReview(req, res) {
     });
 }
 
+function updateReview(req, res) {
+  console.log('update is working')
+  //the id is called via the parameters
+  console.log('id', req.params.id)
+    Cafe.findById(req.params.id)
+    .populate('review')
+    .then(cafe => {
+      console.log('cafe', cafe)
+      cafe.reviews.forEach(review => {
+          //updates the document in the body
+          review.updateOne(req.body)
+            .then(() => {
+              res.redirect(`/cafes/${cafe._id}`)
+            })
+        })
+          
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/cafes')
+    })
+}
+
 function deleteReview(req, res) {
   Cafe.findById(req.params.cafeId)
   .then(cafe => {
@@ -161,6 +183,7 @@ export {
   update,
   createReview,
   editReview,
+  updateReview,
   deleteReview,
   deleteCafe as delete
 }
