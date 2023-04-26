@@ -17,13 +17,13 @@
           <td><%= cafe.location %></td>
           <%# button for reviews %>
           <td>
-            <form id="reviews" action="/cafes/<%= cafe._id %>" method="GET"><button class="button-85" role="button">REVIEWS</button>
+            <form id="reviews" action="/cafes/<%= cafe._id %>" method="GET"><button class="button">REVIEWS</button>
             </form>
           </td>
           <%# button for delete cafes%>
           <td>
             <form action="/cafes/<%= cafe._id %>?_method=DELETE" method="POST">
-              <button class="button-85" role="button"type="submit">X</button>
+              <button class="button" id="remove" type="submit">X</button>
           </form>
           </td>
         </tr>
@@ -84,7 +84,7 @@
       <option value="WI">WI</option>
       <option value="WY">WY</option>
     </select>
-    <button class="button-85" role="button" type="submit">Add Cafe</button>
+    <button class="button" type="submit">Add Cafe</button>
   </form>
   <br></br>
   <img id="merycoffee-img" src="/images/merylcoffee.gif" alt="Even Meryl Streep Needs Coffee">

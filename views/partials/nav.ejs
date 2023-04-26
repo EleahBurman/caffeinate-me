@@ -5,10 +5,10 @@
 <body>
   <nav>
     <% if (user) { %>
-      <span><a href="/profiles">Profiles</a></span>
-      <span><a href="/cafes">Cafes</a></span>
+      <span><a href="/profiles" class=<%= title === 'Profiles' ? 'active' : '' %>>Profiles</a></span>
+      <span><a href="/cafes" class=<%= title === 'Cafes' ? 'active' : '' %>>Cafes</a></span>
       <a href="/auth/logout" class="right">
-      <button id="logout-btn" type="submit">Log Out</button>
+      <button class="button" id="logout-btn" type="submit">Log Out</button>
       </a>
     <% } else { %>
         <div 

@@ -19,7 +19,7 @@
       </form>
     </td>
     <%# button for meetups%>
-    <td><form action="/cafes/<%= cafe._id %>/reviews/<%=review._id%>?_method=DELETE" method="POST"><button>DELETE REVIEW</button></td></form>
+    <td><form action="/cafes/<%= cafe._id %>/reviews/<%=review._id%>?_method=DELETE" method="POST"><button class="button">DELETE REVIEW</button></td></form>
   <% }) %>
   <form 
     id="add-review-form"
@@ -32,7 +32,7 @@
   <input type="text" name="leastCoffee" id="leastCoffee"></input>
   <label for="priceLatte">Price of Latte:</label>
   <input type="number" name="priceLatte" id="priceLatte"></input>
-  <button type="submit">Add Review</button>
+  <button class="button" type="submit">Add Review</button>
   </form>
   <br></br>
   <img id="needcofee" src="/images/needcoffee.gif" alt="Need Coffee">
