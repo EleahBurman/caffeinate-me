@@ -9,39 +9,24 @@ html {
   /* All ::after pseudo-elements */
   /* height & width will now include border & padding by default but can be overridden as needed */
   box-sizing: inherit;
+  justify-content: center;
 }
 
 body {
+  margin-block-start: 0;
   background-color: #271c14;
   color: rgb(182, 159, 159);
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family:  'Holtwood One SC', serif;
   margin: 0;
 }
-span + span {
-  margin-left: 20px;
-}
 
-nav {
-  background-color: rgb(182, 159, 159);
-  color: #271c14;
-  display: flex;
-  align-items: center;
-  padding: 30px;
-  min-height: 60px;
-}
-
-nav > a:visited {
-  color: #271c14
-}
-
-nav > a:hover {
-  color: #bc5e1b;
-  background-color: #424748;
-}
-
-nav > a.active {
-  color: #0d0579
+#cafepage{
+  transform: scale(0.8, 0.8);
+  -ms-transform: scale(0.8, 0.8); /* IE 9 */
+  -webkit-transform: scale(0.8, 0.8); /* Safari and Chrome */
+  -o-transform: scale(0.8, 0.8); /* Opera */
+  -moz-transform: scale(0.8, 0.8); /* Firefox */
 }
 main {
   display: flex;
@@ -50,17 +35,18 @@ main {
   flex-direction: column;
 }
 
-.right {
-  margin-left: auto;
+h1, h2  {
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 5px 15px rgba(182, 159, 159,.4);
 }
 
 .button {
   font-size: 20px;
-  width: 100px;
+  width: 130px;
   background: #bc5e1b;
   color:rgb(255, 255, 255, 0.8);
   justify-content: center;
-  border-radius: 10px;
   text-transform: uppercase;
   transition: all 0.2s ease-in-out;
 }

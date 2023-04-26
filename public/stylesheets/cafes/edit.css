@@ -56,11 +56,10 @@ main {
 
 .button {
   font-size: 20px;
-  width: 100px;
+  width: 130px;
   background: #bc5e1b;
   color:rgb(255, 255, 255, 0.8);
   justify-content: center;
-  border-radius: 10px;
   text-transform: uppercase;
   transition: all 0.2s ease-in-out;
 }

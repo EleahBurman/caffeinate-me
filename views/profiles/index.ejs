@@ -2,16 +2,20 @@
 <link rel="stylesheet" href="/stylesheets/profiles/index.css" />
 <%- include('../partials/nav') %>
 <main>
-  <h1>Profile List</h1>
-  <div id="profile-container">
-    <% profiles.forEach(profile => { %>
-      <img src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
-      <h2><%= profile.name %></h2>
-      <form action="/profiles/<%= profile._id %>" method="GET">
-      <button class=button><%= profile.name %></button>
-      </form>
-    <% }) %>  
+  <div id="profilepage">
+    <h1>Profile List</h1>
+    <div id="profile-container">
+      <% profiles.forEach(profile => { %>
+        <img src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
+        <h2><%= profile.name %></h2>
+        <form action="/profiles/<%= profile._id %>" method="GET">
+        <button class=button><%= profile.name %></button>
+        </form>
+      <% }) %>  
+    </div>
+  <div class="snowwhite">
+    <img id="snowwhite" src="/images/snowwhitecoffee.gif" alt="Snow White Needs Coffee">
   </div>
-  <img id="snowwhite" src="/images/snowwhitecoffee.gif" alt="Snow White Needs Coffee">
+  </div>
 </main>
 <%- include('../partials/footer') %>

@@ -18,6 +18,15 @@ body {
   font-family:  'Holtwood One SC', serif;
   margin: 0;
 }
+
+#profilepage {
+  transform: scale(0.8, 0.8);
+  -ms-transform: scale(0.8, 0.8); /* IE 9 */
+  -webkit-transform: scale(0.8, 0.8); /* Safari and Chrome */
+  -o-transform: scale(0.8, 0.8); /* Opera */
+  -moz-transform: scale(0.8, 0.8); /* Firefox */
+}
+
 span + span {
   margin-left: 20px;
 }
@@ -56,11 +65,10 @@ main {
 
 .button {
   font-size: 20px;
-  width: 100px;
+  width: 150px;
   background: #bc5e1b;
   color:rgb(255, 255, 255, 0.8);
   justify-content: center;
-  border-radius: 10px;
   text-transform: uppercase;
   transition: all 0.2s ease-in-out;
 }
@@ -69,6 +77,11 @@ main {
   background: #bc5e1b;
   color:(255, 255, 255, 1);
   box-shadow: 0 5px 15px rgba(188,94,27,.4);
+}
+
+#snowwhite {
+  max-width: 50%;
+  height: auto;
 }
 
 #remove {
