@@ -2,6 +2,12 @@
 <link rel="stylesheet" href="/stylesheets/profiles/index.css" />
 <%- include('../partials/nav') %>
 
-<h1>This is my profiles show view</h1>
+<h1><%= profile.name %>'s Profile</h1>
+<div id="profile-container">
+  <% profiles.forEach(profile => { %>
+    <img src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
+    <h2><%= profile.name %></h2>
+    <%# I want a link that goes to all of profile's favorite cafes create route here%>
 
+  <% }) %>  
 <%- include('../partials/footer') %>

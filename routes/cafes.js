@@ -9,12 +9,16 @@ router.get('/', cafesCtrl.index)
 router.get('/new', cafesCtrl.new)
 // GET localhost:3000/cafes/:cafeId
 router.get('/:cafeId', cafesCtrl.show)
+// blogs/:blogId/comments/:commentId
+router.get('/:cafeId/reviews/:reviewId', cafesCtrl.editReview)
 // POST localhost:3000/cafes
 router.post('/', isLoggedIn, cafesCtrl.create)
 // POST localhost:3000/cafes/:cafeId/reviews
 router.post('/:cafeId/reviews', cafesCtrl.createReview)
 // DELETE localhost:3000/cafes/:cafeId
 router.delete('/:cafeId', cafesCtrl.delete )
+// DELTE localhost:3000/cafes/:cafeId/reviews/:reviewId
+router.delete('/:cafeId/reviews/:reviewId', cafesCtrl.deleteReview)
 // PUT localhost:3000/cafes/:cafeId
 router.put('/:cafeId', isLoggedIn, cafesCtrl.update)
 export { router }

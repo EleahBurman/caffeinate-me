@@ -13,6 +13,13 @@
     <% if (review.reviewer) { %>
       <li>☕️Name: <%= review.reviewer.name %></li>
     <% } %>
+              <%# button for edit reviews %>
+    <td>
+      <form id="edit-review" action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>" method="GET"><button>EDIT REVIEW</button>
+      </form>
+    </td>
+    <%# button for meetups%>
+    <td><form action="/cafes/<%= cafe._id %>/reviews/<%=review._id%>?_method=DELETE" method="POST"><button>DELETE REVIEW</button></td></form>
   <% }) %>
   <form 
     id="add-review-form"
