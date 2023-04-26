@@ -3,10 +3,10 @@
   <% } %>
 </head>
 <body>
-  <nav>
+  <nav class="navbar">
     <% if (user) { %>
-      <span><a href="/profiles" class=<%= title === 'Profiles' ? 'active' : '' %>>Profiles</a></span>
-      <span><a href="/cafes" class=<%= title === 'Cafes' ? 'active' : '' %>>Cafes</a></span>
+      <span><a class="navwords" href="/profiles">Profiles</a></span>
+      <span><a class="navwords" href="/cafes">Cafes</a></span>
       <a href="/auth/logout" class="right">
       <button class="button" id="logout-btn" type="submit">Log Out</button>
       </a>

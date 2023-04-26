@@ -22,26 +22,21 @@ span + span {
   margin-left: 20px;
 }
 
-nav {
+.navbar{
   background-color: rgb(182, 159, 159);
-  color: #271c14;
+  color: #c4611a;
   display: flex;
   align-items: center;
-  padding: 30px;
-  min-height: 60px;
+  padding: 10px;
+  min-height: 40px;
 }
 
-nav > a:visited {
-  color: #271c14
+.navwords{
+  color: #c4611a;
 }
 
-nav > a:hover {
-  color: #bc5e1b;
-  background-color: #424748;
-}
-
-nav > a.active {
-  color: #0d0579
+.navwords:hover{
+  color:#f59753;
 }
 main {
   display: flex;

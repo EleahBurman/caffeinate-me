@@ -22,32 +22,34 @@ span + span {
   margin-left: 20px;
 }
 
-nav {
+.navbar{
   background-color: rgb(182, 159, 159);
-  color: #271c14;
+  color: #c4611a;
   display: flex;
   align-items: center;
-  padding: 30px;
-  min-height: 60px;
+  padding: 10px;
+  min-height: 40px;
 }
 
-nav > a:visited {
-  color: #271c14
+.navwords{
+  color: #c4611a;
 }
 
-nav > a:hover {
-  color: #bc5e1b;
-  background-color: #424748;
+.navwords:hover{
+  color:#f59753;
 }
 
-nav > a.active {
-  color: #0d0579
-}
 main {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+h1, h2  {
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 5px 15px rgba(182, 159, 159,.4);
 }
 
 .right {
