@@ -17,20 +17,20 @@
           <td><%= cafe.location %></td>
           <%# button for reviews %>
           <td>
-            <form id="reviews" action="/cafes/<%= cafe._id %>" method="GET"><button>REVIEWS</button>
+            <form id="reviews" action="/cafes/<%= cafe._id %>" method="GET"><button class="button-85" role="button">REVIEWS</button>
             </form>
           </td>
           <%# button for delete cafes%>
           <td>
             <form action="/cafes/<%= cafe._id %>?_method=DELETE" method="POST">
-              <button type="submit">X</button>
+              <button class="button-85" role="button"type="submit">X</button>
           </form>
           </td>
         </tr>
       <% }) %>
     </tbody>
   </table>
-  <h1>Add Cafe</h1>
+  <h2>Add Cafe</h2>
   <form id="new-form" action="/cafes" method="POST">
     <label for="name-input">Name:</label>
     <input type="text" name="name" id="name-input">
@@ -84,7 +84,9 @@
       <option value="WI">WI</option>
       <option value="WY">WY</option>
     </select>
-    <button type="submit">Add Cafe</button>
+    <button class="button-85" role="button" type="submit">Add Cafe</button>
   </form>
+  <br></br>
+  <img id="merycoffee-img" src="/images/merylcoffee.gif" alt="Even Meryl Streep Needs Coffee">
 </main>
 <%- include('../partials/footer') %>

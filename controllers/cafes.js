@@ -127,14 +127,14 @@ function updateReview(req, res) {
       review.set(req.body)
       cafe.save()
       console.log(cafe, 'cafe updated')
+    })
       .then(() => {
         res.redirect(`/cafes/${cafe._id}`)
       })
       .catch(err => {
-        console.log(err)
+        console.log(err)        
         res.redirect('/cafes')
       })
-    })
     .catch(err => {
       console.log(err)
       res.redirect('/cafes')

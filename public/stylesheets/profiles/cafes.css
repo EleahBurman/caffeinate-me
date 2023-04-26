@@ -1,0 +1,43 @@
+html {
+  box-sizing: border-box;
+}
+
+/* The Universal Selector */
+*, /* All elements*/
+*::before, /* All ::before pseudo-elements */
+*::after {
+  /* All ::after pseudo-elements */
+  /* height & width will now include border & padding by default but can be overridden as needed */
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #271c14;
+  color: rgb(182, 159, 159);
+  /* Use a system font, if none are available use any found sans-sarif font */
+  font-family:  'Holtwood One SC', serif;
+  margin: 0;
+}
+span + span {
+  margin-left: 20px;
+}
+
+nav {
+  background-color: rgb(182, 159, 159);
+  color: #271c14;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  min-height: 60px;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.right {
+  margin-left: auto;
+}

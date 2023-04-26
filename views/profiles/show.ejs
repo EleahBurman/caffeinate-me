@@ -1,13 +1,16 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/profiles/index.css" />
 <%- include('../partials/nav') %>
-
+<main>
 <h1><%= profile.name %>'s Profile</h1>
-<div id="profile-container">
-  <% profiles.forEach(profile => { %>
-    <img src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
-    <h2><%= profile.name %></h2>
-    <%# I want a link that goes to all of profile's favorite cafes create route here%>
+<img src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
+<% profile.cafes.forEach(cafe => { %>
+  <form id="favorite-cafes" action="/profiles/<%= profile._id %>/cafes/<%= cafe._id %>" method="POST">
+  <button><%= profile.name %>'s Favorite Cafes</button>  
+  </form>
+<% }) %>
+<a href="/profiles/index"><button>Profiles</button></a>
+<img id="lorelai" src="/images/lorelaicoffee.gif" alt="Lorelai Needs Coffee">
+</main>
 
-  <% }) %>  
 <%- include('../partials/footer') %>

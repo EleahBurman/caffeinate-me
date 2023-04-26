@@ -8,5 +8,6 @@ const router = Router ()
 router.get('/', isLoggedIn, profilesCtrl.index)
 //read a specific blog - blogs/blogid
 router.get('/:profileId', isLoggedIn, profilesCtrl.show)
-
+// /blogs/:blogId/subscribers/:subscriberId
+router.post('/:profileId/cafes/:cafeId', isLoggedIn, profilesCtrl.favCafes)
 export { router }

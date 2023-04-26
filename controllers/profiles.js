@@ -29,7 +29,24 @@ function show(req, res) {
     })
 }
 
+function favCafes(req, res) {
+  Profile.findById(req.params.profileId)
+  .populate('cafes')
+  .then(profile => {
+    
+    res.render('profiles/cafes', {
+    profile: profile,
+    title: 'Favorite Cafes'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/profiles')
+  })
+}
+
 export {
   index,
-  show
+  show, 
+  favCafes
 }
