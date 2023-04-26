@@ -1,5 +1,4 @@
 import { Cafe } from '../models/cafe.js';
-import { User } from '../models/user.js';
 
 function index(req, res) {
   console.log('index is working!')
@@ -122,27 +121,25 @@ function editReview(req, res) {
 }
 
 function updateReview(req, res) {
-  console.log('update is working')
-  //the id is called via the parameters
-  console.log('id', req.params.id)
-    Cafe.findById(req.params.id)
-    .populate('review')
+  Cafe.findById(req.params.cafeId)
     .then(cafe => {
-      console.log('cafe', cafe)
-      cafe.reviews.forEach(review => {
-          //updates the document in the body
-          review.updateOne(req.body)
-            .then(() => {
-              res.redirect(`/cafes/${cafe._id}`)
-            })
-        })
-          
+      const review = cafe.reviews.id(req.params.reviewId)
+      review.set(req.body)
+      cafe.save()
+      console.log(cafe, 'cafe updated')
+      .then(() => {
+        res.redirect(`/cafes/${cafe._id}`)
+      })
+      .catch(err => {
+        console.log(err)
+        res.redirect('/cafes')
+      })
     })
     .catch(err => {
       console.log(err)
       res.redirect('/cafes')
     })
-}
+  }
 
 function deleteReview(req, res) {
   Cafe.findById(req.params.cafeId)

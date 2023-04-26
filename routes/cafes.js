@@ -10,7 +10,7 @@ router.get('/new', cafesCtrl.new)
 // GET localhost:3000/cafes/:cafeId
 router.get('/:cafeId', cafesCtrl.show)
 // blogs/:blogId/comments/:commentId
-router.get('/:cafeId/reviews/:reviewId', cafesCtrl.editReview)
+router.get('/:cafeId/reviews/:reviewId/edit', cafesCtrl.editReview)
 // POST localhost:3000/cafes
 router.post('/', isLoggedIn, cafesCtrl.create)
 // POST localhost:3000/cafes/:cafeId/reviews
