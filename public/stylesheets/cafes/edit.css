@@ -96,6 +96,12 @@ h2{
   transform: scale(1)
 }
 
+.textbox {
+  width: 120px; 
+  height: 20px;
+  border-radius:10px;
+}
+
 #remove {
   width: 50px;
 }

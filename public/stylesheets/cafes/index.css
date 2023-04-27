@@ -111,6 +111,13 @@ main {
   background-color: #eb7725;
 }
 
+
+.textbox {
+  width: 120px; 
+  height: 20px;
+  border-radius:10px;
+}
+
 #remove {
   width: 50px;
 }
@@ -123,6 +130,7 @@ main {
   align-items: center;
   vertical-align: center;
 }
+
 #meryl {
   display: flex;
   max-width: 50%;
