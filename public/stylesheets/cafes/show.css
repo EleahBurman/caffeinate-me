@@ -20,19 +20,19 @@ body {
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family:  'Holtwood One SC', serif;
   margin: 0;
-  color: #c89b60;
-  text-shadow: 0 5px 15px rgba(182, 159, 159,.4);
+  color: #d58317;
+  text-shadow: 2px 2px 4px #000000;
 }
 span + span {
   margin-left: 20px;
 }
 
-.row{
+#row{
   display: flex;
   flex-direction: row;
 }
 
-.column {
+#column {
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
@@ -47,6 +47,7 @@ span + span {
 .navbar{
   background-color: rgb(182, 159, 159);
   color: #c4611a;
+  text-shadow: 2px 2px 4px #000000;
   display: flex;
   align-items: center;
   padding: 10px;
@@ -55,10 +56,12 @@ span + span {
 
 .navwords{
   color: #c4611a;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .navwords:hover{
   color:#f59753;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 main {
@@ -70,7 +73,7 @@ main {
 
 h1 {
   color: #271c14;
-  text-shadow: 0 5px 15px (39,28,20, .4);
+  text-shadow: 0 0 0.15em #f4830b;
   align-items: center;
   justify-content: center;
   margin-top: 0;
@@ -81,8 +84,8 @@ h2, h3 {
   display: flex;
   margin-top: 0;
   justify-content: center;
-  color: #c89b60;
-  text-shadow: 0 5px 15px rgba(182, 159, 159,.4);
+  color: #d58317;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 #needcoffee{

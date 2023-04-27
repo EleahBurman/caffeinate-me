@@ -17,8 +17,8 @@ body {
   background-size: cover;
   background-attachment: fixed;
   min-height: 100%;
-  color: #c89b60;
-  text-shadow: 0 5px 15px rgba(205,144,108, .4);
+  color: #d58317;
+  text-shadow: 2px 2px 4px #000000;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family:  'Holtwood One SC', serif;
   margin: 0;
@@ -38,10 +38,12 @@ span + span {
 
 .navwords{
   color: #c4611a;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .navwords:hover{
   color:#f59753;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 main {
@@ -58,7 +60,7 @@ h1 {
   margin-top: 0;
   padding: 0;
   color: #271c14;
-  text-shadow: 0 5px 15px (39,28,20, .4)
+  text-shadow: 0 0 0.15em #f4830b;
 }
 
 h2{

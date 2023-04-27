@@ -20,6 +20,8 @@ body {
   background-size: cover;
   background-attachment: fixed;
   min-height: 100%;
+  color: #d58317;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 #profilepage {
@@ -33,8 +35,8 @@ body {
 h1  {
   align-items: center;
   justify-content: center;
-  text-shadow: 0 5px 15px rgba(182, 159, 159,.4);
   color: #271c14;
+  text-shadow: 0 0 0.15em #f4830b;
 }
 
 
@@ -43,7 +45,8 @@ h2{
   justify-content: center;
   text-shadow: 0 5px 15px rgba(182, 159, 159,.4);
   font-size: 16px;
-  color: #c89b60;
+  color: #d58317;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 span + span {
@@ -73,14 +76,17 @@ span + span {
 
 .navwords{
   color: #c4611a;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .navwords:hover{
   color:#f59753;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .navwords:visited :hover{
   color: #f59753;
+  text-shadow: 2px 2px 4px #000000;
 }
 main {
   display: flex;

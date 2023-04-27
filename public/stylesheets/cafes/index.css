@@ -23,12 +23,13 @@ body {
   font-family:  'Holtwood One SC', serif;
   margin: 0;
   padding: 0;
-  color: #c89b60;
+  color: #d58317;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .darkbrown {
   color: #271c14;
-  text-shadow: 0 5px 15px rgba(39,28,20, .6);
+  text-shadow: 0 0 0.15em #f4830b;
 }
 .navbar{
   background-color: rgb(182, 159, 159);
@@ -42,28 +43,30 @@ body {
 
 .navwords{
   color: #c4611a;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .navwords:hover{
   color:#f59753;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 h1{
   align-items: center;
   justify-content: center;
-  text-shadow: 0 5px 15px rgba(39,28,20, .6);
+  color: #271c14;
+  text-shadow: 0 0 0.15em #f4830b;
   margin-top: 0;
   padding: 0;
-  color: #271c14;
-  text-shadow: 0 5px 15px (39,28,20, .4)
 }
 
 h2{
   align-items: center;
   justify-content: center;
-  text-shadow: 0 5px 15px rgba(205,144,108, .4);
   font-size: 16px;
-  color: #c89b60;
+  color: #d58317;
+  text-shadow: 2px 2px 4px #000000;
+  
 }
 
 #cafepage{

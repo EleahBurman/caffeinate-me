@@ -5,7 +5,7 @@
   <h1 class= "animate__animated animate__lightSpeedInLeft">☕️<%= cafe.name %>☕️</h1>
   <h2><%= cafe.location %></h2>
   <img id="needcofee" src="/images/needcoffee.gif" alt="Need Coffee">
-  <h3>Reviews</h2>
+  <h3>Reviews</h3>
   <div id="row">
     <% cafe.reviews.forEach(review => { %>
       <% if (review.reviewer) { %>
@@ -18,18 +18,15 @@
         </div>
               <%# button for edit reviews %>
         <div id="column">
-        <td>
         <form id="edit-review" action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>/edit" method="GET"><button class="button">EDIT REVIEW</button>
         </form>
-      </td>
-      <td>
         <form action="/cafes/<%= cafe._id %>/reviews/<%=review._id%>?_method=DELETE" method="POST">
           <button class="button">X</button>
         </form>
-      </td>
     </div>
     <% }) %>
   </div>
+  <br></br>
   <div class="blockreview">
     <form 
       id="add-review-form"
