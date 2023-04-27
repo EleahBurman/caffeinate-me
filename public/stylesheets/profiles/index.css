@@ -108,7 +108,7 @@ main {
   justify-content: center;
   text-transform: uppercase;
   transition: all 0.2s ease-in-out;
-  height: 24px;
+  height: 42px;
   font-size: 17px;
   border-radius:10px;
 }
