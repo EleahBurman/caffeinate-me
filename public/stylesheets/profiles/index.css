@@ -12,11 +12,14 @@ html {
 }
 
 body {
-  background-color: #271c14;
-  color: rgb(182, 159, 159);
+  background-image: url("/images/coffeebackground1.jpg");
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family:  'Holtwood One SC', serif;
   margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100%;
 }
 
 #profilepage {
@@ -27,15 +30,22 @@ body {
   -moz-transform: scale(0.8, 0.8); /* Firefox */
 }
 
-h1, h2  {
+h1  {
   align-items: center;
   justify-content: center;
   text-shadow: 0 5px 15px rgba(182, 159, 159,.4);
+  color: #271c14;
 }
 
+
 h2{
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 5px 15px rgba(182, 159, 159,.4);
   font-size: 16px;
+  color: #c89b60;
 }
+
 span + span {
   margin-left: 20px;
 }

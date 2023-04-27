@@ -24,10 +24,10 @@ coffee-monday-3D1v8iexqiPbq)
 * JavaScript
 * CSS
 * Git
-* Adobe Photoshop
 * Google OAuth
 * Fly.io
 * EJS
+* Animate.css
 
 ## Ice Box
 - [ ] Implement friend request functionality.

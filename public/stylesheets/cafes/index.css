@@ -13,15 +13,23 @@ html {
 }
 
 body {
+  background-image: url("/images/coffeebackground1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100%;
   margin-block-start: 0;
-  background-color: #271c14;
-  color: rgb(182, 159, 159);
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family:  'Holtwood One SC', serif;
   margin: 0;
   padding: 0;
+  color: #c89b60;
 }
 
+.darkbrown {
+  color: #271c14;
+  text-shadow: 0 5px 15px rgba(39,28,20, .6);
+}
 .navbar{
   background-color: rgb(182, 159, 159);
   color: #c4611a;
@@ -40,12 +48,22 @@ body {
   color:#f59753;
 }
 
-h1, h2  {
+h1{
   align-items: center;
   justify-content: center;
-  text-shadow: 0 5px 15px rgba(182, 159, 159,.4);
+  text-shadow: 0 5px 15px rgba(39,28,20, .6);
   margin-top: 0;
   padding: 0;
+  color: #271c14;
+  text-shadow: 0 5px 15px (39,28,20, .4)
+}
+
+h2{
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 5px 15px rgba(205,144,108, .4);
+  font-size: 16px;
+  color: #c89b60;
 }
 
 #cafepage{
