@@ -13,7 +13,9 @@
 * [Giphy](https://giphy.com/gifs/coffee-the-devil-wears-prada-miranda-priestly-xUOrwpPFzqDh48XEek)
 * [Giphy](https://giphy.com/gifs/oZEBLugoTthxS)
 * [Giphy](https://giphy.com/gifs/originals-retro-l46Cbqvg6gxGvh2PS)
-* [Giphy](https://giphy.com/gifs/coffee-monday-3D1v8iexqiPbq)
+* [Giphy](https://giphy.com/gifs/
+coffee-monday-3D1v8iexqiPbq)
+* [Soft Icons](https://www.softicons.com/toolbar-icons/32x32-free-design-icons-by-aha-soft/coffee-icon)
 
 ## Technologies Used
 * Mongoose
