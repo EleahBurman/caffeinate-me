@@ -17,31 +17,27 @@ body {
   background-size: cover;
   background-attachment: fixed;
   min-height: 100%;
-  /* Use a system font, if none are available use any found sans-sarif font */
   font-family:  'Holtwood One SC', serif;
   margin: 0;
-  color: #d58317;
+}
+h1 {
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 5px 15px rgba(182, 159, 159,.4);
+  color: #271c14;
+}
+
+h2{
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 5px 15px rgba(182, 159, 159,.4);
+  font-size: 16px;
+  color: #c89b60;
   text-shadow: 2px 2px 4px #000000;
 }
+
 span + span {
   margin-left: 20px;
-}
-
-#row{
-  display: flex;
-  flex-direction: row;
-}
-
-#column {
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-}
-
-.buttoncolumn {
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
 }
 
 .navbar{
@@ -68,42 +64,50 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  list-style:none;
 }
 
-h1 {
-  color: #271c14;
-  text-shadow: 0 0 0.15em #f4830b;
+.list {
+  list-style: none;
+  line-height: 7px;
+  justify-content: center;
+  
+}
+
+.cafes {
+  color: #bc5e1b;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.cafes:visited{
+  color: #f05209;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.cafes:hover {
+  color: #f59753;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+h1  {
   align-items: center;
   justify-content: center;
-  margin-top: 0;
-  padding: 0;
+  color: #271c14;
+  text-shadow: 0 0 0.15em #f4830b;
 }
 
-h2, h3 {
-  display: flex;
-  margin-top: 0;
+h2 {
+  align-items: center;
   justify-content: center;
+  font-size: medium;
   color: #d58317;
   text-shadow: 2px 2px 4px #000000;
 }
 
-#needcoffee{
-  transform: 50%;
-}
-
-.editdelete{
-  display: flex;
-
-}
-
-.blockreview{
-  display: inline;
-  margin-left: 20px;
-  width: 80%;
-}
-
-li{
-  list-style-type: none;
+#profileimg{
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 4px #000000;
 }
 
 .button {
@@ -126,11 +130,6 @@ li{
   background: #eb7725;
   transform: scale(1)
 }
-
-.resizedTextbox {
-  width: 80px; height: 20px
-}
-
 #remove {
   width: 50px;
 }

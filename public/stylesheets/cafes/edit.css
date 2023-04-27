@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background-image: url("/images/coffeebackground1.jpg");
+  background-image: url("/images/CoffeeBackground.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -25,15 +25,16 @@ body {
 }
 span + span {
   margin-left: 20px;
+  letter-spacing: .08rem;
 }
 
 .navbar{
   background-color: rgb(182, 159, 159);
   color: #c4611a;
-  display: flex;
   align-items: center;
   padding: 10px;
   min-height: 40px;
+  letter-spacing: .18rem;
 }
 
 .navwords{
@@ -83,11 +84,13 @@ h2{
   height: 24px;
   font-size: 17px;
   border-radius:10px;
+  transform: scale(1);
+  transition: all .5s ease-in-out;
 }
 
 .button:hover {
   background: #eb7725;
-  font-size: 19px;
+  transform: scale(1)
 }
 
 #remove {

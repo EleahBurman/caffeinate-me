@@ -61,11 +61,13 @@ main {
   height: 24px;
   font-size: 17px;
   border-radius:10px;
+  transform: scale(1);
+  transition: all .5s ease-in-out;
 }
 
 .button:hover {
   background: #eb7725;
-  font-size: 19px;
+  transform: scale(1)
 }
 
 #remove {

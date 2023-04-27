@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  background-image: url("/images/coffeebackground1.jpg");
+  background-image: url("/images/CoffeeBackground.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -25,20 +25,22 @@ body {
   padding: 0;
   color: #d58317;
   text-shadow: 2px 2px 4px #000000;
+  letter-spacing: .08rem;
 }
 
 .darkbrown {
   color: #d58317;
   font-size: 20px;
+  letter-spacing: .08rem;
 }
 .navbar{
   background-color: rgb(182, 159, 159);
   color: #c4611a;
-  display: flex;
   align-items: center;
   padding: 10px;
   min-height: 40px;
   margin-bottom: 0;
+  letter-spacing: .18rem;
 }
 
 .navwords{
@@ -56,6 +58,7 @@ h1{
   text-shadow: 0 0 0.15em #f4830b;
   margin-top: 0;
   padding: 0;
+  letter-spacing: .08rem;
 }
 
 h2{
@@ -64,6 +67,7 @@ h2{
   font-size: 16px;
   color: #d58317;
   text-shadow: 2px 2px 4px #000000;
+  letter-spacing: .08rem;
   
 }
 
@@ -96,11 +100,13 @@ main {
   height: 24px;
   font-size: 17px;
   border-radius:10px;
+  transform: scale(1);
+  transition: all .5s ease-in-out;
 }
 
 .button:hover {
-  background: #eb7725;
-  font-size: 19px;
+  background-color: #eb7725;
+  transform: scale(1)
 }
 
 #remove {

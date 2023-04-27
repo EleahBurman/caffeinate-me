@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background-image: url("/images/coffeebackground1.jpg");
+  background-image: url("/images/CoffeeBackground.png");
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family:  'Holtwood One SC', serif;
   margin: 0;
@@ -22,6 +22,7 @@ body {
   min-height: 100%;
   color: #d58317;
   text-shadow: 2px 2px 4px #000000;
+  letter-spacing: .08rem;
 }
 
 #profilepage {
@@ -37,6 +38,7 @@ h1  {
   justify-content: center;
   color: #271c14;
   text-shadow: 0 0 0.15em #f4830b;
+  letter-spacing: .08rem;
 }
 
 
@@ -47,6 +49,7 @@ h2{
   font-size: 16px;
   color: #d58317;
   text-shadow: 2px 2px 4px #000000;
+  letter-spacing: .08rem;
 }
 
 span + span {
@@ -68,10 +71,10 @@ span + span {
 .navbar{
   background-color: rgb(182, 159, 159);
   color: #c4611a;
-  display: flex;
   align-items: center;
   padding: 10px;
   min-height: 40px;
+  letter-spacing: .18rem;
 }
 
 .navwords{
@@ -108,14 +111,16 @@ main {
   justify-content: center;
   text-transform: uppercase;
   transition: all 0.2s ease-in-out;
-  height: 42px;
+  height: 45px;
   font-size: 17px;
   border-radius:10px;
+  transform: scale(1);
+  transition: all .5s ease-in-out;
 }
 
 .button:hover {
   background: #eb7725;
-  font-size: 19px;
+  transform: scale(1)
 }
 
 .snowwhite {
