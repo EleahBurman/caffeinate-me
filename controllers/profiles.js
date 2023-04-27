@@ -15,7 +15,10 @@ function index(req, res) {
 }
 function show(req, res) {
   Profile.findById(req.params.profileId)
+  //referenced resource
+  .populate('cafes')
     .then(profile => {
+      console.log(profile, 'cafe data inside profile')
       res.render('profiles/show', {
         // Set the title of the page to the profile name
         title: profile.name,
@@ -29,24 +32,7 @@ function show(req, res) {
     })
 }
 
-function favCafes(req, res) {
-  Profile.findById(req.params.profileId)
-  .populate('cafes')
-  .then(profile => {
-    
-    res.render('profiles/cafes', {
-    profile: profile,
-    title: 'Favorite Cafes'
-    })
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect('/profiles')
-  })
-}
-
 export {
   index,
-  show, 
-  favCafes
+  show,
 }

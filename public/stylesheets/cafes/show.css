@@ -46,8 +46,35 @@ main {
   flex-direction: column;
 }
 
-.right {
-  margin-left: auto;
+h1, h2, h3 {
+  display: flex;
+  margin-top: 0;
+  justify-content: center;
+  text-shadow: 0 5px 15px rgba(182, 159, 159,.4);
+}
+
+#needcoffee{
+  transform: 50%;
+}
+
+.reviewcolumn{
+  display: column;
+  margin-left: 0%;
+}
+
+.editdelete{
+  display: flex;
+
+}
+
+.blockreview{
+  display: inline;
+  margin-left: 20px;
+  transform: 50%;
+}
+
+li{
+  list-style-type: none;
 }
 
 .button {

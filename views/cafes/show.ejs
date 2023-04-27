@@ -4,37 +4,38 @@
 <main>
   <h1><%= cafe.name %></h1>
   <h2><%= cafe.location %></h2>
-    <br></br>
-  <h2>Reviews</h2>
-  <% cafe.reviews.forEach(review => { %>
-    <li>☕️Favorite Coffee: <%= review.favoriteCoffee %></li>
-    <li>☕️Least Favorite Coffee: <%= review.leastCoffee %></li>
-    <li>☕️Price of Latte: <%= review.priceLatte %></li>
-    <% if (review.reviewer) { %>
-      <li>☕️Name: <%= review.reviewer.name %></li>
-    <% } %>
-              <%# button for edit reviews %>
-    <td>
-      <form id="edit-review" action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>/edit" method="GET"><button class="button">EDIT REVIEW</button>
-      </form>
-    </td>
-    <%# button for meetups%>
-    <td><form action="/cafes/<%= cafe._id %>/reviews/<%=review._id%>?_method=DELETE" method="POST"><button class="button">DELETE REVIEW</button></td></form>
-  <% }) %>
-  <form 
-    id="add-review-form"
-    action="/cafes/<%= cafe._id%>/reviews"
-    method="POST"
-  >
-  <label for="favoriteCoffee">Favorite Coffee:</label>
-  <input type="text" name="favoriteCoffee" id="favoriteCoffee"></input>
-  <label for="leastCoffee">Least Favorite Coffee:</label>
-  <input type="text" name="leastCoffee" id="leastCoffee"></input>
-  <label for="priceLatte">Price of Latte:</label>
-  <input type="number" name="priceLatte" id="priceLatte"></input>
-  <button class="button" type="submit">Add Review</button>
-  </form>
-  <br></br>
   <img id="needcofee" src="/images/needcoffee.gif" alt="Need Coffee">
+  <h3>Reviews</h2>
+  <div class="reviewcolumn">
+    <% cafe.reviews.forEach(review => { %>
+      <% if (review.reviewer) { %>
+        <li>☕️Name: <%= review.reviewer.name %></li>
+        <li>☕️Favorite Coffee: <%= review.favoriteCoffee %></li>
+        <li>☕️Least Favorite Coffee: <%= review.leastCoffee %></li>
+        <li>☕️Price of Latte: <%= review.priceLatte %></li>
+    <% } %>
+    </div>
+              <%# button for edit reviews %>
+      <td>
+        <form id="edit-review" action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>/edit" method="GET"><button class="button" id="wrap">EDIT REVIEW</button>
+        </form>
+      </td>
+      <td><form action="/cafes/<%= cafe._id %>/reviews/<%=review._id%>?_method=DELETE" method="POST"><button class="button" id="wrap">DELETE REVIEW</button></td></form>
+    <% }) %>
+  <div class="blockreview">
+    <form 
+      id="add-review-form"
+      action="/cafes/<%= cafe._id%>/reviews"
+      method="POST"
+    >
+    <label for="favoriteCoffee">Favorite Coffee:</label>
+    <input type="text" name="favoriteCoffee" id="favoriteCoffee"></input>
+    <label for="leastCoffee">Least Favorite Coffee:</label>
+    <input type="text" name="leastCoffee" id="leastCoffee"></input>
+    <label for="priceLatte">Price of Latte:</label>
+    <input type="number" name="priceLatte" id="priceLatte"></input>
+    <button class="button" type="submit">Add Review</button>
+    </form>
+  </div>
 </main>
 <%- include('../partials/footer') %>

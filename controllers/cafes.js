@@ -1,4 +1,5 @@
 import { Cafe } from '../models/cafe.js';
+import { Profile } from '../models/profile.js';
 
 function index(req, res) {
   console.log('index is working!')
@@ -33,8 +34,19 @@ function create(req, res){
   //creates a new cafe doc  with the data from the object using req.body
   Cafe.create(req.body)
   .then((cafe) => { 
+    //first find appropriate profile
+    Profile.findById(req.user.profile._id)
+    .then((profile)=>{
+      profile.cafes.push(cafe)
+      profile.save()
+      .then((profile)=>{
+        console.log(profile, 'eleah profile')
+        res.redirect(`/cafes/${cafe._id}`)
+      })
+    })
+
+    //store a reference of cafe in the profile
     //redirects using the newly created id
-      res.redirect(`/cafes/${cafe._id}`)
   })
   .catch(err => {
     console.log(err)
