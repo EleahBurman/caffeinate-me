@@ -69,6 +69,10 @@ span + span {
   padding-right: 5px;
 }
 
+.profphoto{
+  border-radius:10px;
+}
+
 .navbar{
   background-color: rgb(182, 159, 159);
   text-shadow: 2px 2px 4px #000000;
