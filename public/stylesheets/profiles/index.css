@@ -102,15 +102,15 @@ main {
 .snowwhite {
   max-width: 50%;
   height: auto;
-  flex-direction: row;
+  display: flex;
   justify-content: center;
   align-items: center;
   vertical-align: center;
 }
 
 #snowwhite{
+  display: flex;
   max-width: 50%;
-  margin-right: 60%;
   vertical-align: center;
 }
 
