@@ -53,8 +53,8 @@ h1, h2  {
 }
 
 .button {
-  font-size: 20px;
-  width: 130px;
+  font-size: 15px;
+  width: 80px;
   background: #bc5e1b;
   color:rgb(255, 255, 255, 0.8);
   justify-content: center;
