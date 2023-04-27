@@ -40,6 +40,14 @@ body {
   color:#f59753;
 }
 
+h1, h2  {
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 5px 15px rgba(182, 159, 159,.4);
+  margin-top: 0;
+  padding: 0;
+}
+
 #cafepage{
   margin-top: 0;
   border: 0;
@@ -57,16 +65,9 @@ main {
   flex-direction: column
 }
 
-h1, h2  {
-  align-items: center;
-  justify-content: center;
-  text-shadow: 0 5px 15px rgba(182, 159, 159,.4);
-  margin-top: 0;
-}
-
 .button {
   font-size: 15px;
-  width: 80px;
+  width: fit-content;
   background: #bc5e1b;
   color:rgb(255, 255, 255, 0.8);
   justify-content: center;
@@ -82,4 +83,19 @@ h1, h2  {
 
 #remove {
   width: 50px;
+}
+
+.meryl{
+  max-width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
+}
+#meryl {
+  display: flex;
+  max-width: 50%;
+  vertical-align: center;
+  margin-top: 5px;
 }
