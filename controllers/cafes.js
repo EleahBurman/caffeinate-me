@@ -6,7 +6,6 @@ function index(req, res) {
   Cafe.find({})
   .populate('reviews')
   .then(cafes => {
-    console.log(cafes, 'cafes in index')
     res.render('cafes/index', {
       cafes: cafes,
       title: 'All Cafes'
@@ -26,7 +25,6 @@ function newCafe(req, res) {
 }
 
 function create(req, res){
-  console.log('create is working')
   //if an empty string is added to create a cafe, delete that string
   for (let key in req.body) {
     if (req.body[key] === '') delete req.body[key]
@@ -40,13 +38,9 @@ function create(req, res){
       profile.cafes.push(cafe)
       profile.save()
       .then((profile)=>{
-        console.log(profile, 'eleah profile')
         res.redirect(`/cafes/${cafe._id}`)
       })
     })
-
-    //store a reference of cafe in the profile
-    //redirects using the newly created id
   })
   .catch(err => {
     console.log(err)
@@ -55,8 +49,6 @@ function create(req, res){
 }
 
 function show(req, res){
-  console.log(req.user, 'requser')
-  console.log('show is working')
   Cafe.findById(req.params.cafeId)
   .populate('reviews.reviewer')
   .then(cafe=> {
@@ -73,9 +65,7 @@ function show(req, res){
 }
 
 function update(req, res) {
-  console.log('update is working')
   //the id is called via the parameters
-  console.log('id', req.params.id)
     Cafe.findById(req.params.id)
     .then(cafe => {
       console.log('cafe', cafe)
@@ -119,7 +109,6 @@ function editReview(req, res) {
     .then(cafe => {
     // find the review by its id
     const review = cafe.reviews.id(req.params.reviewId)
-
       res.render('cafes/edit', {
         review: review,
         cafe: cafe,
@@ -138,7 +127,6 @@ function updateReview(req, res) {
       const review = cafe.reviews.id(req.params.reviewId)
       review.set(req.body)
       cafe.save()
-      console.log(cafe, 'cafe updated')
     })
       .then(() => {
         res.redirect(`/cafes/${cafe._id}`)
