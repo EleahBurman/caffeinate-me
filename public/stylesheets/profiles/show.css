@@ -113,7 +113,7 @@ h2 {
 #profileimg{
   align-items: center;
   justify-content: center;
-  box-shadow: 2px 2px 4px #000000;
+  border-radius:10px;
 }
 
 .button {
@@ -137,5 +137,5 @@ h2 {
 }
 
 #lorelai{
-  box-shadow: 2px 2px 4px #000000;
+  border-radius:10px;
 }

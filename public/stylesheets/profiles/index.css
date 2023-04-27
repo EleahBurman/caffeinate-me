@@ -143,7 +143,10 @@ main {
 #snowwhite{
   display: flex;
   max-width: 50%;
-  vertical-align: center;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  border-radius:10px;
 }
 
 #remove {

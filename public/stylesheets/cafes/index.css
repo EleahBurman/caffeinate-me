@@ -123,6 +123,7 @@ main {
 }
 
 .meryl{
+  margin-top: 20px;
   max-width: 50%;
   height: auto;
   display: flex;
@@ -136,4 +137,5 @@ main {
   max-width: 50%;
   vertical-align: center;
   margin-top: 5px;
+  border-radius:10px;
 }

@@ -90,7 +90,11 @@ h2, h3 {
   text-shadow: 2px 2px 4px #000000;
 }
 
-#needcoffee{
+.needcoffee{
+  border-radius:10px;
+}
+
+#needcoffee {
   transform: 50%;
 }
 

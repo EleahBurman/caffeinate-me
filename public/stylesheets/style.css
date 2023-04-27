@@ -76,3 +76,9 @@ main {
 #remove {
   width: 50px;
 }
+
+#logout-btn{
+  position: relative;
+  float: right;
+
+}
