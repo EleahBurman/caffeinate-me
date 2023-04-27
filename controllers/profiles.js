@@ -2,7 +2,6 @@ import { Profile } from "../models/profile.js"
 function index(req, res) {
   Profile.find({})
   .then(profiles => {
-    //I want a view of my profiles/index
     res.render('profiles/index', {
     profiles: profiles,
     title: 'All Profiles'
@@ -15,10 +14,9 @@ function index(req, res) {
 }
 function show(req, res) {
   Profile.findById(req.params.profileId)
-  //referenced resource
+  //referenced resource, cafes, is populated
   .populate('cafes')
     .then(profile => {
-      console.log(profile, 'cafe data inside profile')
       res.render('profiles/show', {
         // Set the title of the page to the profile name
         title: profile.name,
