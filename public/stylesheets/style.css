@@ -12,8 +12,8 @@ html {
 }
 
 body {
-  background-color: #271c14;
   color: rgb(182, 159, 159);
+  background-color: #271c14;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family:  'Holtwood One SC', serif;
   margin: 0;
@@ -23,9 +23,9 @@ span + span {
 }
 
 .navbar{
-  background-color: rgb(182, 159, 159);
-  text-shadow: 2px 2px 4px #000000;
   color: #c4611a;
+  text-shadow: 2px 2px 4px #000000;
+  background-color: rgb(182, 159, 159);
   align-items: center;
   padding: 10px;
   min-height: 40px;
@@ -57,15 +57,14 @@ main {
 }
 
 .button {
-  font-family: 'Puritan', sans-serif;
-  font-size: 15px;
-  width: fit-content;
-  background: #bc5e1b;
   color:rgb(255, 255, 255, 0.8);
+  background: #bc5e1b;
+  font-family: 'Puritan', sans-serif;
+  font-size: 17px;
+  height: 30px;
+  width: fit-content;
   justify-content: center;
   text-transform: uppercase;
-  height: 24px;
-  font-size: 17px;
   border-radius:10px;
 }
 
