@@ -49,7 +49,7 @@ body {
 .navwords{
   color: #c4611a;
   text-shadow: 2px 2px 4px #000000;
-  margin-right: 15px;
+  margin-left: 10px;
 }
 
 .navwords:hover{
@@ -135,6 +135,5 @@ main {
   display: flex;
   max-width: 50%;
   vertical-align: center;
-  margin-top: 5px;
   border-radius:10px;
 }

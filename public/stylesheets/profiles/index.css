@@ -87,6 +87,7 @@ span + span {
 .navwords{
   color: #c4611a;
   text-shadow: 2px 2px 4px #000000;
+  margin-left: 10px;
 }
 
 .navwords:hover{
@@ -94,10 +95,6 @@ span + span {
   text-shadow: 2px 2px 4px #000000;
 }
 
-.navwords:visited :hover{
-  color: #f59753;
-  text-shadow: 2px 2px 4px #000000;
-}
 main {
   display: flex;
   align-items: center;

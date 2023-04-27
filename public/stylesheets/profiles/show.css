@@ -58,6 +58,7 @@ span + span {
 .navwords{
   color: #c4611a;
   text-shadow: 2px 2px 4px #000000;
+  margin-left: 10px;
 }
 
 .navwords:hover{
@@ -107,7 +108,7 @@ h2 {
   text-shadow: 2px 2px 4px #000000;
   align-items: center;
   justify-content: center;
-  font-size: medium;
+  font-size: 20px;
 }
 
 #profileimg{

@@ -66,6 +66,7 @@ span + span {
 .navwords:hover{
   color:#f59753;
   text-shadow: 2px 2px 4px #000000;
+  margin-left: 10px;
 }
 
 main {

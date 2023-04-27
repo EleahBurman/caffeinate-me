@@ -43,6 +43,7 @@ span + span {
 .navwords{
   color: #c4611a;
   text-shadow: 2px 2px 4px #000000;
+  margin-left: 10px;
 }
 
 .navwords:hover{
@@ -62,7 +63,6 @@ h1 {
   text-shadow: 0 0 0.15em #f4830b;
   align-items: center;
   justify-content: center;
-  text-shadow: 0 5px 15px rgba(39,28,20, .6);
   margin-top: 0;
   padding: 0;
 }
