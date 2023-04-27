@@ -64,6 +64,9 @@ span + span {
   color:#f59753;
 }
 
+.navwords:visited :hover{
+  color: #f59753;
+}
 main {
   display: flex;
   align-items: center;

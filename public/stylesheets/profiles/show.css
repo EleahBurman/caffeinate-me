@@ -58,11 +58,12 @@ main {
   color: #bc5e1b;
 }
 
-.cafes:hover {
-  color: #f59753;
-}
 .cafes:visited{
   color: #f05209;
+}
+
+.cafes:hover {
+  color: #f59753;
 }
 
 h1, h2  {
@@ -77,7 +78,7 @@ h2 {
 
 .button {
   font-size: 15px;
-  width: 80px;
+  width: fit-content;
   background: #bc5e1b;
   color:rgb(255, 255, 255, 0.8);
   justify-content: center;

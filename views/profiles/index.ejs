@@ -1,3 +1,4 @@
+
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/profiles/index.css" />
 <%- include('../partials/nav') %>
@@ -6,7 +7,6 @@
     <div class="row">
       <% profiles.forEach(profile => { %>
           <img class="column" src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
-
       <div class="column">
         <h2><%= profile.name %></h2>
         <form action="/profiles/<%= profile._id %>" method="GET">
