@@ -24,20 +24,27 @@ span + span {
 
 .navbar{
   background-color: rgb(182, 159, 159);
+  text-shadow: 2px 2px 4px #000000;
   color: #c4611a;
-  display: flex;
   align-items: center;
   padding: 10px;
   min-height: 40px;
+  letter-spacing: .18rem;
+  text-shadow: 0px;
+  font-size: 20px;
+  margin-right: 15px;
 }
 
 .navwords{
   color: #c4611a;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .navwords:hover{
   color:#f59753;
+  text-shadow: 2px 2px 4px #000000;
 }
+
 main {
   display: flex;
   align-items: center;
@@ -57,17 +64,13 @@ main {
   color:rgb(255, 255, 255, 0.8);
   justify-content: center;
   text-transform: uppercase;
-  transition: all 0.2s ease-in-out;
   height: 24px;
   font-size: 17px;
   border-radius:10px;
-  transform: scale(1);
-  transition: all .5s ease-in-out;
 }
 
 .button:hover {
   background: #eb7725;
-  transform: scale(1)
 }
 
 #remove {

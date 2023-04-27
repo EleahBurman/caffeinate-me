@@ -30,11 +30,14 @@ span + span {
 
 .navbar{
   background-color: rgb(182, 159, 159);
+  text-shadow: 2px 2px 4px #000000;
   color: #c4611a;
   align-items: center;
   padding: 10px;
   min-height: 40px;
   letter-spacing: .18rem;
+  text-shadow: 0px;
+  font-size: 20px;
 }
 
 .navwords{

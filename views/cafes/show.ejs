@@ -14,20 +14,20 @@
           <li>☕️Favorite Coffee: <%= review.favoriteCoffee %></li>
           <li>☕️Least Favorite Coffee: <%= review.leastCoffee %></li>
           <li>☕️Price of Latte: <%= review.priceLatte %></li>
-        <% } %>
         </div>
+      <% } %>
               <%# button for edit reviews %>
-        <div id="column">
+      <div id="column">
         <form id="edit-review" action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>/edit" method="GET"><button class="button">EDIT REVIEW</button>
         </form>
         <form action="/cafes/<%= cafe._id %>/reviews/<%=review._id%>?_method=DELETE" method="POST">
           <button class="button">X</button>
         </form>
-    </div>
-    <% }) %>
+      </div>
+      <% }) %>
   </div>
   <br></br>
-  <div class="blockreview">
+  <div id="review">
     <form 
       id="add-review-form"
       action="/cafes/<%= cafe._id%>/reviews"

@@ -46,11 +46,14 @@ span + span {
 
 .navbar{
   background-color: rgb(182, 159, 159);
-  color: #c4611a;
   text-shadow: 2px 2px 4px #000000;
+  color: #c4611a;
   align-items: center;
   padding: 10px;
   min-height: 40px;
+  letter-spacing: .18rem;
+  text-shadow: 0px;
+  font-size: 20px;
 }
 
 .navwords{
@@ -93,13 +96,17 @@ h2, h3 {
 
 .editdelete{
   display: flex;
+  flex-direction: column;
 
 }
 
-.blockreview{
-  display: inline;
+#review{
+  display: block;
   margin-left: 20px;
   width: 80%;
+  letter-spacing: .08rem;
+  text-shadow: 5px 5px 8px #000000;
+  font-size: 20px;
 }
 
 li{
@@ -114,21 +121,19 @@ li{
   color:rgb(255, 255, 255, 0.8);
   justify-content: center;
   text-transform: uppercase;
-  transition: all 0.2s ease-in-out;
   height: 24px;
   font-size: 17px;
   border-radius:10px;
-  transform: scale(1);
-  transition: all .5s ease-in-out;
 }
 
 .button:hover {
   background: #eb7725;
-  transform: scale(1)
 }
 
 .resizedTextbox {
-  width: 80px; height: 20px
+  width: 100px; 
+  height: 20px;
+  border-radius:10px;
 }
 
 #remove {
