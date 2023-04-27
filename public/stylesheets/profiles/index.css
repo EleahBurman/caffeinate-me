@@ -100,6 +100,7 @@ main {
 }
 
 .button {
+  font-family: 'Puritan', sans-serif;
   font-size: 15px;
   width: fit-content;
   background: #bc5e1b;
@@ -107,12 +108,14 @@ main {
   justify-content: center;
   text-transform: uppercase;
   transition: all 0.2s ease-in-out;
+  height: 24px;
+  font-size: 17px;
+  border-radius:10px;
 }
 
 .button:hover {
-  background: #bc5e1b;
-  color:(255, 255, 255, 1);
-  box-shadow: 0 5px 15px rgba(188,94,27,.4);
+  background: #eb7725;
+  font-size: 19px;
 }
 
 .snowwhite {
