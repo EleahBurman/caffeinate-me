@@ -22,7 +22,11 @@
         <form id="edit-review" action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>/edit" method="GET"><button class="button">EDIT REVIEW</button>
         </form>
       </td>
-      <td><form action="/cafes/<%= cafe._id %>/reviews/<%=review._id%>?_method=DELETE" method="POST"><button class="button">DELETE REVIEW</button></td></form>
+      <td>
+        <form action="/cafes/<%= cafe._id %>/reviews/<%=review._id%>?_method=DELETE" method="POST">
+          <button class="button">X</button>
+        </form>
+      </td>
     </div>
     <% }) %>
   </div>
