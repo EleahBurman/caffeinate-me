@@ -1,6 +1,6 @@
 # Caffeinate-Me
 
-![Caffeinate-Me Screenshot](./public/images/ScreenshotOfCaffeinateMe.png)
+![Caffeinate-Me Screenshot](./public/images/ScreenshotCaffeinateMe.png)
 
 ## [Use Caffeinate-Me](https://caffeinate-me.fly.dev)
 
