@@ -22,7 +22,7 @@ function show(req, res) {
         title: profile.name,
         // Pass the retrieved profile object to the view
         profile
-      });
+      })
     })
     .catch(err => {
       console.log(err)

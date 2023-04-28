@@ -52,7 +52,6 @@ function show(req, res){
   Cafe.findById(req.params.cafeId)
   .populate('reviews.reviewer')
   .then(cafe=> {
-    console.log('CAFE OBJ', cafe)
     res.render('cafes/show', {
       title: 'Cafe Detail',
       cafe: cafe,
