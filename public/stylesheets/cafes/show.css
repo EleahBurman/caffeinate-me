@@ -88,10 +88,6 @@ h2{
   margin-bottom: 0px;
 }
 
-span + span {
-  margin-left: 20px;
-}
-
 .row{
   display: flex;
   flex-direction: row;

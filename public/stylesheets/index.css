@@ -59,9 +59,6 @@ h1{
   font-size: 60px;
   letter-spacing: .08rem;
 }
-span + span {
-  margin-left: 20px;
-}
 
 main {
   display: flex;

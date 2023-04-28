@@ -86,10 +86,6 @@ justify-content: center;
 letter-spacing: .08rem;
 }
 
-span + span {
-margin-left: 20px;
-}
-
 main {
 display: flex;
 align-items: center;
