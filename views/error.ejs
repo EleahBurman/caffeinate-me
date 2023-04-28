@@ -2,9 +2,9 @@
 <link rel="stylesheet" href="/stylesheets/error.css" />
 <%- include('./partials/nav') %>
 <main>
-  <h1><%= message %></h1>
+  <h1>☕️<%= message %>☕️</h1>
   <img id="error-img" src="/images/helpmecoffee.gif" alt="Help Me Coffee">
-  <h2><%= error.status %></h2>
-  <pre><%= error.stack %></pre>
+  <h2 id="error"><%= error.status %></h2>
+  <pre id="notfounderror"><%= error.stack %></pre>
 </main>
 <%- include('./partials/footer') %>

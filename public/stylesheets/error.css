@@ -13,7 +13,7 @@ html {
 
 body {
   color: #d58317;
-  text-shadow: 2px 2px 4px #000000;
+  text-shadow: 4px 4px 9px #000000;
   background-image: url("/images/CoffeeBackground.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -47,6 +47,7 @@ body {
 }
 
 #logout-btn{
+  font-family: 'Puritan', sans-serif;
   position: relative;
   float: right;
   font-size: 25px;
@@ -61,7 +62,6 @@ h1 {
   font-size: 25px;
   align-items: center;
   justify-content: center;
-  text-shadow: 0 5px 15px rgba(182, 159, 159,.4);
 }
 
 h2{
@@ -71,7 +71,6 @@ h2{
   align-items: center;
   justify-content: center;
   text-shadow: 0 5px 15px rgba(182, 159, 159,.4);
-  font-size: 16px;
 }
 
 span + span {
@@ -125,4 +124,14 @@ h2 {
 }
 #remove {
   width: 50px;
+}
+
+#error{
+  font-size: 20px;
+}
+
+#notfounderror{
+    font-size: 15px;
+    text-shadow: 10px 10px 9px #000000;
+    font-family: 'Puritan', sans-serif;
 }
