@@ -172,6 +172,10 @@ main {
   text-shadow: 4px 4px 9px #000000;
 }
 
+#edit-review{
+  margin-top: 5px;
+}
+
 .marginbottom{
   margin-bottom: 5px;
 }
