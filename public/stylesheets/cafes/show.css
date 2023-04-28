@@ -176,6 +176,9 @@ main {
   text-shadow: 4px 4px 9px #000000;
 }
 
+.marginbottom{
+  margin-bottom: 5px;
+}
 .needcoffee{
   border-radius:10px;
 }

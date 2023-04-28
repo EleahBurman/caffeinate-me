@@ -18,8 +18,11 @@
       <% } %>
               <%# button for edit reviews %>
       <div class="column">
-        <form id="edit-review" action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>/edit" method="GET"><button class="button">EDIT REVIEW</button>
-        </form>
+        <div class="marginbottom">
+          <form action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>/edit" method="GET">
+            <button class="button" id="edit-review">EDIT REVIEW</button>
+          </form>
+        </div>
         <form action="/cafes/<%= cafe._id %>/reviews/<%=review._id%>?_method=DELETE" method="POST">
           <button class="button">X</button>
         </form>
