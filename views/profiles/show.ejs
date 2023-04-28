@@ -13,9 +13,10 @@
     <% }) %>
   <img id="lorelai" src="/images/lorelaicoffee.gif" alt="Lorelai Needs Coffee">
   <a href="/profiles/index"><button class="button">Profiles</button></a>
-  <% } else {  %>
+  <% } else { %>
       <h2><%= profile.name  %> Has No Favorite Cafes</h2>
       <img id="nocoffee" src="/images/nocoffeeforyou.gif" alt="No Coffee For You">
-      <%   }   %>
+      <a href="/profiles/index"><button class="button">Profiles</button></a>
+  <% } %>
 </main>
 <%- include('../partials/footer') %>
