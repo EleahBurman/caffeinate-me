@@ -28,6 +28,7 @@ Planning materials and original wireframes can be found [here](https://trello.co
 
 ## Technologies Used
 * Mongoose
+* MongoDB
 * Node.js
 * Express
 * JavaScript
