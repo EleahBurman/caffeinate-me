@@ -2,7 +2,7 @@
 
 ![Caffeinate-Me Screenshot](./public/images/ScreenshotCaffeinateMe.png)
 
-## [Use Caffeinate-Me](https://caffeinate-me.fly.dev)
+## [☕ Caffeinate-Me](https://caffeinate-me.fly.dev)
 
 ## 🏃🏻‍♀️ Getting Started
 "Caffeinate-Me" was inspired by my love of coffee.  I love going to family-owned cafes around the United States.  I drink 8 cups of coffee a day. I love speaking with fellow coffee-lovers about our love of coffee.
