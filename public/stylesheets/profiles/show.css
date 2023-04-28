@@ -150,4 +150,5 @@ main {
 #lorelai{
   border-radius:10px;
   margin-bottom: 10px;
+  max-width: 350px;
 }
