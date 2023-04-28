@@ -89,6 +89,9 @@ h2{
 .row{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: 200px;
+  margin-left: 200px;
 }
 
 .column {
@@ -134,14 +137,18 @@ main {
 .profphoto{
   border-radius:10px;
   margin-left: 10px;
+  max-width: 100px;
+  max-height: 100px;
 }
 
 #profilename{
-  margin-bottom: 8px;
+  margin-top: 0px;
 }
 
 #viewbutton{
-  margin-top: 0px;
+  margin-top: 0px; 
+  width: 120px;
+  height: 40px;
 }
 
 .snowwhite {

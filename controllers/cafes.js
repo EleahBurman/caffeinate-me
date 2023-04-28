@@ -124,6 +124,7 @@ function updateReview(req, res) {
   Cafe.findById(req.params.cafeId)
     .then(cafe => {
       const review = cafe.reviews.id(req.params.reviewId)
+      //Replaces any properties in the review that have a matching property names on req.body
       review.set(req.body)
       cafe.save()
     })
