@@ -9,6 +9,8 @@ Caffeinate-Me was inspired by my love of coffee.  I love going to family-owned c
 
 Caffeinate-Me lets you add your favorite cafes, review cafes, and edit your reviews.  You will no longer have to scroll through your notes app to remember the cafe you saw five months ago.  Caffeinate yourself as you add more to your caffeinate-me profile's favorite cafes.
 
+Planning materials and original wireframes can be found [here](https://trello.com/b/M4Np6xbo/caffeinate-me)
+
 ## Attributions
 
 * [MDN](https://www.w3schools.com/)
