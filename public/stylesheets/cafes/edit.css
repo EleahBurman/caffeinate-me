@@ -67,6 +67,7 @@ body {
 h1  {
   color: #271c14;
   text-shadow: 0 0 0.15em #f4830b;
+  font-size: 25px;
   align-items: center;
   justify-content: center;
   letter-spacing: .08rem;
@@ -76,9 +77,9 @@ h1  {
 h2{
   color: #d58317;
   text-shadow: 2px 2px 4px #000000;
+  font-size: 20px;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
   letter-spacing: .08rem;
 }
 
