@@ -132,6 +132,10 @@ main {
   width: 50px;
 }
 
+#update-review{
+  font-size: 20px;
+}
+
 .list {
   list-style: none;
   line-height: 7px;

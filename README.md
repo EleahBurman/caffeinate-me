@@ -38,5 +38,6 @@ coffee-monday-3D1v8iexqiPbq)
 - [ ] Show meet-ups that each profile is attending.
 - [ ] Let users save a bio in their profile.
 - [ ] Allow users to add photos to their reviews.
+- [ ] Allow users to edit one cafe or two cafes, and only the item(s) edited will update and the others will remain the same
 
 
