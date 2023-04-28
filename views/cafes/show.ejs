@@ -5,11 +5,11 @@
   <h1 class= "animate__animated animate__lightSpeedInLeft">☕️<%= cafe.name %>☕️</h1>
   <h2><%= cafe.location %></h2>
   <img class="needcoffee" id="needcofee" src="/images/needcoffee.gif" alt="Need Coffee">
-  <h3>Reviews</h3>
-  <div id="row">
+  <h3 id="reviews">Reviews</h3>
+  <div class="row">
     <% cafe.reviews.forEach(review => { %>
       <% if (review.reviewer) { %>
-        <div id="column">
+        <div class="column">
           <li>☕️Name: <%= review.reviewer.name %></li>
           <li>☕️Favorite Coffee: <%= review.favoriteCoffee %></li>
           <li>☕️Least Favorite Coffee: <%= review.leastCoffee %></li>
@@ -17,7 +17,7 @@
         </div>
       <% } %>
               <%# button for edit reviews %>
-      <div id="column">
+      <div class="column">
         <form id="edit-review" action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>/edit" method="GET"><button class="button">EDIT REVIEW</button>
         </form>
         <form action="/cafes/<%= cafe._id %>/reviews/<%=review._id%>?_method=DELETE" method="POST">

@@ -83,16 +83,20 @@ h2{
   letter-spacing: .08rem;
 }
 
+#reviews{
+  margin-bottom: 0px;
+}
+
 span + span {
   margin-left: 20px;
 }
 
-#row{
+.row{
   display: flex;
   flex-direction: row;
 }
 
-#column {
+.column {
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
