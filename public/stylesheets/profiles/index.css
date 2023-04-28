@@ -9,6 +9,7 @@ html {
   /* All ::after pseudo-elements */
   /* height & width will now include border & padding by default but can be overridden as needed */
   box-sizing: inherit;
+  justify-content: center;
 }
 
 body {
@@ -68,10 +69,6 @@ span + span {
   padding-right: 5px;
 }
 
-.profphoto{
-  border-radius:10px;
-}
-
 .navbar{
   color: #c4611a;
   text-shadow: 2px 2px 4px #000000;
@@ -123,6 +120,14 @@ main {
   background: #eb7725;
 }
 
+#remove {
+  width: 50px;
+}
+
+.profphoto{
+  border-radius:10px;
+}
+
 .snowwhite {
   max-width: 50%;
   height: auto;
@@ -139,8 +144,4 @@ main {
   justify-content: center;
   align-items: center;
   border-radius:10px;
-}
-
-#remove {
-  width: 50px;
 }

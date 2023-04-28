@@ -9,19 +9,32 @@ html {
   /* All ::after pseudo-elements */
   /* height & width will now include border & padding by default but can be overridden as needed */
   box-sizing: inherit;
+  justify-content: center;
 }
 
 body {
+  color: #d58317;
+  text-shadow: 2px 2px 4px #000000;
   background-image: url("/images/CoffeeBackground.png");
+  /* Use a system font, if none are available use any found sans-sarif font */
+  font-family:  'Holtwood One SC', serif;
+  margin: 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   min-height: 100%;
-  font-family:  'Holtwood One SC', serif;
-  margin: 0;
   letter-spacing: .08rem;
 }
-h1 {
+
+#profilepage {
+  transform: scale(0.8, 0.8);
+  -ms-transform: scale(0.8, 0.8); /* IE 9 */
+  -webkit-transform: scale(0.8, 0.8); /* Safari and Chrome */
+  -o-transform: scale(0.8, 0.8); /* Opera */
+  -moz-transform: scale(0.8, 0.8); /* Firefox */
+}
+
+h1  {
   color: #271c14;
   text-shadow: 0 0 0.15em #f4830b;
   align-items: center;
@@ -29,13 +42,13 @@ h1 {
   letter-spacing: .08rem;
 }
 
+
 h2{
   color: #d58317;
+  text-shadow: 2px 2px 4px #000000;
   align-items: center;
   justify-content: center;
-  text-shadow: 0 5px 15px rgba(182, 159, 159,.4);
   font-size: 16px;
-  text-shadow: 2px 2px 4px #000000;
   letter-spacing: .08rem;
 }
 
@@ -43,10 +56,23 @@ span + span {
   margin-left: 20px;
 }
 
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+  width: 120px;
+  height: 120px;
+  flex: 1;
+  padding-right: 5px;
+}
+
 .navbar{
-  background-color: rgb(182, 159, 159);
-  text-shadow: 2px 2px 4px #000000;
   color: #c4611a;
+  text-shadow: 2px 2px 4px #000000;
+  background-color: rgb(182, 159, 159);
   align-items: center;
   padding: 10px;
   min-height: 40px;
@@ -74,11 +100,36 @@ main {
   list-style:none;
 }
 
+.right {
+  margin-left: auto;
+}
+
+.button {
+  color:rgb(255, 255, 255, 0.8);
+  background: #bc5e1b;
+  font-family: 'Puritan', sans-serif;
+  font-size: 15px;
+  width: fit-content;
+  justify-content: center;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  height: 30px;
+  border-radius:10px;
+}
+
+.button:hover {
+  background: #eb7725;
+}
+
+
+#remove {
+  width: 50px;
+}
+
 .list {
   list-style: none;
   line-height: 7px;
   justify-content: center;
-  
 }
 
 .cafes {
@@ -96,44 +147,10 @@ main {
   text-shadow: 2px 2px 4px #000000;
 }
 
-h1  {
-  color: #271c14;
-  text-shadow: 0 0 0.15em #f4830b;
-  align-items: center;
-  justify-content: center;
-}
-
-h2 {
-  color: #d58317;
-  text-shadow: 2px 2px 4px #000000;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-}
-
 #profileimg{
   align-items: center;
   justify-content: center;
   border-radius:10px;
-}
-
-.button {
-  color:rgb(255, 255, 255, 0.8);
-  background: #bc5e1b;
-  font-family: 'Puritan', sans-serif;
-  font-size: 17px;
-  height: 30px;
-  width: fit-content;
-  justify-content: center;
-  text-transform: uppercase;
-  border-radius:10px;
-}
-
-.button:hover {
-  background: #eb7725;
-}
-#remove {
-  width: 50px;
 }
 
 #lorelai{
