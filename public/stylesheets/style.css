@@ -31,8 +31,7 @@ span + span {
   min-height: 40px;
   letter-spacing: .18rem;
   text-shadow: 0px;
-  font-size: 20px;
-  margin-right: 15px;
+  font-size: 25px;
 }
 
 .navwords{
@@ -44,6 +43,15 @@ span + span {
 .navwords:hover{
   color:#f59753;
   text-shadow: 2px 2px 4px #000000;
+}
+
+#logout-btn{
+  position: relative;
+  float: right;
+  font-size: 25px;
+  margin-right: 10px;
+  justify-content: center;
+  margin-top: 0.3em;
 }
 
 main {
@@ -75,10 +83,4 @@ main {
 
 #remove {
   width: 50px;
-}
-
-#logout-btn{
-  position: relative;
-  float: right;
-
 }

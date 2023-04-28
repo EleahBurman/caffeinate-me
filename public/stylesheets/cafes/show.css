@@ -23,6 +23,38 @@ body {
   letter-spacing: .08rem;
 }
 
+.navbar{
+  color: #c4611a;
+  text-shadow: 2px 2px 4px #000000;
+  background-color: rgb(182, 159, 159);
+  align-items: center;
+  padding: 10px;
+  min-height: 40px;
+  letter-spacing: .18rem;
+  text-shadow: 0px;
+  font-size: 25px;
+}
+
+.navwords{
+  color: #c4611a;
+  text-shadow: 2px 2px 4px #000000;
+  margin-left: 10px;
+}
+
+.navwords:hover{
+  color:#f59753;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+#logout-btn{
+  position: relative;
+  float: right;
+  font-size: 25px;
+  margin-right: 10px;
+  justify-content: center;
+  margin-top: 0.3em;
+}
+
 #profilepage {
   transform: scale(0.8, 0.8);
   -ms-transform: scale(0.8, 0.8); /* IE 9 */
@@ -62,29 +94,6 @@ span + span {
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
-}
-
-.navbar{
-  color: #c4611a;
-  text-shadow: 2px 2px 4px #000000;
-  background-color: rgb(182, 159, 159);
-  align-items: center;
-  padding: 10px;
-  min-height: 40px;
-  letter-spacing: .18rem;
-  text-shadow: 0px;
-  font-size: 20px;
-}
-
-.navwords{
-  color: #c4611a;
-  text-shadow: 2px 2px 4px #000000;
-  margin-left: 10px;
-}
-
-.navwords:hover{
-  color:#f59753;
-  text-shadow: 2px 2px 4px #000000;
 }
 
 main {
@@ -155,8 +164,9 @@ main {
   width: 50px;
 }
 
-#remove {
-  width: 50px;
+#review{
+  display: block;
+  text-shadow: 4px 4px 9px #000000;
 }
 
 .needcoffee{

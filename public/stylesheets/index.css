@@ -21,25 +21,16 @@ body {
   letter-spacing: .08rem;
 }
 
-h1{
-  color: rgb(182, 159, 159);
-  font-size: 60px;
-  letter-spacing: .08rem;
-}
-span + span {
-  margin-left: 20px;
-}
-
 .navbar{
   color: #c4611a;
-  background-color: rgb(182, 159, 159);
   text-shadow: 2px 2px 4px #000000;
+  background-color: rgb(182, 159, 159);
   align-items: center;
   padding: 10px;
   min-height: 40px;
   letter-spacing: .18rem;
   text-shadow: 0px;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .navwords{
@@ -51,6 +42,24 @@ span + span {
 .navwords:hover{
   color:#f59753;
   text-shadow: 2px 2px 4px #000000;
+}
+
+#logout-btn{
+  position: relative;
+  float: right;
+  font-size: 25px;
+  margin-right: 10px;
+  justify-content: center;
+  margin-top: 0.3em;
+}
+
+h1{
+  color: rgb(182, 159, 159);
+  font-size: 60px;
+  letter-spacing: .08rem;
+}
+span + span {
+  margin-left: 20px;
 }
 
 main {
