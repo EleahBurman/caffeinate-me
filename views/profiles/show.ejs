@@ -5,7 +5,7 @@
   <h1 class= "animate__animated animate__lightSpeedInLeft">☕️<%= profile.name %>'s Profile☕️</h1>
   <img id="profileimg" src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
   <% if (profile.cafe) { %>
-    <h2><%= profile.name  %>'s Favorite Cafes</h2>
+    <h2><%= profile.name %>'s Favorite Cafes</h2>
     <% profile.cafes.forEach(cafe => { %>
       <ul>
         <li class="list">☕️<a class="cafes" href="/cafes/<%= cafe._id%>"><%= cafe.name%></a></li>
@@ -14,7 +14,7 @@
   <img id="lorelai" src="/images/lorelaicoffee.gif" alt="Lorelai Needs Coffee">
   <a href="/profiles/index"><button class="button">Profiles</button></a>
   <% } else { %>
-      <h2><%= profile.name  %> Has No Favorite Cafes</h2>
+      <h2><%= profile.name %> Has No Favorite Cafes</h2>
       <img id="nocoffee" src="/images/nocoffeeforyou.gif" alt="No Coffee For You">
       <a href="/profiles/index"><button class="button">Profiles</button></a>
   <% } %>

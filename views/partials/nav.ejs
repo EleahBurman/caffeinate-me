@@ -5,10 +5,14 @@
 <body>
   <nav class="navbar">
     <% if (user) { %>
-      <span><a class="navwords" href="/profiles">Profiles</a></span>
-      <span><a class="navwords" href="/cafes">Cafes</a></span>
+      <span>
+        <a class="navwords" href="/profiles">Profiles</a>
+      </span>
+      <span>
+        <a class="navwords" href="/cafes">Cafes</a>
+      </span>
       <a href="/auth/logout" class="right">
-      <button class="button" id="logout-btn" type="submit">Log Out</button>
+        <button class="button" id="logout-btn" type="submit">Log Out</button>
       </a>
     <% } else { %>
         <div 
