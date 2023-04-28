@@ -8,7 +8,7 @@ function index(req, res) {
   .then(cafes => {
     res.render('cafes/index', {
       cafes: cafes,
-      title: 'All Cafes'
+      title: 'All Cafes',
     })
   })
   .catch(err => {

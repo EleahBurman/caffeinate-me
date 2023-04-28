@@ -46,5 +46,6 @@ Planning materials and original wireframes can be found [here](https://trello.co
 - [ ] Show meet-ups that each profile is attending.
 - [ ] Let users save a bio in their profile.
 - [ ] Allow users to add photos to their reviews.
+- [ ] Create a different page when a user has not logged cafes into the database.
 
 
