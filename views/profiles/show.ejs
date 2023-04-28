@@ -4,7 +4,7 @@
 <main>
   <h1 class= "animate__animated animate__lightSpeedInLeft">☕️<%= profile.name %>'s Profile☕️</h1>
   <img id="profileimg" src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
-    <h2><%= profile.name  %>'s Favorite Cafes</h2>
+    <h2>☕️<%= profile.name  %>'s Favorite Cafes☕️</h2>
     <% profile.cafes.forEach(cafe => { %>
       <ul>
         <li class="list">☕️<a class="cafes" href="/cafes/<%= cafe._id%>"><%= cafe.name%></a></li>

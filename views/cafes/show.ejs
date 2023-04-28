@@ -3,9 +3,9 @@
 <%- include('../partials/nav') %>
 <main>
   <h1 class= "animate__animated animate__lightSpeedInLeft">☕️<%= cafe.name %>☕️</h1>
-  <h2><%= cafe.location %></h2>
+  <h2>☕️<%= cafe.location %>☕️</h2>
   <img class="needcoffee" id="needcofee" src="/images/needcoffee.gif" alt="Need Coffee">
-  <h3 id="reviews">Reviews</h3>
+  <h3 id="reviews">☕️Reviews☕️</h3>
   <div class="row">
     <% cafe.reviews.forEach(review => { %>
       <% if (review.reviewer) { %>
