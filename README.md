@@ -7,7 +7,7 @@
 ## Getting Started
 "Caffeinate-Me" was inspired by my love of coffee.  I love going to family-owned cafes around the United States.  I drink 8 cups of coffee a day. I love speaking with fellow coffee-lovers about our love of coffee.
 
-"Caffeinate-Me" lets you add your favorite cafes, review cafes, and edit your reviews.  You will no longer have to scroll through your notes app to remember the cafe you saw five months ago.  Caffeinate yourself as you add more to your caffeinate-me profile's favorite cafes.
+"Caffeinate-Me" lets you add your favorite cafes, review cafes, and edit your reviews.  You will no longer have to scroll through your notes app to remember the cafe you saw five months ago.  Caffeinate yourself as you add more cafes to "Caffeinate-Me!"
 
 Planning materials and original wireframes can be found [here](https://trello.com/b/M4Np6xbo/caffeinate-me)
 
