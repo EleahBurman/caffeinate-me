@@ -80,7 +80,7 @@ h1  {
 h2{
   color: #d58317;
   text-shadow: 2px 2px 4px #000000;
-  font-size: 20px;
+  font-size: 15px;
   align-items: center;
   justify-content: center;
   letter-spacing: .08rem;
@@ -133,6 +133,7 @@ main {
 
 .profphoto{
   border-radius:10px;
+  margin-left: 10px;
 }
 
 #profilename{
