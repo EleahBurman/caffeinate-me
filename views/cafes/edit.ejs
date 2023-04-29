@@ -5,12 +5,18 @@
   <h1 class= "animate__animated animate__lightSpeedInLeft">☕️Edit Review☕️</h1>
   <br></br>
   <form id="update-review" action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>?_method=PUT" method="POST">
-    <label for="favoriteCoffee">Favorite Coffee:</label>
-    <input type="text" class="textbox" name="favoriteCoffee" id="favoriteCoffee"></input>
-    <label for="leastCoffee">Least Favorite Coffee:</label>
-    <input type="text" class="textbox" name="leastCoffee" id="leastCoffee"></input>
-    <label for="priceLatte">Price of Latte: $</label>
-    <input type="number" class="textbox" name="priceLatte" id="priceLatte"></input>
+    <% cafe.reviews.forEach(review => { %>
+      <% if (review.reviewer) { %>
+        <label for="favoriteCoffee">Favorite Coffee:</label>
+        <input type="text" class="textbox" name="favoriteCoffee" id="favoriteCoffee" value="<%= review.favoriteCoffee %>"><%= review.favoriteCoffee %></input> 
+        <label for="leastCoffee">Least Favorite Coffee:</label>
+        <input type="text" class="textbox" name="leastCoffee" id="leastCoffee" value="<%= review.leastCoffee %>"><%= review.leastCoffee %></input>
+        <label for="priceLatte">Price of Latte: $</label>
+        <input type="number" class="textbox" name="priceLatte" id="priceLatte" value="<%= review.priceLatte %>"><%= review.priceLatte %></input>
+      <% } else { %>
+          <h2>You did not make this review.</h2>
+      <% } %>
+    <% }) %>
     <button class="button" type="submit">Save Review</button>
   </form>
   <br></br>
