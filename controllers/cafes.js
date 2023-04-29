@@ -34,6 +34,14 @@ function create(req, res){
       .then((profile)=>{
         res.redirect(`/cafes/${cafe._id}`)
       })
+      .catch(err => {
+        console.log(err)
+        res.redirect('/cafes')
+      })
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/cafes')
     })
   })
   .catch(err => {
@@ -111,7 +119,7 @@ function editReview(req, res) {
     .catch(err => {
       console.log(err);
       res.redirect('/cafes');
-    });
+    })
 }
 
 function updateReview(req, res) {
