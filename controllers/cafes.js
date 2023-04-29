@@ -23,10 +23,6 @@ function newCafe(req, res) {
 }
 
 function create(req, res){
-  //if an empty string is added to create a cafe, delete that string
-  for (let key in req.body) {
-    if (req.body[key] === '') delete req.body[key]
-  }
   //creates a new cafe doc  with the data from the object using req.body
   Cafe.create(req.body)
   .then((cafe) => { 
