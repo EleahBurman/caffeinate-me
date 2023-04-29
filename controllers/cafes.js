@@ -17,7 +17,6 @@ function index(req, res) {
 }
 
 function newCafe(req, res) {
-  console.log('newcafe is working')
   res.render('cafes', {
     title: 'Add Cafe'
   })
