@@ -2,7 +2,6 @@ import { Cafe } from '../models/cafe.js';
 import { Profile } from '../models/profile.js';
 
 function index(req, res) {
-  console.log('index is working!')
   Cafe.find({})
   .populate('reviews')
   .then(cafes => {
