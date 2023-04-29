@@ -92,6 +92,7 @@ h2{
   flex-wrap: wrap;
   margin-right: 200px;
   margin-left: 200px;
+  max-width: 700px;
 }
 
 .column {
@@ -99,7 +100,7 @@ h2{
   width: 120px;
   height: 120px;
   flex: 1;
-  padding-right: 5px;
+  padding-right: 7px;
 }
 
 main {
@@ -121,7 +122,6 @@ main {
   width: fit-content;
   justify-content: center;
   text-transform: uppercase;
-  transition: all 0.2s ease-in-out;
   height: 30px;
   border-radius:10px;
 }
@@ -136,7 +136,7 @@ main {
 
 .profphoto{
   border-radius:10px;
-  margin-left: 10px;
+  margin-left: 12 px;
   max-width: 100px;
   max-height: 100px;
 }
