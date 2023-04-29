@@ -68,6 +68,7 @@ function show(req, res){
 function update(req, res) {
   //the id is called via the parameters
     Cafe.findById(req.params.id)
+    .populate('reviews.reviewer')
     .then(cafe => {
       console.log('cafe', cafe)
       //updates the document in the body
@@ -107,6 +108,7 @@ function createReview(req, res) {
 
 function editReview(req, res) {
   Cafe.findById(req.params.cafeId)
+    .populate('reviews.reviewer')
     .then(cafe => {
     // find the review by its id
     const review = cafe.reviews.id(req.params.reviewId)
