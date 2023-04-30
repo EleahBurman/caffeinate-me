@@ -38,14 +38,12 @@ letter-spacing: .08rem;
 
 .navwords{
   color: #518453;
-  text-shadow: 2px 2px 1px #f2f0f0;
   text-decoration: none;
   margin-left: 10px;
 }
 
 .navwords:hover{
-  color:#facdad;
-  text-shadow: 2px 2px 1px #f2f0f0;
+  color:#fe8e3e;
   text-decoration: none;
 
 }
