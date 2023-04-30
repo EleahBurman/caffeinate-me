@@ -124,6 +124,7 @@ main {
 }
 
 .button {
+  margin-bottom: 0;
   color:rgb(255, 255, 255, 0.8);
   background: #bc5e1b;
   font-family: 'Puritan', sans-serif;
@@ -136,6 +137,23 @@ main {
 }
 
 .button:hover {
+  background: #fe8e3e;
+}
+
+.friendbutton {
+  margin-top: 0;
+  color:rgb(255, 255, 255, 0.8);
+  background: #bc5e1b;
+  font-family: 'Puritan', sans-serif;
+  font-size: 12px;
+  width: fit-content;
+  justify-content: center;
+  text-transform: uppercase;
+  height: 20px;
+  border-radius:10px;
+}
+
+.friendbutton:hover {
   background: #fe8e3e;
 }
 
