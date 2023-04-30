@@ -23,6 +23,7 @@ function newCafe(req, res) {
 }
 
 function create(req, res){
+  req.body.owner = req.user.profile._id
   //creates a new cafe doc  with the data from the object using req.body
   Cafe.create(req.body)
   .then((cafe) => { 
@@ -52,7 +53,10 @@ function create(req, res){
 
 function show(req, res){
   Cafe.findById(req.params.cafeId)
-  .populate('reviews.reviewer')
+  .populate([
+    {path: 'owner'},
+    {path: 'reviews.reviewer'}
+  ])
   .then(cafe=> {
     res.render('cafes/show', {
       title: 'Cafe Detail',
@@ -70,26 +74,28 @@ function update(req, res) {
     Cafe.findById(req.params.id)
     .populate('reviews.reviewer')
     .then(cafe => {
-      console.log('cafe', cafe)
+      if (cafe.owner.equals(req.user.profile._id)) {
       //updates the document in the body
         cafe.updateOne(req.body)
           .then(() => {
             res.redirect(`/cafes/${cafe._id}`)
-          })
-          
-    })
-    .catch(err => {
-      console.log(err)
-      res.redirect('/cafes')
-    })
+          })     
+    } else {
+      throw new Error ('You did not create this review. Do not pass go. Do not collect $200.')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/sneakers')
+  })
 }
 
 function createReview(req, res) {
   Cafe.findById(req.params.cafeId)
     .then((cafe) => {
       // store reviewer's objectId
-      req.body.reviewer = req.user.profile;
-      cafe.reviews.push(req.body);
+      req.body.reviewer = req.user.profile._id
+      cafe.reviews.push(req.body)
       // save the changes to the cafe document and return the promise
       cafe.save()
       .then(() => {
@@ -108,15 +114,18 @@ function createReview(req, res) {
 
 function editReview(req, res) {
   Cafe.findById(req.params.cafeId)
-    .populate('reviews.reviewer')
     .then(cafe => {
     // find the review by its id
     const review = cafe.reviews.id(req.params.reviewId)
+    if(review.reviewer.equals(req.user.profile._id)){
       res.render('cafes/edit', {
         review: review,
         cafe: cafe,
         title: 'Edit Cafe Review'
       })
+    } else {
+      throw new Error('You did not create this review. Do not pass go. Do not collect $200.')
+    }
     })
     .catch(err => {
       console.log(err);
@@ -128,10 +137,10 @@ function updateReview(req, res) {
   Cafe.findById(req.params.cafeId)
     .then(cafe => {
       const review = cafe.reviews.id(req.params.reviewId)
+      if (review.reviewer.equals(req.user.profile._id)) {
       //Replaces any properties in the review that have a matching property names on req.body
       review.set(req.body)
       cafe.save()
-    })
       .then(() => {
         res.redirect(`/cafes/${cafe._id}`)
       })
@@ -139,25 +148,33 @@ function updateReview(req, res) {
         console.log(err)        
         res.redirect('/cafes')
       })
-    .catch(err => {
-      console.log(err)
-      res.redirect('/cafes')
-    })
-  }
+    } else {
+      throw new Error ('You did not create this review. Do not pass go. Do not collect $200.')
+    }
+  })
+  .catch(err => {
+  console.log(err)
+  res.redirect('/cafes')
+  })
+}
 
 function deleteReview(req, res) {
   Cafe.findById(req.params.cafeId)
   .then(cafe => {
-    cafe.reviews.remove(req.params.reviewId)
-    // movie.reviews.id(req.params.reviewId).deleteOne()
-    cafe.save()
-    .then(() => {
-      res.redirect(`/cafes/${cafe._id}`)
-    })
-    .catch(err => {
-      console.log(err)
-      res.redirect('/cafes')
-    })
+    const review = cafe.reviews.id(req.params.reviewId)
+    if (review.reviewer.equals(req.user.profile._id)) {
+      cafe.reviews.remove(review)
+      cafe.save()
+      .then(() => {
+        res.redirect(`/cafes/${cafe._id}`)
+      })
+      .catch(err => {
+        console.log(err)
+        res.redirect('/cafes')
+      })
+    } else {
+      throw new Error ('You did not create this review. Do not pass go. Do not collect $200.')
+    }
   })
   .catch(err => {
     console.log(err)
@@ -168,7 +185,14 @@ function deleteReview(req, res) {
 function deleteCafe(req, res){
     Cafe.findByIdAndDelete(req.params.cafeId)
     .then(cafe =>{
-      res.redirect('/cafes')
+      if(cafe.owner.equals(req.user.profile._id)) {
+        cafe.deleteOne()
+        .then(() => {
+          res.redirect('/cafes')
+        })
+      } else {
+        throw new Error ('You did not create this review. Do not pass go. Do not collect $200.')
+      }
     })
     .catch(err => {
       console.log(err)

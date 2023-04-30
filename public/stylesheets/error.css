@@ -14,7 +14,7 @@ html {
 body {
   color: #d58317;
   text-shadow: 4px 4px 9px #000000;
-  background-image: url("/images/CoffeeBackground.png");
+  background-color: #271c14;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -25,7 +25,6 @@ body {
 
 .navbar{
   color: #c4611a;
-  text-shadow: 2px 2px 4px #000000;
   background-color: rgb(182, 159, 159);
   align-items: center;
   padding: 10px;
@@ -37,13 +36,11 @@ body {
 
 .navwords{
   color: #c4611a;
-  text-shadow: 2px 2px 4px #000000;
   margin-left: 10px;
 }
 
 .navwords:hover{
   color:#f59753;
-  text-shadow: 2px 2px 4px #000000;
 }
 
 #logout-btn{
