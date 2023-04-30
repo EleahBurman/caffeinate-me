@@ -7,7 +7,8 @@ function index(req, res) {
     .then(userProfile => {
       res.render('profiles/index', {
         title: 'All Profiles',
-        profiles,
+        profiles: profiles,
+        nav: 'profiles',
         userProfile
       })
     })

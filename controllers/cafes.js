@@ -8,6 +8,7 @@ function index(req, res) {
     res.render('cafes/index', {
       cafes: cafes,
       title: 'All Cafes',
+      nav: 'cafes'
     })
   })
   .catch(err => {
@@ -18,7 +19,8 @@ function index(req, res) {
 
 function newCafe(req, res) {
   res.render('cafes', {
-    title: 'Add Cafe'
+    title: 'Add Cafe',
+    nav: 'cafes'
   })
 }
 
