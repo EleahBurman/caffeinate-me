@@ -20,8 +20,7 @@ body {
 }
 
 .navbar{
-  color: #ffbd8f;
-  background-color: rgb(122, 222, 145);
+  background-color: #ffbd8f;
   align-items: center;
   padding: 10px;
   min-height: 40px;
