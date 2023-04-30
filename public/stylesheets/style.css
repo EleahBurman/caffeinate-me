@@ -20,7 +20,7 @@ body {
 }
 
 .navbar{
-  background-color: #ffbd8f;
+  background-color: #d3e1e9 ;
   align-items: center;
   padding: 10px;
   min-height: 40px;
@@ -30,7 +30,7 @@ body {
 }
 
 .navwords{
-  color: #047e5e;
+  color: #cdb189;
   text-shadow: 2px 2px 1px #f2f0f0;
   text-decoration: none;
   margin-left: 10px;

@@ -15,7 +15,7 @@ html {
 body {
 color: #B99F88;
 text-shadow: 2px 2px 4px #000000;
-background-color: #B99F88;
+background-color:#271c14;
 /* Use a system font, if none are available use any found sans-sarif font */
 font-family:  'Holtwood One SC', serif;
 margin: 0;
@@ -27,8 +27,7 @@ letter-spacing: .08rem;
 }
 
 .navbar{
-
-  background-color:#047e5e;
+  background-color: #d3e1e9 ;
   align-items: center;
   padding: 10px;
   min-height: 40px;
@@ -38,7 +37,7 @@ letter-spacing: .08rem;
 }
 
 .navwords{
-  color:  #ffbd8f;
+  color: #518453;
   text-shadow: 2px 2px 1px #f2f0f0;
   text-decoration: none;
   margin-left: 10px;
@@ -71,8 +70,7 @@ transform: scale(0.8, 0.8);
 }
 
 h1  {
-  color: #f4830b;
-  text-shadow: 2px 2px 1px #f2f0f0;
+  color: #66b49c;
   font-size: 35px;
   align-items: center;
   justify-content: center;
@@ -80,8 +78,7 @@ h1  {
 }
 
 h2{
-  color: #d58317;
-  text-shadow: 2px 2px 1px #f2f0f0;
+  color: #66b49c;
   font-size: 15px;
   align-items: center;
   justify-content: center;
@@ -101,7 +98,7 @@ margin-left: auto;
 
 .button {
 color:rgb(255, 255, 255, 0.8);
-background: #bc5e1b;
+background: #a6885d;
 font-family: 'Puritan', sans-serif;
 font-size: 15px;
 width: fit-content;
