@@ -20,8 +20,8 @@ body {
 }
 
 .navbar{
-  color: #271c14;
-  background-color: rgb(182, 159, 159);
+  color: #ffbd8f;
+  background-color: rgb(122, 222, 145);
   align-items: center;
   padding: 10px;
   min-height: 40px;
@@ -31,14 +31,14 @@ body {
 }
 
 .navwords{
-  color: #271c14;
+  color: #047e5e;
   text-shadow: 2px 2px 1px #f2f0f0;
   text-decoration: none;
   margin-left: 10px;
 }
 
 .navwords:hover{
-  color:#1621b2;
+  color:#7dbfaa;
   text-shadow: 2px 2px 1px #f2f0f0;
   text-decoration: none;
 
