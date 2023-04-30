@@ -13,9 +13,9 @@ html {
 }
 
 body {
-color: #d58317;
+color: #ffbd8f;
 text-shadow: 2px 2px 4px #000000;
-background-color: #000000;
+background-color: #B99F88;
 /* Use a system font, if none are available use any found sans-sarif font */
 font-family:  'Holtwood One SC', serif;
 margin: 0;
@@ -28,7 +28,7 @@ letter-spacing: .08rem;
 
 .navbar{
 
-  background-color: #ffbd8f;
+  background-color:#047e5e;
   align-items: center;
   padding: 10px;
   min-height: 40px;
@@ -38,14 +38,14 @@ letter-spacing: .08rem;
 }
 
 .navwords{
-  color: #047e5e;
+  color:  #f9a569;
   text-shadow: 2px 2px 1px #f2f0f0;
   text-decoration: none;
   margin-left: 10px;
 }
 
 .navwords:hover{
-  color:#7dbfaa;
+  color:#facdad;
   text-shadow: 2px 2px 1px #f2f0f0;
   text-decoration: none;
 

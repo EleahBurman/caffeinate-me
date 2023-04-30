@@ -57,11 +57,12 @@ function show(req, res){
   Cafe.findById(req.params.cafeId)
   .populate([
     {path: 'owner',
-    model: 'Cafe'},
+    model: 'Profile'},
     {path: 'reviews.reviewer',
-    model: 'Cafe'}
+    model: 'Profile'}
   ])
   .then(cafe=> {
+    console.log(cafe, 'cafe dont forget to remove')
     res.render('cafes/show', {
       title: 'Cafe Detail',
       cafe: cafe,

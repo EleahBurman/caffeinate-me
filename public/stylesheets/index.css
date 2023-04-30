@@ -9,20 +9,26 @@ html {
   /* All ::after pseudo-elements */
   /* height & width will now include border & padding by default but can be overridden as needed */
   box-sizing: inherit;
+  justify-content: center;
 }
 
 body {
-  color: #d58317;
-  background-color: #271c14;
-  text-shadow: 0 5px 15px rgba(182, 159, 159,.4);
-  /* Use a system font, if none are available use any found sans-sarif font */
-  font-family:  'Holtwood One SC', serif;
-  margin: 0;
-  letter-spacing: .08rem;
+color: #B99F88;
+text-shadow: 2px 2px 4px #000000;
+background-color: #B99F88;
+/* Use a system font, if none are available use any found sans-sarif font */
+font-family:  'Holtwood One SC', serif;
+margin: 0;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+min-height: 100%;
+letter-spacing: .08rem;
 }
 
 .navbar{
-  background-color: #ffbd8f;
+
+  background-color:#047e5e;
   align-items: center;
   padding: 10px;
   min-height: 40px;
@@ -32,14 +38,14 @@ body {
 }
 
 .navwords{
-  color: #047e5e;
+  color:  #ffbd8f;
   text-shadow: 2px 2px 1px #f2f0f0;
   text-decoration: none;
   margin-left: 10px;
 }
 
 .navwords:hover{
-  color:#7dbfaa;
+  color:#facdad;
   text-shadow: 2px 2px 1px #f2f0f0;
   text-decoration: none;
 
@@ -56,37 +62,74 @@ body {
   justify-content: center;
 }
 
-h1{
-  color: #ffbd8f;
-  font-size: 60px;
+#profilepage {
+transform: scale(0.8, 0.8);
+-ms-transform: scale(0.8, 0.8); /* IE 9 */
+-webkit-transform: scale(0.8, 0.8); /* Safari and Chrome */
+-o-transform: scale(0.8, 0.8); /* Opera */
+-moz-transform: scale(0.8, 0.8); /* Firefox */
+}
+
+h1  {
+  color: #f4830b;
+  text-shadow: 2px 2px 1px #f2f0f0;
+  font-size: 35px;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: .08rem;
+}
+
+h2{
+  color: #d58317;
+  text-shadow: 2px 2px 1px #f2f0f0;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
   letter-spacing: .08rem;
 }
 
 main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
 }
 
 .right {
-  margin-left: auto;
+margin-left: auto;
 }
 
 .button {
-  color:rgb(255, 255, 255, 0.8);
-  background: #bc5e1b;
-  font-family: 'Puritan', sans-serif;
-  font-size: 17px;
-  height: 30px;
-  width: fit-content;
-  justify-content: center;
-  text-transform: uppercase;
-  border-radius:10px;
+color:rgb(255, 255, 255, 0.8);
+background: #bc5e1b;
+font-family: 'Puritan', sans-serif;
+font-size: 15px;
+width: fit-content;
+justify-content: center;
+text-transform: uppercase;
+transition: all 0.2s ease-in-out;
+height: 30px;
+border-radius:10px;
 }
 
 .button:hover {
-  background: #fe8e3e;
+background: #fe8e3e;
+}
+
+#remove {
+width: 50px;
+}
+
+.textbox {
+  width: 140px; 
+  height: 20px;
+  border-radius:10px;
+}
+
+.namelocation {
+  color: #d58317;
+  font-size: 20px;
+  letter-spacing: .08rem;
 }
 
 #remove {

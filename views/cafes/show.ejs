@@ -19,17 +19,21 @@
         </div>
       <% } %>
               <%# button for edit reviews %>
-      <div class="column">
-        <div class="marginbottom">
-          <form action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>/edit" method="GET">
+        <%# look at taco cat to reference if else statement to as a user who is author to review render or delete can do if populated reviewer._id otherwise something to do with reviewer property look at taco cat console.log reviewer and see properties%>
+        
+      <% if(review.reviewer.equals(user?.profile._id)) { %>
+        <div class="column">
+          <div class="marginbottom">
+            <form action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>/edit" method="GET">
             <button class="button" id="edit-review">EDIT REVIEW</button>
+            </form>
+          </div>
+          <form action="/cafes/<%= cafe._id %>/reviews/<%=review._id%>?_method=DELETE" method="POST">
+          <button class="button">X</button>
           </form>
         </div>
-        <form action="/cafes/<%= cafe._id %>/reviews/<%=review._id%>?_method=DELETE" method="POST">
-          <button class="button">X</button>
-        </form>
-      </div>
-      <% }) %>
+      <% } %>
+    <% }) %>
   </div>
   <div id="review">
     <form 
