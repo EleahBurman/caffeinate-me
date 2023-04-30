@@ -25,6 +25,7 @@ function index(req, res) {
 
 function show(req, res) {
   Profile.findById(req.params.profileId)
+  .populate('cafes')
   .then(profile => {
     res.render('profiles/show', {
       // Set the title of the page to the profile name
