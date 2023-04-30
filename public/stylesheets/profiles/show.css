@@ -15,7 +15,7 @@ html {
 body {
   color: #d58317;
   text-shadow: 2px 2px 4px #000000;
-  background-color: #271c14;
+  background-color: #000000;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family:  'Holtwood One SC', serif;
   margin: 0;

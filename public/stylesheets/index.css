@@ -12,8 +12,8 @@ html {
 }
 
 body {
-  color: rgb(182, 159, 159);
-  background-color: #271c14;
+  color: #d58317;
+  background-color: #000000;
   text-shadow: 0 5px 15px rgba(182, 159, 159,.4);
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family:  'Holtwood One SC', serif;
@@ -57,7 +57,7 @@ body {
 }
 
 h1{
-  color: rgb(182, 159, 159);
+  color: #ffbd8f;
   font-size: 60px;
   letter-spacing: .08rem;
 }
