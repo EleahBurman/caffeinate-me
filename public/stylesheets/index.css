@@ -14,17 +14,15 @@ html {
 body {
   color: rgb(182, 159, 159);
   background-color: #271c14;
-  text-shadow: 0 5px 15px rgba(182, 159, 159,.4);
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family:  'Holtwood One SC', serif;
   margin: 0;
-  letter-spacing: .08rem;
 }
 
 .navbar{
   color: #c4611a;
   text-shadow: 2px 2px 4px #000000;
-  background-color: rgb(182, 159, 159);
+  background-color: #ffbd8f;
   align-items: center;
   padding: 10px;
   min-height: 40px;
@@ -34,14 +32,16 @@ body {
 }
 
 .navwords{
-  color: #c4611a;
+  color: #017e5e;
   text-shadow: 2px 2px 4px #000000;
   margin-left: 10px;
+  text-decoration: none;
 }
 
 .navwords:hover{
-  color:#f59753;
-  text-shadow: 2px 2px 4px #000000;
+  color: #7dbfaa;
+  text-shadow: 2px 2px 1px #000000;
+  text-decoration: none;
 }
 
 #logout-btn{
@@ -52,12 +52,6 @@ body {
   margin-right: 10px;
   margin-top: 5px;
   justify-content: center;
-}
-
-h1{
-  color: rgb(182, 159, 159);
-  font-size: 60px;
-  letter-spacing: .08rem;
 }
 
 main {
@@ -73,7 +67,7 @@ main {
 
 .button {
   color:rgb(255, 255, 255, 0.8);
-  background: #bc5e1b;
+  background: #017e5e;
   font-family: 'Puritan', sans-serif;
   font-size: 17px;
   height: 30px;
@@ -84,8 +78,7 @@ main {
 }
 
 .button:hover {
-  background: #eb7725;
-  font-size: 19px;
+  background: #7dbfaa;
 }
 
 #remove {
