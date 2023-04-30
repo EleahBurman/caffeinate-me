@@ -13,7 +13,7 @@ html {
 body {
   color: #d58317;
   text-shadow: 2px 2px 4px #000000;
-  background-image: url("/images/CoffeeBackground.png");
+  background-color: #271c14;
   font-family:  'Holtwood One SC', serif;
   margin: 0;
   background-repeat: no-repeat;
@@ -24,8 +24,7 @@ body {
 }
 
 .navbar{
-  color: #c4611a;
-  text-shadow: 2px 2px 4px #000000;
+  color: #271c14;
   background-color: rgb(182, 159, 159);
   align-items: center;
   padding: 10px;
@@ -36,14 +35,21 @@ body {
 }
 
 .navwords{
-  color: #c4611a;
-  text-shadow: 2px 2px 4px #000000;
+  color: #271c14;
+  text-shadow: 2px 2px 1px #f2f0f0;
+  text-decoration: none;
   margin-left: 10px;
 }
 
 .navwords:hover{
+  color:#1621b2;
+  text-shadow: 2px 2px 1px #f2f0f0;
+  text-decoration: none;
+
+}
+
+.navwords:hover{
   color:#f59753;
-  text-shadow: 2px 2px 4px #000000;
 }
 
 #logout-btn{
@@ -65,20 +71,18 @@ body {
 }
 
 h1  {
-  color: #271c14;
-  text-shadow: 0 0 0.15em #f4830b;
+  color: #f4830b;
+  text-shadow: 2px 2px 1px #f2f0f0;
   font-size: 35px;
   align-items: center;
   justify-content: center;
   letter-spacing: .08rem;
 }
 
-
 h2{
-  margin-top: 0px;
   color: #d58317;
-  font-size: 20px;
-  text-shadow: 2px 2px 4px #000000;
+  text-shadow: 2px 2px 1px #f2f0f0;
+  font-size: 15px;
   align-items: center;
   justify-content: center;
   letter-spacing: .08rem;
@@ -125,7 +129,7 @@ main {
 }
 
 .button:hover {
-  background: #eb7725;
+  background: #fe8e3e;
 }
 
 #remove {
@@ -176,10 +180,20 @@ main {
 .marginbottom{
   margin-bottom: 5px;
 }
-.needcoffee{
-  border-radius:10px;
+
+.meryl{
+  margin-top: 20px;
+  max-width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
 }
 
-#needcoffee {
-  transform: 50%;
+#meryl {
+  display: flex;
+  max-width: 50%;
+  vertical-align: center;
+  border-radius:10px;
 }

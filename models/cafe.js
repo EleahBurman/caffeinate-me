@@ -13,6 +13,7 @@ const cafeSchema = new Schema({
   name: String,
   location: String,
   reviews: [reviewSchema],
+  owner: {type: Schema.Types.ObjectId, ref: "Profile"},
 }, {
   timestamps: true
 })

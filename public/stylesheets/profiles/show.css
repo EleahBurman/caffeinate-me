@@ -15,7 +15,7 @@ html {
 body {
   color: #d58317;
   text-shadow: 2px 2px 4px #000000;
-  background-image: url("/images/CoffeeBackground.png");
+  background-color: #271c14;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family:  'Holtwood One SC', serif;
   margin: 0;
@@ -27,8 +27,7 @@ body {
 }
 
 .navbar{
-  color: #c4611a;
-  text-shadow: 2px 2px 4px #000000;
+  color: #271c14;
   background-color: rgb(182, 159, 159);
   align-items: center;
   padding: 10px;
@@ -39,16 +38,18 @@ body {
 }
 
 .navwords{
-  color: #c4611a;
-  text-shadow: 2px 2px 4px #000000;
+  color: #271c14;
+  text-shadow: 2px 2px 1px #f2f0f0;
+  text-decoration: none;
   margin-left: 10px;
 }
 
 .navwords:hover{
-  color:#f59753;
-  text-shadow: 2px 2px 4px #000000;
-}
+  color:#1621b2;
+  text-shadow: 2px 2px 1px #f2f0f0;
+  text-decoration: none;
 
+}
 #logout-btn{
   font-family: 'Puritan', sans-serif;
   position: relative;
@@ -68,19 +69,18 @@ body {
 }
 
 h1  {
-  color: #271c14;
-  text-shadow: 0 0 0.15em #f4830b;
+  color: #f4830b;
+  text-shadow: 2px 2px 1px #f2f0f0;
   font-size: 35px;
   align-items: center;
   justify-content: center;
   letter-spacing: .08rem;
 }
 
-
 h2{
   color: #d58317;
-  text-shadow: 2px 2px 4px #000000;
-  font-size: 20px;
+  text-shadow: 2px 2px 1px #f2f0f0;
+  font-size: 15px;
   align-items: center;
   justify-content: center;
   letter-spacing: .08rem;
@@ -112,7 +112,7 @@ main {
 }
 
 .button:hover {
-  background: #eb7725;
+  background: #fe8e3e;
 }
 
 

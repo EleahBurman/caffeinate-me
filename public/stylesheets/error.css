@@ -14,7 +14,7 @@ html {
 body {
   color: #d58317;
   text-shadow: 4px 4px 9px #000000;
-  background-image: url("/images/CoffeeBackground.png");
+  background-color: #271c14;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -24,8 +24,7 @@ body {
 }
 
 .navbar{
-  color: #c4611a;
-  text-shadow: 2px 2px 4px #000000;
+  color: #271c14;
   background-color: rgb(182, 159, 159);
   align-items: center;
   padding: 10px;
@@ -36,14 +35,17 @@ body {
 }
 
 .navwords{
-  color: #c4611a;
-  text-shadow: 2px 2px 4px #000000;
+  color: #271c14;
+  text-shadow: 2px 2px 1px #f2f0f0;
+  text-decoration: none;
   margin-left: 10px;
 }
 
 .navwords:hover{
-  color:#f59753;
-  text-shadow: 2px 2px 4px #000000;
+  color:#1621b2;
+  text-shadow: 2px 2px 1px #f2f0f0;
+  text-decoration: none;
+
 }
 
 #logout-btn{
@@ -56,21 +58,20 @@ body {
   justify-content: center;
 }
 
-h1 {
-  color: #271c14;
-  text-shadow: 0 0 0.15em #f4830b;
-  font-size: 35px;
+h1  {
   align-items: center;
   justify-content: center;
+  color: #f4830b;
+  font-size: 20px;
 }
 
 h2{
   color: #d58317;
-  text-shadow: 2px 2px 4px #000000;
-  font-size: 20px;
+  text-shadow: 2px 2px 1px #f2f0f0;
+  font-size: 15px;
   align-items: center;
   justify-content: center;
-  text-shadow: 0 5px 15px rgba(182, 159, 159,.4);
+  letter-spacing: .08rem;
 }
 
 main {
@@ -86,21 +87,6 @@ main {
   line-height: 7px;
   justify-content: center;
   
-}
-
-h1  {
-  align-items: center;
-  justify-content: center;
-  color: #271c14;
-  text-shadow: 0 0 0.15em #f4830b;
-}
-
-h2 {
-  align-items: center;
-  justify-content: center;
-  font-size: medium;
-  color: #d58317;
-  text-shadow: 2px 2px 4px #000000;
 }
 
 .button {
