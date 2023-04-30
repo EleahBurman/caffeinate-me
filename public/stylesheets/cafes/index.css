@@ -130,20 +130,3 @@ width: 50px;
 #remove {
   width: 50px;
 }
-
-.meryl{
-  margin-top: 20px;
-  max-width: 50%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  vertical-align: center;
-}
-
-#meryl {
-  display: flex;
-  max-width: 50%;
-  vertical-align: center;
-  border-radius:10px;
-}

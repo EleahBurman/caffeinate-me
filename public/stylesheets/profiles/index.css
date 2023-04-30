@@ -147,21 +147,3 @@ main {
   width: 120px;
   height: 40px;
 }
-
-.snowwhite {
-  max-width: 50%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  vertical-align: center;
-}
-
-#snowwhite{
-  display: flex;
-  max-width: 50%;
-  height: auto;
-  justify-content: center;
-  align-items: center;
-  border-radius:10px;
-}

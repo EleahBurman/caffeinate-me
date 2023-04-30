@@ -173,10 +173,20 @@ main {
 .marginbottom{
   margin-bottom: 5px;
 }
-.needcoffee{
-  border-radius:10px;
+
+.meryl{
+  margin-top: 20px;
+  max-width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
 }
 
-#needcoffee {
-  transform: 50%;
+#meryl {
+  display: flex;
+  max-width: 50%;
+  vertical-align: center;
+  border-radius:10px;
 }
