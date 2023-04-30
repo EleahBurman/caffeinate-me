@@ -81,7 +81,6 @@ function acceptFriend(req, res) {
   // find the logged in user's profile
   Profile.findById(req.user.profile)
   .then(userProfile => {
-    console.log(userProfile)
     // remove the friend _id from pending incoming
     userProfile.pendingIncomingInvites.remove(req.params.profileId)
     // add friend _id to friends list
