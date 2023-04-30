@@ -8,5 +8,7 @@ const router = Router ()
 router.get('/', isLoggedIn, profilesCtrl.index)
 //read a specific blog - blogs/blogid
 router.get('/:profileId', isLoggedIn, profilesCtrl.show)
-
+router.post('/requestFriend/:profileId', isLoggedIn, profilesCtrl.requestFriend)
+router.patch('/acceptFriend/:profileId', isLoggedIn, profilesCtrl.acceptFriend)
+router.delete('/removeFriend/:profileId', isLoggedIn, profilesCtrl.removeFriend)
 export { router }

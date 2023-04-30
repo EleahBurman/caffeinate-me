@@ -1,19 +1,37 @@
-
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/profiles/index.css" />
 <%- include('../partials/nav') %>
 <main>
-    <h1 class= "animate__animated animate__lightSpeedInLeft">☕️Profiles☕️</h1>
-    <div class="row">
-      <% profiles.forEach(profile => { %>
-          <img class="column profphoto" src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
-      <div class="column">
-        <h2 id="profilename"><%= profile.name %></h2>
-        <form action="/profiles/<%= profile._id %>" method="GET">
-        <button class=button id="viewbutton">View Profile</button>
-        </form>
+  <h1 class= "animate__animated animate__lightSpeedInLeft">☕️Profiles☕️</h1>
+  <div class="row" id="container">
+    <% profiles.forEach(profile => { %>
+      <div class="<%= userProfile.friends.includes(profile._id) ? 'profile-card friend' : 'profile-card' %>">
+        <img class="column profphoto" src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
+          <div class="column">
+            <h2 id="profilename"><%= profile.name %></h2>
+            <form action="/profiles/<%= profile._id %>" method="GET">
+              <button class=button id="viewbutton">View Profile</button>
+            </form>
+          </div>
+        <% if (userProfile.equals(profile._id)) { %>
+        <% } else { %>
+          <% if (userProfile.pendingOutgoingInvites.includes(profile._id)) { %>
+            <button>Pending</button>
+          <% } else if (userProfile.pendingIncomingInvites.includes(profile._id)) { %>
+            <form action="/profiles/acceptFriend/<%= profile._id %>?_method=PATCH" method="POST">
+              <button type="submit">Accept Invite</button>
+            </form>
+          <% } else if (userProfile.friends.includes(profile._id)) { %>
+            <form action="/profiles/removeFriend/<%= profile._id %>?_method=DELETE" method="POST">
+              <button type="submit">Remove Friend</button>
+            </form>
+          <% } else { %>
+            <form action="/profiles/requestFriend/<%= profile._id %>" method="POST">
+              <button type="submit">Send Request</button>
+            </form>
+          <% } %>
+        <% } %>
       </div>
-      <% }) %>
-    </div>
+    <% }) %>
+  </div>
 </main>
-<%- include('../partials/footer') %>

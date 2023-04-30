@@ -54,8 +54,10 @@ function create(req, res){
 function show(req, res){
   Cafe.findById(req.params.cafeId)
   .populate([
-    {path: 'owner'},
-    {path: 'reviews.reviewer'}
+    {path: 'owner',
+    model: 'Cafe'},
+    {path: 'reviews.reviewer',
+    model: 'Cafe'}
   ])
   .then(cafe=> {
     res.render('cafes/show', {
@@ -86,7 +88,7 @@ function update(req, res) {
   })
   .catch(err => {
     console.log(err)
-    res.redirect('/sneakers')
+    res.redirect('/cafes')
   })
 }
 
