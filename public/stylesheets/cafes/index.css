@@ -27,7 +27,7 @@ letter-spacing: .08rem;
 }
 
 .navbar{
-  color: #c4611a;
+  color: #271c14;
   background-color: rgb(182, 159, 159);
   align-items: center;
   padding: 10px;
@@ -38,12 +38,17 @@ letter-spacing: .08rem;
 }
 
 .navwords{
-  color: #c4611a;
+  color: #271c14;
+  text-shadow: 2px 2px 1px #f2f0f0;
+  text-decoration: none;
   margin-left: 10px;
 }
 
 .navwords:hover{
-  color:#f59753;
+  color:#1621b2;
+  text-shadow: 2px 2px 1px #f2f0f0;
+  text-decoration: none;
+
 }
 
 #logout-btn{
