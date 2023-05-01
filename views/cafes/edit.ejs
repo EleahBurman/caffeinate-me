@@ -2,20 +2,30 @@
 <link rel="stylesheet" href="/stylesheets/cafes/edit.css" />
 <%- include('../partials/nav') %>
 <main>
-  <h1 class= "animate__animated animate__lightSpeedInLeft">☕️Edit Review☕️</h1>
-  <br></br>
-  <form id="update-review" action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>?_method=PUT" method="POST">
-    <% cafe.reviews.forEach(review => { %>
-        <label for="favoriteCoffee">Favorite Coffee:</label>
-        <input type="text" class="textbox" name="favoriteCoffee" id="favoriteCoffee" value="<%= review.favoriteCoffee %>"></input> 
-        <label for="leastCoffee">Least Favorite Coffee:</label>
-        <input type="text" class="textbox" name="leastCoffee" id="leastCoffee" value="<%= review.leastCoffee %>"></input>
-        <label for="priceLatte">Price of Latte: $</label>
-        <input type="number" class="textbox" name="priceLatte" id="priceLatte" value="<%= review.priceLatte %>"></input>
-    <% }) %>
-    <button class="button" type="submit">Save Review</button>
-  </form>
-  <br></br>
-  <img class=darkness id="hellodarkness" src="/images/hellodarkness.png" alt="Hello Darkness">
+  <div class= "edit" id="editcafe">
+    <h1 class= "animate__animated animate__lightSpeedInLeft">☕️Edit Review☕️</h1>
+    <br></br>
+    <form id="update-review" action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>?_method=PUT" method="POST">
+      <% cafe.reviews.forEach(review => { %>
+          <label for="favoriteCoffee">Favorite Coffee:</label>
+          <input type="text" class="textbox" name="favoriteCoffee" id="favoriteCoffee" value="<%= review.favoriteCoffee %>"></input> 
+          <label for="leastCoffee">Least Favorite Coffee:</label>
+          <input type="text" class="textbox" name="leastCoffee" id="leastCoffee" value="<%= review.leastCoffee %>"></input>
+          <label for="milk-select">Milk:</label>
+          <select name="milk" id="milk-select" >
+            <option value="whole">Whole</option>
+            <option value="oat">Oat</option>
+            <option value="skim">Skim</option>
+            <option value="soy">Soy</option>
+            <option value="almond">Almond</option>
+          </select>
+          <label for="priceLatte">Price of Latte: $</label>
+          <input type="number" class="textbox" name="priceLatte" id="priceLatte" value="<%= review.priceLatte %>"></input>
+      <% }) %>
+      <button class="button" type="submit">Save Review</button>
+    </form>
+    <br></br>
+    <img class=darkness id="hellodarkness" src="/images/hellodarkness.png" alt="Hello Darkness">
+  </div>
 </main>
 <%- include('../partials/footer') %>

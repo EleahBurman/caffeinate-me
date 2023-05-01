@@ -15,6 +15,7 @@
           <li>☕️Name: <%= review.reviewer.name %></li>
           <li>☕️Favorite Coffee: <%= review.favoriteCoffee %></li>
           <li>☕️Least Favorite Coffee: <%= review.leastCoffee %></li>
+          <li>☕️Milk Preference: <%= review.milk %></li>
           <li>☕️Price of Latte: $<%= review.priceLatte %></li>
         </div>
       <% } %>
@@ -45,6 +46,14 @@
     <input type="text" class="textbox" name="favoriteCoffee" id="favoriteCoffee"></input>
     <label for="leastCoffee">Least Favorite Coffee:</label>
     <input type="text" class="textbox" name="leastCoffee" id="leastCoffee"></input>
+    <label for="milk-select">Milk:</label>
+    <select name="milk" id="milk-select" >
+      <option value="whole">Whole</option>
+      <option value="oat">Oat</option>
+      <option value="skim">Skim</option>
+      <option value="soy">Soy</option>
+      <option value="almond">Almond</option>
+    </select>
     <label for="priceLatte">Price of Latte: $</label>
     <input type="number" class="textbox" name="priceLatte" id="priceLatte"></input>
     <button class="button" type="submit">Add Review</button>

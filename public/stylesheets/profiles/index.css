@@ -22,9 +22,8 @@ html {
 }
 
 body {
-  color: #d58317;
-  text-shadow: 2px 2px 4px #000000;
-  background-color: #000000;
+  color: #B99F88;
+  background-color:#271c14;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family:  'Holtwood One SC', serif;
   margin: 0;
@@ -33,31 +32,28 @@ body {
   background-attachment: fixed;
   min-height: 100%;
   letter-spacing: .08rem;
-}
-
-.navbar{
-  background-color: #ffbd8f;
-  align-items: center;
-  padding: 10px;
-  min-height: 40px;
-  letter-spacing: .18rem;
-  text-shadow: 0px;
-  font-size: 25px;
-}
-
-.navwords{
-  color: #047e5e;
-  text-shadow: 2px 2px 1px #f2f0f0;
-  text-decoration: none;
-  margin-left: 10px;
-}
-
-.navwords:hover{
-  color:#7dbfaa;
-  text-shadow: 2px 2px 1px #f2f0f0;
-  text-decoration: none;
-
-}
+  }
+  
+  .navbar{
+    background-color: #d3e1e9 ;
+    align-items: center;
+    padding: 10px;
+    min-height: 40px;
+    letter-spacing: .18rem;
+    font-size: 25px;
+  }
+  
+  .navwords{
+    color: #518453;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  
+  .navwords:hover{
+    color:#fe8e3e;
+    text-decoration: none;
+  }
+  
 
 
 #logout-btn{

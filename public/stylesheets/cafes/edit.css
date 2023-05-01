@@ -10,43 +10,37 @@ html {
   justify-content: center;
 }
 
-
 body {
-  color: #d58317;
-  text-shadow: 2px 2px 4px #000000;
-  background-color: #000000;
+  background-color:white;
+  /* Use a system font, if none are available use any found sans-sarif font */
   font-family:  'Holtwood One SC', serif;
-  margin: 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   min-height: 100%;
   letter-spacing: .08rem;
-}
+  }
 
 .navbar{
-  color: #ffbd8f;
+  background-color: #252525;
   align-items: center;
   padding: 10px;
   min-height: 40px;
   letter-spacing: .18rem;
-  text-shadow: 0px;
   font-size: 25px;
 }
-
+  
 .navwords{
-  color: #047e5e;
-  text-shadow: 2px 2px 1px #f2f0f0;
-  text-decoration: none;
-  margin-left: 10px;
-}
-
-.navwords:hover{
-  color:#7dbfaa;
-  text-shadow: 2px 2px 1px #f2f0f0;
-  text-decoration: none;
-
-}
+    color: #E0DDD8;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  
+  .navwords:hover{
+    color:#fe8e3e;
+    text-decoration: none;
+  }
+  
 
 #logout-btn{
   font-family: 'Puritan', sans-serif;
@@ -58,7 +52,11 @@ body {
   justify-content: center;
 }
 
-#profilepage {
+
+#editcafe {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
   transform: scale(0.8, 0.8);
   -ms-transform: scale(0.8, 0.8); /* IE 9 */
   -webkit-transform: scale(0.8, 0.8); /* Safari and Chrome */
@@ -66,9 +64,13 @@ body {
   -moz-transform: scale(0.8, 0.8); /* Firefox */
 }
 
+.edit{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
 h1  {
-  color: #f4830b;
-  text-shadow: 2px 2px 1px #f2f0f0;
+  color: #518453;
   font-size: 35px;
   align-items: center;
   justify-content: center;
@@ -76,7 +78,7 @@ h1  {
 }
 
 h2{
-  color: #d58317;
+  color: #252525;
   text-shadow: 2px 2px 1px #f2f0f0;
   font-size: 15px;
   align-items: center;

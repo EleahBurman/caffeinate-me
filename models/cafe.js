@@ -5,6 +5,7 @@ const Schema = mongoose.Schema
 const reviewSchema = new Schema({
   favoriteCoffee: String,
   leastCoffee: String,
+  milk: String,
   priceLatte: Number,
   reviewer: { type: Schema.Types.ObjectId, ref: 'Profile' },
 })

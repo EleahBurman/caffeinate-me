@@ -14,7 +14,6 @@ html {
 
 body {
 color: #B99F88;
-text-shadow: 2px 2px 4px #000000;
 background-color:#271c14;
 /* Use a system font, if none are available use any found sans-sarif font */
 font-family:  'Holtwood One SC', serif;
@@ -32,7 +31,6 @@ letter-spacing: .08rem;
   padding: 10px;
   min-height: 40px;
   letter-spacing: .18rem;
-  text-shadow: 0px;
   font-size: 25px;
 }
 
@@ -45,7 +43,6 @@ letter-spacing: .08rem;
 .navwords:hover{
   color:#fe8e3e;
   text-decoration: none;
-
 }
 
 
