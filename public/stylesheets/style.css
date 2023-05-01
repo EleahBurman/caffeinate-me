@@ -21,30 +21,29 @@ body {
   background-attachment: fixed;
   min-height: 100%;
   letter-spacing: .08rem;
-  }
+}
   
-  .navbar{
+.navbar {
     background-color: #924F4C;
     align-items: center;
     padding: 10px;
     min-height: 40px;
     letter-spacing: .18rem;
     font-size: 25px;
-  }
+}
   
-  .navwords{
+.navwords {
     color: #E0DDD8;
     text-decoration: none;
     margin-left: 10px;
-  }
+}
   
-  .navwords:hover{
+.navwords:hover {
     color:#71bce7;
     text-decoration: none;
-  }
-  
+}
 
-#logout-btn{
+#logout-btn {
   background-color: #98d9ff;
   border: 1px solid white;
   color: #635454;
@@ -56,7 +55,7 @@ body {
   justify-content: center;
 }
 
-#logout-btn:hover{
+#logout-btn:hover {
   background-color: #4fd7a7;
 }
 

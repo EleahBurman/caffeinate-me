@@ -2,19 +2,15 @@ html {
   box-sizing: border-box;
 }
 
-/* The Universal Selector */
-*, /* All elements*/
-*::before, /* All ::before pseudo-elements */
+*,
+*::before,
 *::after {
-  /* All ::after pseudo-elements */
-  /* height & width will now include border & padding by default but can be overridden as needed */
   box-sizing: inherit;
   justify-content: center;
 }
 
 body {
 background-color:#271c14;
-/* Use a system font, if none are available use any found sans-sarif font */
 font-family:  'Abril Fatface', serif;
 margin: 0;
 background-repeat: no-repeat;

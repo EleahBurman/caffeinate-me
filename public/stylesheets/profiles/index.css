@@ -2,12 +2,9 @@ html {
   box-sizing: border-box;
 }
 
-/* The Universal Selector */
-*, /* All elements*/
-*::before, /* All ::before pseudo-elements */
+*,
+*::before,
 *::after {
-  /* All ::after pseudo-elements */
-  /* height & width will now include border & padding by default but can be overridden as needed */
   box-sizing: inherit;
   justify-content: center;
 }
@@ -200,6 +197,7 @@ main {
 #viewbutton:hover{
   background: #4fd7a7;
 }
+
 .friend {
   background-color: #98d9ff;
 }
