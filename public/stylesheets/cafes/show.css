@@ -2,7 +2,6 @@ html {
   box-sizing: border-box;
 }
 
-
 *,
 *::before,
 *::after {
@@ -92,6 +91,13 @@ h2{
   margin-bottom: 10px;
 }
 
+p{
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
 .row{
   display: flex;
   flex-direction: row;
@@ -136,7 +142,7 @@ main {
 }
 
 .textbox {
-  width: 140px; 
+  width: 100px; 
   height: 20px;
   border-radius:10px;
 }
@@ -155,10 +161,26 @@ main {
   width: 50px;
 }
 
-#review{
+.review{
   margin-top: 10px;
-  display: block;
+  display: flex;
   max-width: 70%;
+  background-color: white;
+  display: flex;
+  border: 1px solid #c6c6c6;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.reviewborder{
+  margin-top: 10px;
+  display: flex;
+  max-width: 70%;
+  background-color: white;
+  display: flex;
+  border: 1px solid #c6c6c6;
+  border-radius: 10px;
+  padding: 25px;
 }
 
 .marginbottom{
@@ -167,7 +189,7 @@ main {
 
 .meryl{
   margin-top: 20px;
-  max-width: 50%;
+  max-width: 60%;
   margin-left: 25%;
   height: auto;
   display: flex;
@@ -181,4 +203,20 @@ main {
   max-width: 50%;
   vertical-align: center;
   border-radius:10px;
+}
+
+#favoriteCoffee {
+  display: block;
+}
+
+#leastCoffee {
+  display: block;
+}
+
+#milk-select{
+  display: block;
+}
+
+#priceLatte{
+  display: block;
 }

@@ -1,15 +1,16 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/cafes/show.css" />
 <%- include('../partials/nav') %>
+
 <main>
   <div class="border">
-    <h1 class= "animate__animated animate__lightSpeedInLeft">☕️<%= cafe.name %>☕️</h1>
+    <h1 class="animate__animated animate__lightSpeedInLeft">☕️<%= cafe.name %>☕️</h1>
     <h2><%= cafe.location %></h2>
     <div class="meryl">
       <img id="meryl" src="/images/merylcoffee.gif" alt="Even Meryl Streep Needs Coffee">
     </div>
     <h3 id="reviews">Reviews</h3>
-    <div class="row">
+    <div class="row reviewborder">
       <% cafe.reviews.forEach(review => { %>
         <% if (review.reviewer) { %>
           <div class="column">
@@ -20,47 +21,41 @@
             <li>☕️Price of Latte: $<%= review.priceLatte %></li>
           </div>
         <% } %>
-                <%# button for edit reviews %>
-          <%# look at taco cat to reference if else statement to as a user who is author to review render or delete can do if populated reviewer._id otherwise something to do with reviewer property look at taco cat console.log reviewer and see properties%>
-          
         <% if(review.reviewer.equals(user?.profile._id)) { %>
           <div class="column">
             <div class="marginbottom">
               <form action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>/edit" method="GET">
-              <button class="button" id="edit-review">EDIT REVIEW</button>
+                <button class="button" id="edit-review">EDIT REVIEW</button>
               </form>
             </div>
             <form action="/cafes/<%= cafe._id %>/reviews/<%=review._id%>?_method=DELETE" method="POST">
-            <button class="button">X</button>
+              <button class="button">X</button>
             </form>
           </div>
         <% } %>
       <% }) %>
     </div>
-    <p>☕️☕️☕️☕️☕️☕️</p>
-    <div id="review">
-      <form 
-        id="add-review-form"
-        action="/cafes/<%= cafe._id%>/reviews"
-        method="POST"
-      >
-      <label for="favoriteCoffee">Favorite Coffee:</label>
-      <input type="text" class="textbox" name="favoriteCoffee" id="favoriteCoffee"></input>
-      <label for="leastCoffee">Least Favorite Coffee:</label>
-      <input type="text" class="textbox" name="leastCoffee" id="leastCoffee"></input>
-      <label for="milk-select">Milk:</label>
-      <select name="milk" id="milk-select" >
-        <option value="whole">Whole</option>
-        <option value="oat">Oat</option>
-        <option value="skim">Skim</option>
-        <option value="soy">Soy</option>
-        <option value="almond">Almond</option>
-      </select>
-      <label for="priceLatte">Price of Latte: $</label>
-      <input type="number" class="textbox" name="priceLatte" id="priceLatte"></input>
-      <button class="button" type="submit">Add Review</button>
+    <h3 id="addreview">Add Review</h3>
+    <div class="review">
+      <form id="add-review-form" action="/cafes/<%= cafe._id%>/reviews" method="POST">
+        <label for="favoriteCoffee">Favorite Coffee:</label>
+        <input type="text" class="textbox" name="favoriteCoffee" class="rowtwo" id="favoriteCoffee"></input>
+        <label for="leastCoffee">Least Favorite Coffee:</label>
+        <input type="text" class="textbox" name="leastCoffee" id="leastCoffee" class="rowtwo"></input>
+        <label for="milk-select">Milk:</label>
+        <select name="milk" id="milk-select" class="rowtwo">
+          <option value="whole">Whole</option>
+          <option value="oat">Oat</option>
+          <option value="skim">Skim</option>
+          <option value="soy">Soy</option>
+          <option value="almond">Almond</option>
+        </select>
+        <label for="priceLatte">Price of Latte: $</label>
+        <input type="number" class="textbox" name="priceLatte" id="priceLatte" class="rowtwo"></input>
+        <button class="button" type="submit">Add Review</button>
       </form>
     </div>
   </div>
 </main>
 <%- include('../partials/footer') %>
+
