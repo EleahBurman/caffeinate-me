@@ -42,9 +42,9 @@ letter-spacing: .08rem;
 
 
 #logout-btn{
-  background-color: #98d9ff;
+  background-color: #924F4C;
+  color: white;
   border: 1px solid white;
-  color: #635454;
   font-family: 'Lato', sans-serif;
   position: relative;
   float: right;
@@ -54,7 +54,8 @@ letter-spacing: .08rem;
 }
 
 #logout-btn:hover{
-  background-color: #4fd7a7;
+  background-color: white;
+  color: #924F4C;
 }
 
 h1  {
