@@ -26,7 +26,6 @@ html {
 body {
   background-color:white;
   color: #517784;
-  /* Use a system font, if none are available use any found sans-sarif font */
   font-family:  'Abril Fatface', serif;
   margin: 0;
   background-repeat: no-repeat;
@@ -37,32 +36,33 @@ body {
 }
   
 .navbar{
-    background-color: #924F4C;
-    align-items: center;
-    padding: 10px;
-    min-height: 40px;
-    letter-spacing: .18rem;
-    font-size: 25px;
+  background-color: #924F4C;
+  align-items: center;
+  padding: 10px;
+  min-height: 40px;
+  letter-spacing: .18rem;
+  font-size: 25px;
 }
   
 .navwords{
-    color: #E0DDD8;
-    text-decoration: none;
-    margin-left: 10px;
+  color: #E0DDD8;
+  text-decoration: none;
+  margin-left: 10px;
 }
   
 .navwords:hover{
-    color:#71bce7;
-    text-decoration: none;
+  color:#71bce7;
+  text-decoration: none;
 }
   
 #logout-btn{
   background-color: #98d9ff;
-  color: #252525;
+  border: 1px solid white;
+  color: #635454;
   font-family: 'Lato', sans-serif;
   position: relative;
   float: right;
-  font-size: 23px;
+  font-size: 20px;
   margin-right: 10px;
   justify-content: center;
 }

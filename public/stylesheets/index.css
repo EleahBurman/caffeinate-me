@@ -47,11 +47,12 @@ letter-spacing: .08rem;
 
 #logout-btn{
   background-color: #98d9ff;
-  color: #252525;
+  border: 1px solid white;
+  color: #635454;
   font-family: 'Lato', sans-serif;
   position: relative;
   float: right;
-  font-size: 23px;
+  font-size: 20px;
   margin-right: 10px;
   justify-content: center;
 }
