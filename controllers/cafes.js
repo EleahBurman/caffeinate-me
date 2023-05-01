@@ -69,31 +69,32 @@ function show(req, res){
     })
   }) 
   .catch(err => {
-  console.log(err)
-  res.redirect('/cafes')
+    console.log(err)
+    res.redirect('/cafes')
   })
 }
 
 function update(req, res) {
   //the id is called via the parameters
-    Cafe.findById(req.params.id)
+  Cafe.findById(req.params.id)
     .populate('reviews.reviewer')
     .then(cafe => {
       if (cafe.owner.equals(req.user.profile._id)) {
-      //updates the document in the body
+        //updates the document in the body
         cafe.updateOne(req.body)
           .then(() => {
             res.redirect(`/cafes/${cafe._id}`)
           })     
-    } else {
-      throw new Error ('You did not create this review. Do not pass go. Do not collect $200.')
-    }
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect('/cafes')
-  })
+      } else {
+        throw new Error ('You did not create this review. Do not pass go. Do not collect $200.')
+      }
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/cafes')
+    })
 }
+
 
 function createReview(req, res) {
   Cafe.findById(req.params.cafeId)
@@ -111,8 +112,8 @@ function createReview(req, res) {
         res.redirect('/')
       })
     .catch((err) => {
-    console.log(err);
-    res.redirect('/')
+      console.log(err);
+      res.redirect('/')
     })
   })
 }
