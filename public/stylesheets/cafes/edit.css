@@ -43,7 +43,7 @@ body {
   
 
 #logout-btn{
-  background-color: #71bce7;
+  background-color: #98d9ff;
   color: #252525;
   font-family: 'Puritan', sans-serif;
   position: relative;
@@ -54,6 +54,9 @@ body {
   justify-content: center;
 }
 
+#logout-btn:hover{
+  background-color: #4fd7a7;
+}
 
 #editcafe {
   text-align: center;
@@ -110,7 +113,6 @@ h1  {
 
 h2{
   color: #252525;
-  text-shadow: 2px 2px 1px #f2f0f0;
   font-size: 15px;
   align-items: center;
   justify-content: center;
@@ -131,20 +133,19 @@ main {
 }
 
 .button {
-  background-color: #71bce7;
+  background-color: #98d9ff;
   color: #252525;
   font-family: 'Puritan', sans-serif;
   font-size: 15px;
   width: fit-content;
   justify-content: center;
   text-transform: uppercase;
-  transition: all 0.2s ease-in-out;
   height: 30px;
   border-radius:10px;
 }
 
 .button:hover {
-  background: #98d9ff;
+  background: #4fd7a7;
 }
 
 #remove {
@@ -169,21 +170,6 @@ main {
   list-style: none;
   line-height: 7px;
   justify-content: center;
-}
-
-.cafes {
-  color: #d58317;
-  text-shadow: 2px 2px 4px #000000;
-}
-
-.cafes:visited{
-  color: #d58317;
-  text-shadow: 2px 2px 4px #000000;
-}
-
-.cafes:hover {
-  color: #f59753;
-  text-shadow: 2px 2px 4px #000000;
 }
 
 .darkness {

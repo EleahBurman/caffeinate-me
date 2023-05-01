@@ -11,8 +11,7 @@ html {
 }
 
 body {
-  color: #B99F88;
-  background-color:#271c14;
+  background-color:white;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family:  'Holtwood One SC', serif;
   margin: 0;
@@ -23,8 +22,8 @@ body {
   letter-spacing: .08rem;
   }
   
-  .navbar{
-    background-color: #d3e1e9 ;
+.navbar{
+    background-color: #252525;
     align-items: center;
     padding: 10px;
     min-height: 40px;
@@ -32,18 +31,20 @@ body {
     font-size: 25px;
   }
   
-  .navwords{
-    color: #518453;
+.navwords{
+    color: #E0DDD8;
     text-decoration: none;
     margin-left: 10px;
   }
   
-  .navwords:hover{
-    color:#fe8e3e;
+.navwords:hover{
+    color:#71bce7;
     text-decoration: none;
   }
   
 #logout-btn{
+  background-color: #98d9ff;
+  color: #252525;
   font-family: 'Puritan', sans-serif;
   position: relative;
   float: right;
@@ -53,17 +54,9 @@ body {
   justify-content: center;
 }
 
-#profilepage {
-  transform: scale(0.8, 0.8);
-  -ms-transform: scale(0.8, 0.8); /* IE 9 */
-  -webkit-transform: scale(0.8, 0.8); /* Safari and Chrome */
-  -o-transform: scale(0.8, 0.8); /* Opera */
-  -moz-transform: scale(0.8, 0.8); /* Firefox */
-}
-
 h1  {
-  color: #f4830b;
-  text-shadow: 2px 2px 1px #f2f0f0;
+  margin-bottom: 0;
+  color: #518453;
   font-size: 35px;
   align-items: center;
   justify-content: center;
@@ -71,9 +64,10 @@ h1  {
 }
 
 h2{
-  color: #d58317;
-  text-shadow: 2px 2px 1px #f2f0f0;
-  font-size: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #252525;
+  font-size: 20px;
   align-items: center;
   justify-content: center;
   letter-spacing: .08rem;
@@ -107,20 +101,19 @@ main {
 }
 
 .button {
-  color:rgb(255, 255, 255, 0.8);
-  background: #bc5e1b;
+  background-color: #98d9ff;
+  color: #252525;
   font-family: 'Puritan', sans-serif;
   font-size: 15px;
   width: fit-content;
   justify-content: center;
   text-transform: uppercase;
-  transition: all 0.2s ease-in-out;
   height: 30px;
   border-radius:10px;
 }
 
 .button:hover {
-  background: #fe8e3e;
+  background: #4fd7a7;
 }
 
 #remove {
@@ -143,21 +136,6 @@ main {
   justify-content: center;
 }
 
-.cafes {
-  color: #d58317;
-  text-shadow: 2px 2px 4px #000000;
-}
-
-.cafes:visited{
-  color: #d58317;
-  text-shadow: 2px 2px 4px #000000;
-}
-
-.cafes:hover {
-  color: #f59753;
-  text-shadow: 2px 2px 4px #000000;
-}
-
 #remove {
   width: 50px;
 }
@@ -165,7 +143,7 @@ main {
 #review{
   margin-top: 10px;
   display: block;
-  text-shadow: 4px 4px 9px #000000;
+  max-width: 70%;
 }
 
 .marginbottom{
