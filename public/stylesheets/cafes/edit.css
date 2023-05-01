@@ -141,14 +141,15 @@ main {
 
 .button {
   background-color: #98d9ff;
-  color: #252525;
-  font-family: 'Lato', sans-serif;
+  color: #1C681B;
+  font-family: 'Puritan', sans-serif;
   font-size: 15px;
   width: fit-content;
   justify-content: center;
   text-transform: uppercase;
   height: 30px;
-  border-radius:10px;
+  border-radius: 10px;
+  border: 2px solid #13106b;
 }
 
 .button:hover {
