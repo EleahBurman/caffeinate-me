@@ -62,7 +62,6 @@ function show(req, res){
     model: 'Profile'}
   ])
   .then(cafe=> {
-    console.log(cafe, 'cafe dont forget to remove')
     res.render('cafes/show', {
       title: 'Cafe Detail',
       cafe: cafe,
