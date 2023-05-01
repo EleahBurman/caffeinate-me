@@ -89,7 +89,7 @@ body {
   height: fit-content;
   align-content: center;
   justify-content: center;
-  margin-left: 30%;
+  margin-left: 20%;
   margin-bottom: 5px;
 }
 
@@ -181,9 +181,9 @@ main {
   border-radius:10px;
   margin-bottom: 10px;
   max-width: 350px;
-  margin-left: 15%;
+  margin-left: 5%;
 }
 
 .profilesbutton{
-  margin-left: 10%;
+  margin-left: 5%;
 }
