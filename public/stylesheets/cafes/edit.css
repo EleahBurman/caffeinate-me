@@ -153,7 +153,7 @@ main {
 }
 
 .button:hover {
-  background: #4fd7a7;
+  background-color: white;
 }
 
 #remove {
@@ -193,6 +193,10 @@ main {
   border: 2px solid #13106b;
   text-align: center;
   margin-right: 47%;
+}
+
+#save:hover {
+  background-color: white;
 }
 
 .darkness {
