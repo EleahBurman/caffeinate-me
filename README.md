@@ -35,7 +35,6 @@ Planning materials and original wireframes can be found [here](https://trello.co
 * Fly.io
 * EJS
 * Animate.css
-* Photoshop
 
 ## 🧊 Ice Box
 - [x] Implement friend request functionality.
