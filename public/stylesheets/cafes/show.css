@@ -228,6 +228,7 @@ main {
   display: block;
 }
 
-.addreview{
-  margin-top: 5px;
+#addreview{
+  margin-top: 20px;
+  margin-bottom: 0px;
 }
