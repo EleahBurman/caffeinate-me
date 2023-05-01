@@ -2,15 +2,19 @@
 <link rel="stylesheet" href="/stylesheets/profiles/show.css" />
 <%- include('../partials/nav') %>
 <main>
-  <h1 class= "animate__animated animate__lightSpeedInLeft">☕️<%= profile.name %>'s Profile☕️</h1>
-  <img id="profileimg" src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
-    <h2>☕️<%= profile.name  %>'s Favorite Cafes☕️</h2>
+  <div class="border">
+    <h1 class= "animate__animated animate__lightSpeedInLeft">☕️<%= profile.name %>'s Profile☕️</h1>
+    <div class="profcard">
+      <img id="profileimg" src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
+      <h2>☕️<%= profile.name  %>'s Favorite Cafes</h2>
+    </div>
     <% profile.cafes.forEach(cafe => { %>
       <ul>
         <li class="list">☕️<a class="cafes" href="/cafes/<%= cafe._id%>"><%= cafe.name%></a></li>
       </ul>
     <% }) %>
-  <img id="lorelai" src="/images/lorelaicoffee.gif" alt="Lorelai Needs Coffee">
-  <a href="/profiles/index"><button class="button">Profiles</button></a>
+    <img id="lorelai" src="/images/lorelaicoffee.gif" alt="Lorelai Needs Coffee">
+    <a href="/profiles/index"><button class="button">Profiles</button></a>
+  </div>
 </main>
 <%- include('../partials/footer') %>

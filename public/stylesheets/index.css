@@ -15,7 +15,7 @@ html {
 body {
 background-color:#271c14;
 /* Use a system font, if none are available use any found sans-sarif font */
-font-family:  'Holtwood One SC', serif;
+font-family:  'Abril Fatface', serif;
 margin: 0;
 background-repeat: no-repeat;
 background-size: cover;
@@ -25,7 +25,7 @@ letter-spacing: .08rem;
 }
 
 .navbar{
-  background-color: #252525;
+  background-color: #924F4C;
   align-items: center;
   padding: 10px;
   min-height: 40px;
@@ -48,12 +48,11 @@ letter-spacing: .08rem;
 #logout-btn{
   background-color: #98d9ff;
   color: #252525;
-  font-family: 'Puritan', sans-serif;
+  font-family: 'Lato', sans-serif;
   position: relative;
   float: right;
-  font-size: 25px;
+  font-size: 23px;
   margin-right: 10px;
-  margin-top: 5px;
   justify-content: center;
 }
 
@@ -91,12 +90,11 @@ margin-left: auto;
 .button {
   background-color: #98d9ff;
   color: #252525;
-  font-family: 'Puritan', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 15px;
   width: fit-content;
   justify-content: center;
   text-transform: uppercase;
-  transition: all 0.2s ease-in-out;
   height: 30px;
   border-radius:10px;
 }

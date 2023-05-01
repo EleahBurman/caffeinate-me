@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/stylesheets/cafes/edit.css" />
 <%- include('../partials/nav') %>
 <main>
-  <div class= "edit" id="editcafe">
+  <div class= "border" id="editcafe">
     <h1 class= "animate__animated animate__lightSpeedInLeft">☕️Edit Review☕️</h1>
     <br></br>
     <form id="update-review" action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>?_method=PUT" method="POST">
@@ -24,7 +24,7 @@
           <input type="number" class="textbox" name="priceLatte" id="priceLatte" value="<%= review.priceLatte %>"></input>
         </div>
       <% }) %>
-      <button class="button" type="submit">Save Review</button>
+      <button class="button" type="submit" id="save">Save Review</button>
     </form>
     <br></br>
     <img class=darkness id="hellodarkness" src="/images/hellodarkness.png" alt="Hello Darkness">
