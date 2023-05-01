@@ -13,38 +13,38 @@ html {
 }
 
 body {
-  background-color:white;
+  background-color: white;
   /* Use a system font, if none are available use any found sans-sarif font */
-  font-family:  'Holtwood One SC', serif;
+  font-family: 'Holtwood One SC', serif;
   margin: 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   min-height: 100%;
   letter-spacing: .08rem;
-  }
+}
   
-.navbar{
-    background-color: #252525;
-    align-items: center;
-    padding: 10px;
-    min-height: 40px;
-    letter-spacing: .18rem;
-    font-size: 25px;
-  }
+.navbar {
+  background-color: #252525;
+  align-items: center;
+  padding: 10px;
+  min-height: 40px;
+  letter-spacing: .18rem;
+  font-size: 25px;
+}
   
-.navwords{
-    color: #E0DDD8;
-    text-decoration: none;
-    margin-left: 10px;
-  }
+.navwords {
+  color: #E0DDD8;
+  text-decoration: none;
+  margin-left: 10px;
+}
   
-.navwords:hover{
-    color:#71bce7;
-    text-decoration: none;
-  }
+.navwords:hover {
+  color: #71bce7;
+  text-decoration: none;
+}
 
-#logout-btn{
+#logout-btn {
   background-color: #98d9ff;
   color: #252525;
   font-family: 'Puritan', sans-serif;
@@ -56,28 +56,27 @@ body {
   justify-content: center;
 }
 
-#logout-btn:hover{
+#logout-btn:hover {
   background-color: #4fd7a7;
 }
 
 #profilepage {
-transform: scale(0.8, 0.8);
--ms-transform: scale(0.8, 0.8); /* IE 9 */
--webkit-transform: scale(0.8, 0.8); /* Safari and Chrome */
--o-transform: scale(0.8, 0.8); /* Opera */
--moz-transform: scale(0.8, 0.8); /* Firefox */
+  transform: scale(0.8, 0.8);
+  -ms-transform: scale(0.8, 0.8); /* IE 9 */
+  -webkit-transform: scale(0.8, 0.8); /* Safari and Chrome */
+  -o-transform: scale(0.8, 0.8); /* Opera */
+  -moz-transform: scale(0.8, 0.8); /* Firefox */
 }
 
-h1  {
+h1 {
   color: #518453;
-  text-shadow: 2px 2px 1px #f2f0f0;
   font-size: 35px;
   align-items: center;
   justify-content: center;
   letter-spacing: .08rem;
 }
 
-h2{
+h2 {
   color: #518453;
   font-size: 20px;
   align-items: center;
@@ -105,7 +104,7 @@ main {
   justify-content: center;
   text-transform: uppercase;
   height: 30px;
-  border-radius:10px;
+  border-radius: 10px;
 }
 
 .button:hover {
@@ -119,7 +118,7 @@ main {
 .textbox {
   width: 140px; 
   height: 20px;
-  border-radius:10px;
+  border-radius: 10px;
 }
 
 #remove {

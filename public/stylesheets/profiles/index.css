@@ -75,7 +75,7 @@ h1  {
 }
 
 h2{
-  color: white;
+  color: #518453;
   font-size: 15px;
   align-items: center;
   justify-content: center;
@@ -84,10 +84,10 @@ h2{
 
 .profile-card{
   flex-wrap: wrap;
-  background-color: #7B4654;
+  background-color: white;
   display: flex;
   flex-direction: column;
-  border: 1px solid #252525;
+  border: 1px solid #c6c6c6;
   border-radius: 10px;
   padding: 10px;
   margin: 25px;
@@ -174,11 +174,23 @@ main {
 }
 
 #viewbutton{
-  margin-top: 0px; 
-  width: 120px;
-  height: 40px;
+  margin-top: 0;
+  margin-left: 14px;
+  background-color: #98d9ff;
+  color: #252525;
+  font-family: 'Puritan', sans-serif;
+  font-size: 12px;
+  width: fit-content;
+  justify-content: center;
+  text-transform: uppercase;
+  height: 20px;
+  border-radius:10px;
+  margin-bottom: 2px;
 }
 
+#viewbutton:hover{
+  background: #4fd7a7;
+}
 .friend {
   background-color: #98d9ff;
 }

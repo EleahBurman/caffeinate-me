@@ -13,7 +13,6 @@ html {
 }
 
 body {
-color: #B99F88;
 background-color:#271c14;
 /* Use a system font, if none are available use any found sans-sarif font */
 font-family:  'Holtwood One SC', serif;
@@ -26,7 +25,7 @@ letter-spacing: .08rem;
 }
 
 .navbar{
-  background-color: #d3e1e9 ;
+  background-color: #252525;
   align-items: center;
   padding: 10px;
   min-height: 40px;
@@ -35,18 +34,20 @@ letter-spacing: .08rem;
 }
 
 .navwords{
-  color: #518453;
+  color: #E0DDD8;
   text-decoration: none;
   margin-left: 10px;
 }
 
 .navwords:hover{
-  color:#fe8e3e;
+  color:#71bce7;
   text-decoration: none;
 }
 
 
 #logout-btn{
+  background-color: #98d9ff;
+  color: #252525;
   font-family: 'Puritan', sans-serif;
   position: relative;
   float: right;
@@ -56,16 +57,12 @@ letter-spacing: .08rem;
   justify-content: center;
 }
 
-#profilepage {
-transform: scale(0.8, 0.8);
--ms-transform: scale(0.8, 0.8); /* IE 9 */
--webkit-transform: scale(0.8, 0.8); /* Safari and Chrome */
--o-transform: scale(0.8, 0.8); /* Opera */
--moz-transform: scale(0.8, 0.8); /* Firefox */
+#logout-btn:hover{
+  background-color: #4fd7a7;
 }
 
 h1  {
-  color: #66b49c;
+  color: #518453;
   font-size: 35px;
   align-items: center;
   justify-content: center;
@@ -73,7 +70,7 @@ h1  {
 }
 
 h2{
-  color: #66b49c;
+  color: #518453;
   font-size: 15px;
   align-items: center;
   justify-content: center;
@@ -92,20 +89,20 @@ margin-left: auto;
 }
 
 .button {
-color:rgb(255, 255, 255, 0.8);
-background: #a6885d;
-font-family: 'Puritan', sans-serif;
-font-size: 15px;
-width: fit-content;
-justify-content: center;
-text-transform: uppercase;
-transition: all 0.2s ease-in-out;
-height: 30px;
-border-radius:10px;
+  background-color: #98d9ff;
+  color: #252525;
+  font-family: 'Puritan', sans-serif;
+  font-size: 15px;
+  width: fit-content;
+  justify-content: center;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  height: 30px;
+  border-radius:10px;
 }
 
 .button:hover {
-background: #fe8e3e;
+  background-color: #4fd7a7;
 }
 
 #remove {
@@ -116,12 +113,6 @@ width: 50px;
   width: 140px; 
   height: 20px;
   border-radius:10px;
-}
-
-.namelocation {
-  color: #d58317;
-  font-size: 20px;
-  letter-spacing: .08rem;
 }
 
 #remove {
