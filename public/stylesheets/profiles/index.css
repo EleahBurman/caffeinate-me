@@ -12,7 +12,7 @@ html {
   justify-content: center;
 }
 
-#profilepage{
+#profilepage {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
@@ -32,7 +32,7 @@ body {
   letter-spacing: .08rem;
   }
   
-  .navbar{
+.navbar{
     background-color: #252525;
     align-items: center;
     padding: 10px;
@@ -41,13 +41,13 @@ body {
     font-size: 25px;
   }
   
-  .navwords{
+.navwords{
     color: #E0DDD8;
     text-decoration: none;
     margin-left: 10px;
   }
   
-  .navwords:hover{
+.navwords:hover{
     color:#71bce7;
     text-decoration: none;
   }
@@ -162,7 +162,7 @@ main {
   width: 50px;
 }
 
-.profphoto{
+.profphoto {
   border-radius:10px;
   margin-left: 12 px;
   max-width: 100px;
