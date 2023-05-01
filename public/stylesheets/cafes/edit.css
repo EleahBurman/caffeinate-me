@@ -12,7 +12,6 @@ html {
 
 body {
   background-color:white;
-  /* Use a system font, if none are available use any found sans-sarif font */
   font-family:  'Holtwood One SC', serif;
   background-repeat: no-repeat;
   background-size: cover;
@@ -113,7 +112,7 @@ h1  {
 
 h2{
   color: #252525;
-  font-size: 15px;
+  font-size: 20px;
   align-items: center;
   justify-content: center;
   letter-spacing: .08rem;

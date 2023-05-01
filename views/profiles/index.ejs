@@ -6,7 +6,7 @@
   <div class="row" id="profilepage">
     <% profiles.forEach(profile => { %>
       <div class="<%= userProfile.friends.includes(profile._id) ? 'profile-card friend' : 'profile-card' %>">
-        <img class="column profphoto" src="<%= profile.avatar %>" alt="<%= profile.name.slice(0,9) %>'s photo">
+        <img class="column profphoto" src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
           <div class="column">
             <h2 id="profilename"><%= profile.name %></h2>
             <form action="/profiles/<%= profile._id %>" method="GET">

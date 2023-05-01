@@ -22,9 +22,7 @@ html {
 }
 
 body {
-  color: #B99F88;
-  background-color:#271c14;
-  /* Use a system font, if none are available use any found sans-sarif font */
+  background-color:white;
   font-family:  'Holtwood One SC', serif;
   margin: 0;
   background-repeat: no-repeat;
@@ -35,7 +33,7 @@ body {
   }
   
   .navbar{
-    background-color: #d3e1e9 ;
+    background-color: #252525;
     align-items: center;
     padding: 10px;
     min-height: 40px;
@@ -44,19 +42,21 @@ body {
   }
   
   .navwords{
-    color: #518453;
+    color: #E0DDD8;
     text-decoration: none;
     margin-left: 10px;
   }
   
   .navwords:hover{
-    color:#fe8e3e;
+    color:#71bce7;
     text-decoration: none;
   }
   
 
 
 #logout-btn{
+  background-color: #98d9ff;
+  color: #252525;
   font-family: 'Puritan', sans-serif;
   position: relative;
   float: right;
@@ -67,8 +67,7 @@ body {
 }
 
 h1  {
-  color: #f4830b;
-  text-shadow: 2px 2px 1px #f2f0f0;
+  color: #518453;
   font-size: 35px;
   align-items: center;
   justify-content: center;
@@ -76,12 +75,25 @@ h1  {
 }
 
 h2{
-  color: #d58317;
-  text-shadow: 2px 2px 1px #f2f0f0;
+  color: white;
   font-size: 15px;
   align-items: center;
   justify-content: center;
   letter-spacing: .08rem;
+}
+
+.profile-card{
+  flex-wrap: wrap;
+  background-color: #7B4654;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #252525;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 25px;
+  width: 190px;
+  height: fit-content;
+  align-items: center;
 }
 
 .row{
@@ -90,7 +102,7 @@ h2{
   flex-wrap: wrap;
   margin-right: 200px;
   margin-left: 200px;
-  max-width: 700px;
+  max-width: 70%;
 }
 
 .column {
@@ -114,8 +126,8 @@ main {
 
 .button {
   margin-bottom: 0;
-  color:rgb(255, 255, 255, 0.8);
-  background: #bc5e1b;
+  background-color: #98d9ff;
+  color: #252525;
   font-family: 'Puritan', sans-serif;
   font-size: 15px;
   width: fit-content;
@@ -126,13 +138,13 @@ main {
 }
 
 .button:hover {
-  background: #fe8e3e;
+  background: #4fd7a7;
 }
 
 .friendbutton {
   margin-top: 0;
-  color:rgb(255, 255, 255, 0.8);
-  background: #bc5e1b;
+  background-color: #98d9ff;
+  color: #252525;
   font-family: 'Puritan', sans-serif;
   font-size: 12px;
   width: fit-content;
@@ -143,7 +155,7 @@ main {
 }
 
 .friendbutton:hover {
-  background: #fe8e3e;
+  background: #4fd7a7;
 }
 
 #remove {
@@ -168,5 +180,5 @@ main {
 }
 
 .friend {
-  background-color: rgb(134, 190, 202);
+  background-color: #98d9ff;
 }
