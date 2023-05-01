@@ -4,7 +4,6 @@
 <main>
   <div class= "border" id="editcafe">
     <h1 class= "animate__animated animate__lightSpeedInLeft">☕️Edit Review☕️</h1>
-    <br></br>
     <form id="update-review" action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>?_method=PUT" method="POST">
       <% cafe.reviews.forEach(review => { %>
         <div id="column">
