@@ -159,15 +159,15 @@ main {
 }
 
 .cafes {
-  color: #98d9ff;
+  color: #924F4C;
 }
 
 .cafes:visited{
-  color: #3fb6fa;
+  color: #7f4542;
 }
 
 .cafes:hover {
-  color: #4fd7a7;
+  color: #a95c58;
 }
 
 #profileimg {
