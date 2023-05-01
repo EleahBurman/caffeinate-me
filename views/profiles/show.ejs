@@ -6,7 +6,7 @@
     <h1 class= "animate__animated animate__lightSpeedInLeft">☕️<%= profile.name %>'s Profile☕️</h1>
     <div class="profcard">
       <img id="profileimg" src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
-      <h2>☕️<%= profile.name  %>'s Favorite Cafes</h2>
+      <h2><%= profile.name  %>'s Favorite Cafes</h2>
     </div>
     <% profile.cafes.forEach(cafe => { %>
       <ul>
