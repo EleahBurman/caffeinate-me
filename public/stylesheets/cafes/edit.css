@@ -36,13 +36,15 @@ body {
     margin-left: 10px;
   }
   
-  .navwords:hover{
-    color:#fe8e3e;
+.navwords:hover{
+    color:#71bce7;
     text-decoration: none;
   }
   
 
 #logout-btn{
+  background-color: #71bce7;
+  color: #252525;
   font-family: 'Puritan', sans-serif;
   position: relative;
   float: right;
@@ -69,6 +71,35 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+#column {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin-left: 33%;
+  align-items: left;
+  text-align: left;
+}
+
+#favoriteCoffee {
+  display: flex;
+  flex-direction: row;
+}
+
+#leastCoffee {
+  display: flex;
+  flex-direction: row;
+}
+
+#milk-silect {
+  display: flex;
+  flex-direction: row;
+}
+
+#priceLatte {
+    flex-direction: row;
+  }
+
 h1  {
   color: #518453;
   font-size: 35px;
@@ -100,8 +131,8 @@ main {
 }
 
 .button {
-  color:rgb(255, 255, 255, 0.8);
-  background: #bc5e1b;
+  background-color: #71bce7;
+  color: #252525;
   font-family: 'Puritan', sans-serif;
   font-size: 15px;
   width: fit-content;
@@ -113,7 +144,7 @@ main {
 }
 
 .button:hover {
-  background: #fe8e3e;
+  background: #98d9ff;
 }
 
 #remove {

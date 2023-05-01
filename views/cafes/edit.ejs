@@ -7,12 +7,13 @@
     <br></br>
     <form id="update-review" action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>?_method=PUT" method="POST">
       <% cafe.reviews.forEach(review => { %>
+        <div id="column">
           <label for="favoriteCoffee">Favorite Coffee:</label>
           <input type="text" class="textbox" name="favoriteCoffee" id="favoriteCoffee" value="<%= review.favoriteCoffee %>"></input> 
           <label for="leastCoffee">Least Favorite Coffee:</label>
           <input type="text" class="textbox" name="leastCoffee" id="leastCoffee" value="<%= review.leastCoffee %>"></input>
           <label for="milk-select">Milk:</label>
-          <select name="milk" id="milk-select" >
+          <select style="width: 100px" name="milk" id="milk-select" >
             <option value="whole">Whole</option>
             <option value="oat">Oat</option>
             <option value="skim">Skim</option>
@@ -21,6 +22,7 @@
           </select>
           <label for="priceLatte">Price of Latte: $</label>
           <input type="number" class="textbox" name="priceLatte" id="priceLatte" value="<%= review.priceLatte %>"></input>
+        </div>
       <% }) %>
       <button class="button" type="submit">Save Review</button>
     </form>
