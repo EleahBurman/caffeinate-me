@@ -105,8 +105,9 @@ main {
 }
 
 .button {
-  background-color: #98d9ff;
-  color: #1C681B;
+  background-color: #924F4C;
+  color: white;
+  border: 2px solid #13106b;
   font-family: 'Puritan', sans-serif;
   font-size: 15px;
   width: fit-content;
@@ -114,11 +115,11 @@ main {
   text-transform: uppercase;
   height: 30px;
   border-radius: 10px;
-  border: 2px solid #13106b;
 }
 
 .button:hover {
   background-color: white;
+  color: #924F4C;
 }
 
 #remove {

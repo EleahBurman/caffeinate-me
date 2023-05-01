@@ -140,8 +140,8 @@ main {
 }
 
 .button {
-  background-color: #98d9ff;
-  color: #1C681B;
+  background-color: #924F4C;
+  color: white;
   font-family: 'Puritan', sans-serif;
   font-size: 15px;
   width: fit-content;
@@ -154,6 +154,7 @@ main {
 
 .button:hover {
   background-color: white;
+  color: #924F4C;
 }
 
 #remove {
@@ -181,22 +182,23 @@ main {
 }
 
 #save {
+  background-color: #924F4C;
+  color: white;
+  border: 2px solid #13106b;
   margin-top: 5px;
-  background-color: #98d9ff;
-  color: #1C681B;
   font-family: 'Puritan', sans-serif;
   font-size: 15px;
   width: fit-content;
   text-transform: uppercase;
   height: 30px;
   border-radius: 10px;
-  border: 2px solid #13106b;
   text-align: center;
   margin-right: 47%;
 }
 
 #save:hover {
   background-color: white;
+  color: #924F4C;
 }
 
 .darkness {

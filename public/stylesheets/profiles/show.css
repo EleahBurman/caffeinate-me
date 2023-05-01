@@ -89,7 +89,7 @@ body {
   height: fit-content;
   align-content: center;
   justify-content: center;
-  margin-left: 25%;
+  margin-left: 20%;
 }
 
 #profilepage {
@@ -128,8 +128,9 @@ main {
 }
 
 .button {
-  background-color: #98d9ff;
-  color: #1C681B;
+  background-color: #924F4C;
+  color: white;
+  border: 2px solid #13106b;
   font-family: 'Puritan', sans-serif;
   font-size: 15px;
   width: fit-content;
@@ -137,11 +138,12 @@ main {
   text-transform: uppercase;
   height: 30px;
   border-radius: 10px;
-  border: 2px solid #13106b;
+  margin-right: 5%;
 }
 
 .button:hover {
   background-color: white;
+  color: #924F4C;
 }
 
 
@@ -178,5 +180,5 @@ main {
   border-radius:10px;
   margin-bottom: 10px;
   max-width: 350px;
-  margin-left: 10%;
+  margin-left: 5%;
 }

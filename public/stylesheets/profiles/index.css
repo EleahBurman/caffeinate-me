@@ -136,8 +136,9 @@ main {
 }
 
 .button {
-  background-color: #98d9ff;
-  color: #1C681B;
+  background-color: #924F4C;
+  color: white;
+  border: 2px solid #13106b;
   font-family: 'Puritan', sans-serif;
   font-size: 15px;
   width: fit-content;
@@ -145,17 +146,18 @@ main {
   text-transform: uppercase;
   height: 30px;
   border-radius: 10px;
-  border: 2px solid #13106b;
 }
 
 .button:hover {
   background-color: white;
+  color: #924F4C;
 }
 
 .friendbutton {
+  background-color: #924F4C;
+  color: white;
+  border: 2px solid #13106b;
   margin-top: 0;
-  background-color: #98d9ff;
-  color: #252525;
   font-family: 'Lato', sans-serif;
   font-size: 12px;
   width: fit-content;
@@ -167,6 +169,7 @@ main {
 
 .friendbutton:hover {
   background-color: white;
+  color: #924F4C;
 }
 
 #remove {
@@ -186,10 +189,11 @@ main {
 }
 
 #viewbutton{
+  background-color: #924F4C;
+  color: white;
+  border: 2px solid #13106b;
   margin-top: 0;
   margin-left: 14px;
-  background-color: #98d9ff;
-  color: #252525;
   font-family: 'Lato', sans-serif;
   font-size: 12px;
   width: fit-content;
@@ -202,8 +206,10 @@ main {
 
 #viewbutton:hover{
   background-color: white;
+  color: #924F4C;
 }
 
 .friend {
-  background-color: #98d9ff;
+  background-color: #924F4C;
+  color: white;
 }
