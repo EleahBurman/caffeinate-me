@@ -50,23 +50,26 @@ body {
   }
   
 .navbar{
-    background-color: #924F4C;
-    align-items: center;
-    padding: 10px;
-    min-height: 40px;
-    letter-spacing: .18rem;
-    font-size: 25px;
+  background-color: #924F4C;
+  align-items: center;
+  padding: 10px;
+  min-height: 40px;
+  letter-spacing: .18rem;
+  font-size: 25px;
 }
   
 .navwords{
-    color: #E0DDD8;
-    text-decoration: none;
-    margin-left: 10px;
+  color: #E0DDD8;
+  text-decoration: none;
+  margin-left: 10px;
+  padding: 2px;
+  border-radius: 10px;
 }
-  
+
 .navwords:hover{
-    color:white;
-    text-decoration: none;
+  color:white;
+  text-decoration: none;
+  outline: white solid 1px;
 }
   
 #logout-btn{
