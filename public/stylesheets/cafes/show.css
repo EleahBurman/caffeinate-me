@@ -24,7 +24,7 @@ html {
 
 body {
   background-color:white;
-  color: #517784;
+  color: #0191DA;
   font-family:  'Abril Fatface', serif;
   margin: 0;
   background-repeat: no-repeat;
@@ -117,7 +117,7 @@ body {
 
 h1  {
   margin-bottom: 0;
-  color: #518453;
+  color: #0191DA;
   font-size: 35px;
   align-items: center;
   text-align: center;
@@ -128,7 +128,7 @@ h1  {
 h2{
   margin-top: 0;
   margin-bottom: 0;
-  color: #518453;
+  color: #0191DA;
   font-size: 20px;
   align-items: center;
   text-align: center;
@@ -171,9 +171,9 @@ main {
 }
 
 .button {
-  background-color: #924F4C;
+  background-color: #af3e38;
   color: white;
-  border: 2px solid #13106b;
+  border: 1px solid #767682;
   font-family: 'Puritan', sans-serif;
   font-size: 15px;
   width: fit-content;
@@ -185,7 +185,7 @@ main {
 
 .button:hover {
   background-color: white;
-  color: #924F4C;
+  color: #af3e38;
 }
 
 #remove {
