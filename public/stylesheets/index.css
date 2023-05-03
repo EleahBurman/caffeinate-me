@@ -23,7 +23,8 @@ body {
   background-color: #af3e38;
   align-items: center;
   padding: 8px;
-  max-height: 40px;
+  max-height: 50px;
+  min-height: 40px;
   letter-spacing: .18rem;
   font-size: 25px;
   display: flex;
