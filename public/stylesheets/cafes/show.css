@@ -157,6 +157,7 @@ p{
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
+  color: #0e2a50;
 }
 
 main {
@@ -258,22 +259,13 @@ main {
   border-radius:10px;
 }
 
-#favoriteCoffee {
+#favoriteCoffee, #leastCoffee, #milk-select, #priceLatte {
   display: block;
 }
 
-#leastCoffee {
-  display: block;
+#add-review-form{
+  color: #0e2a50;
 }
-
-#milk-select{
-  display: block;
-}
-
-#priceLatte{
-  display: block;
-}
-
 #addreview{
   margin-top: 20px;
   margin-bottom: 0px;
