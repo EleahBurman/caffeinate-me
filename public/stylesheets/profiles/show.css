@@ -36,7 +36,7 @@ main {
 
 body {
   background-color:white;
-  color: #517784;
+  color: #0191DA;
   font-family:  'Abril Fatface', serif;
   margin: 0;
   background-repeat: no-repeat;
@@ -156,7 +156,7 @@ body > main {
 }
 
 h1  {
-  color: #518453;
+  color: #0191DA;
   font-size: 35px;
   align-items: center;
   justify-content: center;
@@ -164,7 +164,7 @@ h1  {
 }
 
 h2 {
-  color: #518453;
+  color: #0191DA;
   font-size: 15px;
   justify-content: center;
   letter-spacing: .08rem;
@@ -179,9 +179,9 @@ main {
 }
 
 .button {
-  background-color: #924F4C;
+  background-color: #af3e38;
   color: white;
-  border: 2px solid #13106b;
+  border: 1px solid #c6c6c6;
   font-family: 'Puritan', sans-serif;
   font-size: 15px;
   width: fit-content;
@@ -193,7 +193,7 @@ main {
 
 .button:hover {
   background-color: white;
-  color: #924F4C;
+  color: #af3e38;
 }
 
 
@@ -215,15 +215,16 @@ main {
 }
 
 .cafes {
-  color: #924F4C;
+  color: #af3e38;
 }
 
 .cafes:visited{
-  color: #7f4542;
+  color: #ab261f;
 }
 
 .cafes:hover {
-  color: #a95c58;
+  color: #af3e38;
+  opacity: 80%;
 }
 
 #profileimg {
