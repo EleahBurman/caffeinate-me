@@ -131,7 +131,7 @@ color: white;
 }
 
 h1  {
-  color: #0191DA;;
+  color: #0191DA;
   font-size: 35px;
   align-items: center;
   justify-content: center;
@@ -190,7 +190,7 @@ main {
 .button {
   background-color: #af3e38;
   color: white;
-  border: 2px solid #767682;
+  border: 1px solid #767682;
   font-family: 'Puritan', sans-serif;
   font-size: 15px;
   width: fit-content;
@@ -208,7 +208,7 @@ main {
 .friendbutton {
   background-color: #af3e38;
   color: white;
-  border: 2px solid #93939a;
+  border: 1px solid #93939a;
   margin-top: 0;
   font-family: 'Lato', sans-serif;
   font-size: 12px;
