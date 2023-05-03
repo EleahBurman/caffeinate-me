@@ -6,30 +6,36 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  justify-content: center;
 }
 
 body {
-background-color:#271c14;
-font-family:  'Abril Fatface', serif;
-margin: 0;
-background-repeat: no-repeat;
-background-size: cover;
-background-attachment: fixed;
-min-height: 100%;
-letter-spacing: .08rem;
+  background-color: #271c14;
+  font-family: 'Abril Fatface', serif;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100%;
+  letter-spacing: .08rem;
 }
 
-.navbar{
-  background-color: #924F4C;
+.navbar {
+  background-color: #af3e38;
   align-items: center;
   padding: 10px;
   min-height: 40px;
   letter-spacing: .18rem;
   font-size: 25px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.navwords{
+.navwordscontainer {
+  display: flex;
+  flex-grow: 1;
+}
+
+.navwords {
   color: #E0DDD8;
   text-decoration: none;
   margin-left: 10px;
@@ -37,8 +43,27 @@ letter-spacing: .08rem;
   border-radius: 10px;
 }
 
-.navwords:hover{
-  color:white;
+#cafword {
+  color: #E0DDD8;
+  text-decoration: none;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+
+#meword {
+  color: #E0DDD8;
+  text-decoration: none;
+  border-radius: 10px;
+  font-family: 'Style Script';
+}
+
+#cafword,
+#meword {
+  display: inline-block;
+}
+
+.navwords:hover {
+  color: white;
   text-decoration: none;
   outline: white solid 1px;
 }
@@ -55,20 +80,35 @@ letter-spacing: .08rem;
   justify-content: center;
 }
 
-#logout-btn:hover{
+#logout-btn:hover {
   background-color: white;
   color: #924F4C;
 }
 
-h1  {
-  color: #518453;
+h1 {
+  color: #0191DA;
+  font-style: bold;
   font-size: 35px;
   align-items: center;
   justify-content: center;
   letter-spacing: .08rem;
 }
 
-h2{
+#caffeinate {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#me {
+  font-family: 'Style Script';
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+}
+
+h2 {
   color: #518453;
   font-size: 15px;
   align-items: center;
@@ -77,17 +117,17 @@ h2{
 }
 
 main {
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .right {
-margin-left: auto;
+  margin-left: auto;
 }
 
-.button {
+button {
   background-color: #924F4C;
   color: white;
   border: 2px solid #13106b;
@@ -106,13 +146,13 @@ margin-left: auto;
 }
 
 #remove {
-width: 50px;
+  width: 50px;
 }
 
 .textbox {
-  width: 140px; 
+  width: 140px;
   height: 20px;
-  border-radius:10px;
+  border-radius: 10px;
 }
 
 #remove {

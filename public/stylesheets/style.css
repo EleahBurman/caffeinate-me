@@ -2,19 +2,15 @@ html {
   box-sizing: border-box;
 }
 
-/* The Universal Selector */
-*, /* All elements*/
-*::before, /* All ::before pseudo-elements */
+*,
+*::before,
 *::after {
-  /* All ::after pseudo-elements */
-  /* height & width will now include border & padding by default but can be overridden as needed */
   box-sizing: inherit;
 }
 
 body {
-  background-color:white;
-  /* Use a system font, if none are available use any found sans-sarif font */
-  font-family:  'Abril Fatface', serif;
+  background-color: #271c14;
+  font-family: 'Abril Fatface', serif;
   margin: 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -22,17 +18,24 @@ body {
   min-height: 100%;
   letter-spacing: .08rem;
 }
-  
+
 .navbar {
-  background-color: #924F4C;
+  background-color: #af3e38;
   align-items: center;
   padding: 10px;
   min-height: 40px;
   letter-spacing: .18rem;
   font-size: 25px;
+  display: flex;
+  justify-content: space-between;
 }
-  
-.navwords{
+
+.navwordscontainer {
+  display: flex;
+  flex-grow: 1;
+}
+
+.navwords {
   color: #E0DDD8;
   text-decoration: none;
   margin-left: 10px;
@@ -40,27 +43,83 @@ body {
   border-radius: 10px;
 }
 
-.navwords:hover{
-  color:white;
+#cafword {
+  color: #E0DDD8;
+  text-decoration: none;
+  margin-left: 10px;
+  border-radius: 10px;
+  font-style: "Abril Fatface";
+  font-size: 15px
+}
+
+#meword {
+  color: #E0DDD8;
+  text-decoration: none;
+  border-radius: 10px;
+  font-family: 'Style Script';
+  font-size: 15px
+}
+
+#cafword,
+#meword {
+  display: inline-block; /* add display inline-block */
+}
+
+.navwords:hover {
+  color: white;
   text-decoration: none;
   outline: white solid 1px;
 }
 
-#logout-btn {
+#logout-btn{
   background-color: #924F4C;
   color: white;
   border: 1px solid white;
   font-family: 'Lato', sans-serif;
-  position: relative;
+  position: absolute;
   float: right;
   font-size: 20px;
   margin-right: 10px;
   justify-content: center;
+  text-align: right;
+  margin-left: 30em;
+  margin-top: 5px;
 }
 
 #logout-btn:hover {
   background-color: white;
   color: #924F4C;
+}
+
+h1 {
+  color: #0191DA;
+  font-style: bold;
+  font-size: 35px;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: .08rem;
+}
+
+#caffeinate {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#me {
+  font-family: 'Style Script';
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+}
+
+h2 {
+  color: #518453;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: .08rem;
 }
 
 main {
@@ -74,7 +133,7 @@ main {
   margin-left: auto;
 }
 
-.button {
+button {
   background-color: #924F4C;
   color: white;
   border: 2px solid #13106b;
@@ -90,6 +149,16 @@ main {
 .button:hover {
   background-color: white;
   color: #924F4C;
+}
+
+#remove {
+  width: 50px;
+}
+
+.textbox {
+  width: 140px;
+  height: 20px;
+  border-radius: 10px;
 }
 
 #remove {
