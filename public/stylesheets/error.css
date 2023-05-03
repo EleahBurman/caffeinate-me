@@ -2,19 +2,15 @@ html {
   box-sizing: border-box;
 }
 
-/* The Universal Selector */
-*, /* All elements*/
-*::before, /* All ::before pseudo-elements */
+*,
+*::before,
 *::after {
-  /* All ::after pseudo-elements */
-  /* height & width will now include border & padding by default but can be overridden as needed */
   box-sizing: inherit;
 }
 
 body {
-  background-color:white;
-  /* Use a system font, if none are available use any found sans-sarif font */
-  font-family:  'Abril Fatface', serif;
+  background-color: #271c14;
+  font-family: 'Abril Fatface', serif;
   margin: 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -22,55 +18,111 @@ body {
   min-height: 100%;
   letter-spacing: .08rem;
 }
-  
+
 .navbar {
-    background-color: #924F4C;
-    align-items: center;
-    padding: 10px;
-    min-height: 40px;
-    letter-spacing: .18rem;
-    font-size: 25px;
+  background-color: #af3e38;
+  align-items: center;
+  padding: 8px;
+  max-height: 40px;
+  letter-spacing: .18rem;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
 }
-  
-.navwords{
+
+.navwordscontainer {
+  display: flex;
+  flex-grow: 1;
+  margin-bottom: 5x;
+}
+
+.navwords {
   color: #E0DDD8;
   text-decoration: none;
   margin-left: 10px;
   padding: 2px;
   border-radius: 10px;
+  margin-bottom: 5x;
 }
 
-.navwords:hover{
-  color:white;
+#cafword {
+  color: #E0DDD8;
+  text-decoration: none;
+  margin-left: 10px;
+  border-radius: 10px;
+  font-style: "Abril Fatface";
+  font-size: 15px;
+  margin-bottom: 5x;
+}
+
+#meword {
+  color: #E0DDD8;
+  text-decoration: none;
+  border-radius: 10px;
+  font-family: 'Style Script';
+  font-size: 15px;
+  margin-bottom: 5x;
+}
+
+#cafword,
+#meword {
+  display: inline-block;
+}
+
+.navwords:hover {
+  color: white;
   text-decoration: none;
   outline: white solid 1px;
 }
 
-#logout-btn{
-  background-color: #924F4C;
-  color: white;
-  border: 1px solid white;
-  font-family: 'Lato', sans-serif;
+#logout-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
   position: relative;
-  float: right;
-  font-size: 20px;
-  margin-right: 10px;
-  justify-content: center;
+  margin-left: 58em;
+  vertical-align: middle;
 }
 
-#logout-btn:hover{
-  background-color: white;
-  color: #924F4C;
+#logout-btn:hover {
+  outline: none;
 }
 
-h1  {
+#logout-btn img {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  color: #0191DA;
+  font-style: bold;
+  font-size: 35px;
   align-items: center;
   justify-content: center;
-  color: #518453;
-  font-size: 20px;
+  letter-spacing: .08rem;
 }
 
-h2{
+#caffeinate {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#me {
+  font-family: 'Style Script';
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+}
+
+h2 {
   color: #518453;
   font-size: 15px;
   align-items: center;
@@ -83,32 +135,20 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  list-style:none;
 }
 
-.list {
-  list-style: none;
-  line-height: 7px;
-  justify-content: center;
-  
+.right {
+  margin-left: auto;
 }
 
-.button {
-  background-color: #924F4C;
-  color: white;
-  border: 2px solid #13106b;
-  font-family: 'Puritan', sans-serif;
-  font-size: 15px;
-  width: fit-content;
-  justify-content: center;
-  text-transform: uppercase;
-  height: 30px;
+#remove {
+  width: 50px;
+}
+
+.textbox {
+  width: 140px;
+  height: 20px;
   border-radius: 10px;
-}
-
-.button:hover {
-  background-color: white;
-  color: #924F4C;
 }
 
 #remove {
