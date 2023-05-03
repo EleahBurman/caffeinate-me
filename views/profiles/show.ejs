@@ -4,13 +4,17 @@
 <main>
   <div class="border">
     <h1 class= "animate__animated animate__lightSpeedInLeft">☕️<%= profile.name %>'s Profile☕️</h1>
-    <div class="profcard">
-      <img id="profileimg" src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
-      <h2><%= profile.name  %>'s Favorite Cafes</h2>
+    <div id="emptyspace">
+      <div class="profcard">
+        <img id="profileimg" src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
+        <h2><%= profile.name  %>'s Favorite Cafes</h2>
+      </div>
     </div>
     <% profile.cafes.forEach(cafe => { %>
       <ul>
-        <li class="list">☕️<a class="cafes" href="/cafes/<%= cafe._id%>"><%= cafe.name%></a></li>
+        <div class="centerlist">
+          <li class="list">☕️<a class="cafes" href="/cafes/<%= cafe._id%>"><%= cafe.name%></a></li>
+        </div>
       </ul>
     <% }) %>
     <img id="lorelai" src="/images/lorelaicoffee.gif" alt="Lorelai Needs Coffee">

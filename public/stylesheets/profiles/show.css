@@ -9,6 +9,15 @@ html {
   justify-content: center;
 }
 
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  list-style:none;
+  text-align: center;
+}
+
 .border {
   flex-wrap: wrap;
   background-color: white;
@@ -36,7 +45,13 @@ body {
   min-height: 100%;
   letter-spacing: .08rem;
 }
-  
+
+body > main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .navbar {
     background-color: #924F4C;
     align-items: center;
@@ -49,7 +64,6 @@ body {
 .navwords {
     color: #E0DDD8;
     text-decoration: none;
-    margin-left: 10px;
 }
   
 .navwords:hover {
@@ -65,7 +79,6 @@ body {
   position: relative;
   float: right;
   font-size: 20px;
-  margin-right: 10px;
   justify-content: center;
 }
 
@@ -82,15 +95,10 @@ body {
   border: 1px solid #c6c6c6;
   border-radius: 10px;
   padding: 10px;
-  margin: 25px;
   width: 190px;
   height: fit-content;
   align-items: center;
-  height: fit-content;
-  align-content: center;
   justify-content: center;
-  margin-left: 20%;
-  margin-bottom: 5px;
 }
 
 #profilepage {
@@ -124,10 +132,6 @@ main {
   list-style:none;
 }
 
-.right {
-  margin-left: auto;
-}
-
 .button {
   background-color: #924F4C;
   color: white;
@@ -139,7 +143,6 @@ main {
   text-transform: uppercase;
   height: 30px;
   border-radius: 10px;
-  margin-right: 5%;
 }
 
 .button:hover {
@@ -152,11 +155,17 @@ main {
   width: 50px;
 }
 
+.centerlist{
+  display: flex;
+  justify-content: center;
+}
+
 .list {
   list-style: none;
   line-height: 2px;
-  justify-content: center;
-  margin-right: 15%;
+  display: flex;
+  text-align: center;
+  padding-right: 40px;
 }
 
 .cafes {
@@ -181,10 +190,19 @@ main {
   border-radius:10px;
   margin-bottom: 10px;
   max-width: 350px;
-  margin-left: 5%;
-  margin-top: 1%
+  margin-top: 1%;
+  align-items: center;
+  justify-content: center;
+}
+
+.profcard, #lorelai {
+  margin: 0 auto;
 }
 
 .profilesbutton{
-  margin-left: 5%;
+  margin-top: 10px;
+}
+
+#emptyspace{
+  margin-bottom: 10px;
 }
