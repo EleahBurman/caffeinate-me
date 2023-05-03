@@ -36,7 +36,7 @@ main {
 
 body {
   background-color:white;
-  color: #0191DA;
+  color:#0e2a50;
   font-family:  'Abril Fatface', serif;
   margin: 0;
   background-repeat: no-repeat;
@@ -135,6 +135,7 @@ body > main {
 }
 
 .profcard {
+  color: #0e2a50;
   flex-wrap: wrap;
   background-color: white;
   display: flex;
@@ -165,10 +166,14 @@ h1  {
 }
 
 h2 {
-  color: #0191DA;
+  color: #0e2a50;
   font-size: 15px;
   justify-content: center;
   letter-spacing: .08rem;
+}
+
+.profilefavecafes{
+  color: #0e2a50;
 }
 
 main {
