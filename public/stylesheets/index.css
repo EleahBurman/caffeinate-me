@@ -22,17 +22,19 @@ body {
 .navbar {
   background-color: #af3e38;
   align-items: center;
-  padding: 10px;
-  min-height: 40px;
+  padding: 8px;
+  max-height: 40px;
   letter-spacing: .18rem;
   font-size: 25px;
   display: flex;
   justify-content: space-between;
+  vertical-align: middle;
 }
 
 .navwordscontainer {
   display: flex;
   flex-grow: 1;
+  margin-bottom: 5x;
 }
 
 .navwords {
@@ -41,6 +43,7 @@ body {
   margin-left: 10px;
   padding: 2px;
   border-radius: 10px;
+  margin-bottom: 5x;
 }
 
 #cafword {
@@ -48,6 +51,9 @@ body {
   text-decoration: none;
   margin-left: 10px;
   border-radius: 10px;
+  font-style: "Abril Fatface";
+  font-size: 15px;
+  margin-bottom: 5x;
 }
 
 #meword {
@@ -55,6 +61,8 @@ body {
   text-decoration: none;
   border-radius: 10px;
   font-family: 'Style Script';
+  font-size: 15px;
+  margin-bottom: 5x;
 }
 
 #cafword,
@@ -68,21 +76,27 @@ body {
   outline: white solid 1px;
 }
 
-#logout-btn{
-  background-color: #924F4C;
-  color: white;
-  border: 1px solid white;
-  font-family: 'Lato', sans-serif;
+#logout-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
   position: relative;
-  float: right;
-  font-size: 20px;
-  margin-right: 10px;
-  justify-content: center;
+  margin-left: 58em;
+  vertical-align: middle;
 }
 
 #logout-btn:hover {
-  background-color: white;
-  color: #924F4C;
+  outline: none;
+}
+
+#logout-btn img {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
@@ -125,24 +139,6 @@ main {
 
 .right {
   margin-left: auto;
-}
-
-button {
-  background-color: #924F4C;
-  color: white;
-  border: 2px solid #13106b;
-  font-family: 'Puritan', sans-serif;
-  font-size: 15px;
-  width: fit-content;
-  justify-content: center;
-  text-transform: uppercase;
-  height: 30px;
-  border-radius: 10px;
-}
-
-.button:hover {
-  background-color: white;
-  color: #924F4C;
 }
 
 #remove {
