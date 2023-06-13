@@ -72,7 +72,7 @@ body {
   text-decoration: none;
   margin-left: 10px;
   border-radius: 10px;
-  font-style: "Abril Fatface";
+  font-style: 'Abril Fatface';
   font-size: 15px;
   margin-bottom: 5x;
 }
@@ -112,17 +112,17 @@ body {
 }
 
 #logout-btn img {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   background-color: transparent;
   border: none;
   padding: 0;
   margin: 0;
-  border-radius: 10px;
+  border-radius: 50%;
 }
 
 h1 {
-  color: #0191DA;
+  color: #007185;
   font-size: 35px;
   align-items: center;
   text-align: center;
@@ -151,9 +151,9 @@ main {
 }
 
 .button {
-  background-color: #af3e38;
-  color: white;
-  border: 1px solid #767682;
+  background-color: white;
+  color: #af3e38;
+  border: 2px solid #af3e38;
   font-family: 'Puritan', sans-serif;
   font-size: 15px;
   width: fit-content;
@@ -164,8 +164,8 @@ main {
 }
 
 .button:hover {
-  background-color: white;
-  color: #af3e38;
+  background-color: #af3e38;
+  color: white;
 }
 
 #remove {

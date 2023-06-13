@@ -106,13 +106,13 @@ body {
   }
   
   #logout-btn img {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     background-color: transparent;
     border: none;
     padding: 0;
     margin: 0;
-    border-radius: 10px;
+    border-radius: 50%;
   }
 
 #editcafe {
@@ -159,7 +159,7 @@ body {
   }
 
 h1  {
-  color: #0191DA;
+  color: #007185;
   font-size: 35px;
   align-items: center;
   justify-content: center;
@@ -183,36 +183,10 @@ main {
   letter-spacing: .08rem;
 }
 
-.button {
-  background-color: #af3e38;
-  color: white;
-  font-family: 'Puritan', sans-serif;
-  font-size: 15px;
-  width: fit-content;
-  justify-content: center;
-  text-transform: uppercase;
-  height: 30px;
-  border-radius: 10px;
-  border: 1px solid #c6c6c6;
-}
-
-.button:hover {
-  background-color: white;
-  color: #af3e38;
-}
-
-#remove {
-  width: 50px;
-}
-
 .textbox {
   width: 140px; 
   height: 20px;
   border-radius:10px;
-}
-
-#remove {
-  width: 50px;
 }
 
 #update-review{
@@ -227,10 +201,10 @@ main {
 }
 
 #save {
-  background-color: #af3e38;
-  color: white;
-  border: 1px solid #c6c6c6;
-  margin-top: 5px;
+  background-color: white;
+  color: #af3e38;
+  border: 2px solid #af3e38;
+  margin-top: 15px;
   font-family: 'Puritan', sans-serif;
   font-size: 15px;
   width: fit-content;
@@ -242,8 +216,8 @@ main {
 }
 
 #save:hover {
-  background-color: white;
-  color: #af3e38;
+  background-color: #af3e38;
+  color: white;
 }
 
 .darkness {

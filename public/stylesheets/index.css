@@ -50,7 +50,7 @@ body {
 #cafword {
   color: #E0DDD8;
   text-decoration: none;
-  margin-left: 10px;
+  margin-left: 30px;
   border-radius: 10px;
   font-style: "Abril Fatface";
   font-size: 15px;
@@ -76,29 +76,9 @@ body {
   text-decoration: none;
 }
 
-#logout-btn {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
-  position: relative;
-  margin-left: 58em;
-  vertical-align: middle;
-}
-
-#logout-btn:hover {
-  outline: none;
-  opacity: 80%;
-}
-
-#logout-btn img {
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
-  border-radius: 10px;
+#logout {
+  position: absolute;
+  right: 30px;
 }
 
 h1 {

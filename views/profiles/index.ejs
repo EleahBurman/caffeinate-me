@@ -13,7 +13,6 @@
               <form action="/profiles/<%= profile._id %>" method="GET">
                 <button class=button id="viewbutton">View Profile</button>
               </form>
-            </div>
           <% if (userProfile.equals(profile._id)) { %>
           <% } else { %>
             <% if (userProfile.pendingOutgoingInvites.includes(profile._id)) { %>
@@ -28,10 +27,11 @@
               </form>
             <% } else { %>
               <form action="/profiles/requestFriend/<%= profile._id %>" method="POST">
-                <button class="friendbutton" type="submit">Send Request</button>
+                <button class="sendbutton" type="submit">Send Request</button>
               </form>
             <% } %>
           <% } %>
+            </div>
         </div>
       <% }) %>
     </div>
