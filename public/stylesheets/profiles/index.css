@@ -174,7 +174,7 @@ main {
 .button {
   background-color: white;
   color: #b7835f;
-  border: 1px solid #000000;
+  border: 2px solid #000000;
   font-family: 'Puritan', sans-serif;
   font-size: 15px;
   width: fit-content;
@@ -192,7 +192,7 @@ main {
 .friendbutton {
   background-color: white;
   color: #b7835f;
-  border: 1px solid #000000;
+  border: 2px solid #000000;
   font-family: 'Lato', sans-serif;
   font-size: 12px;
   justify-content: center;
@@ -212,7 +212,7 @@ main {
 .sendbutton {
   background-color: white;
   color: #b7835f;
-  border: 1px solid #000000;
+  border: 2px solid #000000;
   font-family: 'Lato', sans-serif;
   font-size: 12px;
   justify-content: center;
@@ -242,7 +242,7 @@ main {
 #viewbutton{
   background-color: white;
   color: #b7835f;
-  border: 1px solid #000000;
+  border: 2px solid #000000;
   margin-top: 0;
   margin-left: 9%;
   font-family: 'Lato', sans-serif;
