@@ -169,8 +169,8 @@ main {
 
 .button {
   background-color: white;
-  color: #af3e38;
-  border: 2px solid #af3e38;
+  color: #b7835f;
+  border: 1px solid #000000;
   font-family: 'Puritan', sans-serif;
   font-size: 15px;
   width: fit-content;
@@ -181,7 +181,7 @@ main {
 }
 
 .button:hover {
-  background-color: #af3e38;
+  background-color: #b7835f;
   color: white;
 }
 
