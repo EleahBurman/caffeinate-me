@@ -133,7 +133,9 @@ main {
 
 .button {
   background-color: white;
-  color: #b7835f;
+  background: #c2e7ff;
+  color: #001d35;
+  font-weight: bold;
   border: 2px solid #271c14;
   font-family: 'Puritan', sans-serif;
   font-size: 15px;
@@ -145,8 +147,9 @@ main {
 }
 
 .button:hover {
-  background-color: #b7835f;
-  color: white;
+  background: #85ccfc;
+  font-weight: bold;
+  box-shadow: 0px 0px 0px 2px #c6c6c6;
 }
 
 #remove {
