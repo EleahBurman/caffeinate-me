@@ -168,10 +168,10 @@ main {
 }
 
 .button {
+  border: none;
   background: #c2e7ff;
   color: #001d35;
   font-weight: bold;
-  border: 2px solid #271c14;
   font-family: 'Puritan', sans-serif;
   font-size: 15px;
   width: fit-content;
@@ -183,8 +183,8 @@ main {
 
 .button:hover {
   background: #85ccfc;
-  box-shadow: 0px 0px 0px 2px #c6c6c6;
   font-weight: bold;
+  box-shadow: 0px 4px 2px -2px #c6c6c6;
 }
 
 

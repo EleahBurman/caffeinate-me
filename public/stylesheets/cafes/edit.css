@@ -199,3 +199,24 @@ main {
 .column{
   color: #0191DA;
 }
+
+#save {
+  border: none;
+  background: #c2e7ff;
+  color: #001d35;
+  font-weight: bold;
+  font-family: 'Puritan', sans-serif;
+  font-size: 15px;
+  width: fit-content;
+  justify-content: center;
+  text-transform: uppercase;
+  height: 30px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+#save:hover {
+  background: #85ccfc;
+  font-weight: bold;
+  box-shadow: 0px 4px 2px -2px #c6c6c6;
+}

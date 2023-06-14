@@ -9,7 +9,9 @@
         <div class="<%= userProfile.friends.includes(profile._id) ? 'profile-card friend' : 'profile-card' %>">
           <div class="column">
             <h2 id="profilename"><%= profile.name %></h2>
-            <h1>☕️</h1>
+            <div class="coffee-cup">
+              <h1 id="coffee">☕️</h1>
+            </div>
             <form action="/profiles/<%= profile._id %>" method="GET">
               <button class=button id="viewbutton">View Profile</button>
             </form>
