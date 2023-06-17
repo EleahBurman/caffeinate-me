@@ -34,68 +34,6 @@ body {
   min-height: 100%;
   letter-spacing: .08rem;
 }
-  
-.navbar {
-  background-color: #b7835f;
-  align-items: center;
-  padding: 10px;
-  max-height: 60px;
-  min-height: 40px;
-  letter-spacing: .18rem;
-  font-size: 25px;
-  display: flex;
-  justify-content: space-between;
-  vertical-align: middle;
-}
-
-.navwordscontainer {
-  display: flex;
-  flex-grow: 1;
-  margin-bottom: 5x;
-}
-
-.navwords {
-  color: white;
-  text-decoration: none;
-  margin-left: 10px;
-  padding: 2px;
-  border-radius: 10px;
-  margin-bottom: 5x;
-}
-
-#cafword {
-  color: white;
-  text-decoration: none;
-  margin-left: 30px;
-  border-radius: 10px;
-  font-style: "Abril Fatface";
-  font-size: 15px;
-  margin-bottom: 5x;
-}
-
-#meword {
-  color: white;
-  text-decoration: none;
-  border-radius: 10px;
-  font-family: 'Style Script';
-  font-size: 15px;
-  margin-bottom: 5x;
-}
-
-#cafword,
-#meword {
-  display: inline-block;
-}
-
-.navwords:hover {
-  color: #271c14;
-  text-decoration: none;
-}
-
-#logout {
-  position: absolute;
-  right: 30px;
-}
 
 h1  {
   margin-bottom: 0;
