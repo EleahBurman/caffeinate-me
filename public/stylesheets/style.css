@@ -47,6 +47,13 @@ body {
   margin-bottom: 5x;
 }
 
+.navwords:hover {
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-left: 3px;
+  padding-left: 6px;
+}
+
 #cafword {
   color: white;
   text-decoration: none;
@@ -69,11 +76,6 @@ body {
 #cafword,
 #meword {
   display: inline-block;
-}
-
-.navwords:hover {
-  color: #271c14;
-  text-decoration: none;
 }
 
 #logout {
