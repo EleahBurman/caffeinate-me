@@ -172,7 +172,7 @@ main {
 .addreviewborder{
   margin-top: 10px;
   display: flex;
-  width: 462px;
+  width: 80%;
   background-color: white;
   display: flex;
   border: 1px solid #000000;
@@ -186,7 +186,7 @@ main {
   margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
-  width: 462px;
+  width: 80%;
   background-color: white;
   display: flex;
   border: 1px solid #000000;
