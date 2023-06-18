@@ -6,7 +6,9 @@ const reviewSchema = new Schema({
   favoriteCoffee: String,
   leastCoffee: String,
   milk: String,
-  priceLatte: Number,
+  priceLatte: {	
+    type: mongoose.Decimal128,
+    get: v => new mongoose.Types.Decimal128((+v.toString()).toFixed(2)),},
   reviewer: { type: Schema.Types.ObjectId, ref: 'Profile' },
 })
 
