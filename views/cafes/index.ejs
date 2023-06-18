@@ -14,8 +14,8 @@
       <tbody>
         <% cafes.forEach((cafe) => {  %>
           <tr>
-            <td><%= cafe.name %></td>
-            <td><%= cafe.location %></td>
+            <td class="cafe-name"><%= cafe.name %></td>
+            <td class="location-name"><%= cafe.location %></td>
             <%# button for reviews %>
             <td>
               <form id="reviews" action="/cafes/<%= cafe._id %>" method="GET"><button class="button">REVIEWS</button>

@@ -12,6 +12,21 @@ html {
   justify-content: center;
 }
 
+.cafe-name,
+.location-name, #name-input,
+#location-select{
+  border-radius:10px;
+  border: 1px solid #c6c6c6;
+  background: #e0ebf1;
+  padding: 2px;
+  font-family: 'Abril-Fatface';
+  font-size: 16px;
+  height: 28px;
+  margin: 0px 5px 4px 0px;
+  color: #0156d2;
+  font-weight: bold;
+}
+
 .border {
   flex-wrap: wrap;
   background-color: white;
