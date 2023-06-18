@@ -198,3 +198,11 @@ main {
 #addreviewbutton{
   margin-top: 10px;
 }
+
+#name-title,
+#favoritecoffee-title,
+#leastfavcoffee-title,
+#milkpref-title,
+#price-title, label{
+  color: #0156d2;
+}

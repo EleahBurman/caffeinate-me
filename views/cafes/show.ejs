@@ -14,11 +14,11 @@
       <% cafe.reviews.forEach(review => { %>
         <% if (review.reviewer) { %>
           <div class="column">
-            <li>☕️Name: <%= review.reviewer.name %></li>
-            <li>☕️Favorite Coffee: <%= review.favoriteCoffee %></li>
-            <li>☕️Least Favorite Coffee: <%= review.leastCoffee %></li>
-            <li>☕️Milk Preference: <%= review.milk %></li>
-            <li>☕️Price of Latte: $<%= review.priceLatte %></li>
+            <li><span id="name-title">☕️Name: </span><%= review.reviewer.name %></li>
+            <li><span id="favoritecoffee-title">☕️Favorite Coffee: </span><%= review.favoriteCoffee %></li>
+            <li><span id="leastfavcoffee-title">☕️Least Favorite Coffee: </span><%= review.leastCoffee %></li>
+            <li><span id="milkpref-title">☕️Milk Preference: </span><%= review.milk %></li>
+            <li><span id="price-title">☕️Price of Latte: </span>$<%= review.priceLatte %></li>
           </div>
         <% } %>
         <% if(review.reviewer.equals(user?.profile._id)) { %>

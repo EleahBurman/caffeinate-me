@@ -144,16 +144,20 @@ main {
 }
 
 .cafes {
-  color: #af3e38;
+  color: #0391da;
+  text-decoration: none;
 }
 
 .cafes:visited{
-  color: #ab261f;
+  color: #0156d2;
+  text-decoration: none;
 }
 
 .cafes:hover {
-  color: #af3e38;
-  opacity: 80%;
+  color: #0156d2;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0px 4px 2px -2px #c6c6c6;
 }
 
 #profileimg {
