@@ -76,13 +76,6 @@ p{
   flex-direction: row;
 }
 
-.column1 {
-  flex-direction: column;
-  flex-basis: 100%;
-  width: 70%;
-  color: #0191DA;
-}
-
 .multi-reviewers-row{
   display: flex;
   flex-direction: column;
@@ -97,9 +90,15 @@ p{
   margin-top: 25px;
 }
 
+.column1 {
+  flex-direction: column;
+  width: 70%;
+  color: #0191DA;
+}
+
 .column-2 {
   flex-direction: column;
-  width: 100%;
+  width: 30%;
 }
 
 main {
