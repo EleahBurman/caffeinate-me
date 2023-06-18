@@ -106,7 +106,7 @@ main {
   width: fit-content;
   justify-content: center;
   text-transform: uppercase;
-  height: 30px;
+  height: 28px;
   border-radius: 10px;
 }
 
@@ -219,6 +219,8 @@ main {
 #milkpref-title,
 #price-title, label{
   color: #0156d2;
+  width: 300px;
+  height: 28px;
 }
 
 li{

@@ -58,24 +58,26 @@ body {
   text-align: left;
 }
 
-#favoriteCoffee {
-  display: flex;
-  flex-direction: row;
+label{
+  color: #0156d2;
 }
 
-#leastCoffee {
-  display: flex;
-  flex-direction: row;
-}
-
-#milk-silect {
-  display: flex;
-  flex-direction: row;
-}
-
+#favoriteCoffee,
+#leastCoffee,
+#milk-select,
 #priceLatte {
-    flex-direction: row;
-  }
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #c6c6c6;
+  background: #e0ebf1;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  margin-right: 5px;
+  padding: 2px;
+  width: 300px;
+  height: 28px;
+  font-size: 16px;
+}
 
 h1  {
   color: #0191DA;
@@ -102,12 +104,6 @@ main {
   letter-spacing: .08rem;
 }
 
-.textbox {
-  width: 140px; 
-  height: 20px;
-  border-radius:10px;
-}
-
 #update-review{
   font-size: 20px;
   margin-top: 0%;
@@ -128,10 +124,6 @@ main {
   display: flex;
   border-radius:10px;
   vertical-align: center;
-}
-
-#add-review-form{
-  color: #0191DA;
 }
 
 .column{
