@@ -90,10 +90,16 @@ p{
   margin-top: 25px;
 }
 
+
 .column1 {
   flex-direction: column;
   width: 70%;
   color: #0191DA;
+}
+
+.column1:not(.column-2) {
+  width: 100%;
+  margin-bottom: -5px;
 }
 
 .column-2 {
