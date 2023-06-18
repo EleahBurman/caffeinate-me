@@ -72,11 +72,16 @@ p{
   flex-direction: row;
 }
 
-.column {
+.column1 {
   flex-direction: column;
   flex-basis: 100%;
-  flex: 1;
+  width: 70%;
   color: #0191DA;
+}
+
+.column2 {
+  flex-direction: column;
+  width: 30%;
 }
 
 main {
@@ -116,9 +121,16 @@ main {
 }
 
 .textbox {
-  width: 100px; 
+  width: 300px; 
   height: 20px;
   border-radius:10px;
+  border: 1px solid #c6c6c6;
+  background: #e0ebf1;
+  padding: 2px;
+  font-family: 'Abril-Fatface';
+  font-size: 16px;
+  height: 28px;
+  margin: 0px 5px 4px 0px;
 }
 
 #remove {
@@ -151,7 +163,7 @@ main {
 .reviewborder{
   margin-top: 10px;
   display: flex;
-  max-width: 70%;
+  max-width: 80%;
   background-color: white;
   display: flex;
   border: 1px solid #000000;
@@ -186,6 +198,9 @@ main {
   display: block;
 }
 
+#milk-select{
+  height: 28px;
+}
 #add-review-form{
   color: #0191DA;
 }
@@ -205,4 +220,14 @@ main {
 #milkpref-title,
 #price-title, label{
   color: #0156d2;
+}
+
+li{
+  color:black;
+  border: 1px solid #c6c6c6;
+  background: #e0ebf1;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  margin-right: 5px;
+  padding: 2px;
 }

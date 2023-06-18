@@ -13,7 +13,7 @@
     <div class="row reviewborder">
       <% cafe.reviews.forEach(review => { %>
         <% if (review.reviewer) { %>
-          <div class="column">
+          <div class="column-1">
             <li><span id="name-title">☕️Name: </span><%= review.reviewer.name %></li>
             <li><span id="favoritecoffee-title">☕️Favorite Coffee: </span><%= review.favoriteCoffee %></li>
             <li><span id="leastfavcoffee-title">☕️Least Favorite Coffee: </span><%= review.leastCoffee %></li>
@@ -22,7 +22,7 @@
           </div>
         <% } %>
         <% if(review.reviewer.equals(user?.profile._id)) { %>
-          <div class="column">
+          <div class="column-2">
             <div class="marginbottom">
               <form action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>/edit" method="GET">
                 <button class="button" id="edit-review">EDIT REVIEW</button>
