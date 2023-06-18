@@ -20,7 +20,12 @@ html {
   padding: 10px;
   margin: 25px;
   width: 600px;
+  max-width: 100%;
   height: fit-content;
+}
+
+#no-bottom-margin {
+  margin-bottom: 0;
 }
 
 body {
@@ -79,9 +84,23 @@ p{
   color: #0191DA;
 }
 
-.column2 {
+.multi-reviewers-row{
+  display: flex;
   flex-direction: column;
-  width: 30%;
+  flex-basis: 100%;
+  border: 1px solid #000000;
+  box-shadow: 0px 0px 2px 2px #0191DA;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.multi-reviewers-row:not(:first-child) {
+  margin-top: 25px;
+}
+
+.column-2 {
+  flex-direction: column;
+  width: 100%;
 }
 
 main {
@@ -162,6 +181,7 @@ main {
 .reviewborder{
   margin-top: 10px;
   display: flex;
+  flex-wrap: wrap;
   max-width: 80%;
   background-color: white;
   display: flex;

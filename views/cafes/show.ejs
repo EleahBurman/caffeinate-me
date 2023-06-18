@@ -3,7 +3,7 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <div class="border">
+  <div class="border" id="no-bottom-margin">
     <h1 class="animate__animated animate__lightSpeedInLeft">☕️<%= cafe.name %>☕️</h1>
     <h2><%= cafe.location %></h2>
     <div class="meryl">
@@ -13,7 +13,7 @@
     <div class="row reviewborder">
       <% cafe.reviews.forEach(review => { %>
         <% if (review.reviewer) { %>
-          <div class="column-1">
+          <div class="<%= cafe.reviews.length > 1 ? 'multi-reviewers-row' : 'column1' %>">
             <li><span id="name-title">☕️Name: </span><%= review.reviewer.name %></li>
             <li><span id="favoritecoffee-title">☕️Favorite Coffee: </span><%= review.favoriteCoffee %></li>
             <li><span id="leastfavcoffee-title">☕️Least Favorite Coffee: </span><%= review.leastCoffee %></li>
