@@ -9,8 +9,8 @@ html {
 }
 
 body {
-  background-color: #271c14;
-  font-family: 'Abril Fatface', serif;
+  background-color:white;
+  font-family:  'Abril Fatface', serif;
   margin: 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -19,126 +19,26 @@ body {
   letter-spacing: .08rem;
 }
 
-.navbar {
-  background-color: #b7835f;
-  align-items: center;
-  padding: 10px;
-  max-height: 60px;
-  min-height: 40px;
-  letter-spacing: .18rem;
-  font-size: 25px;
-  display: flex;
-  justify-content: space-between;
-  vertical-align: middle;
-}
-
-.navwordscontainer {
-  display: flex;
-  flex-grow: 1;
-  margin-bottom: 5x;
-}
-
-.navwords {
-  color: white;
-  text-decoration: none;
-  margin-left: 10px;
-  padding: 2px;
-  border-radius: 10px;
-  margin-bottom: 5x;
-}
-
-#cafword {
-  color: white;
-  text-decoration: none;
-  margin-left: 30px;
-  border-radius: 10px;
-  font-style: "Abril Fatface";
-  font-size: 15px;
-  margin-bottom: 5x;
-}
-
-#meword {
-  color: white;
-  text-decoration: none;
-  border-radius: 10px;
-  font-family: 'Style Script';
-  font-size: 15px;
-  margin-bottom: 5x;
-}
-
-#cafword,
-#meword {
-  display: inline-block;
-}
-
-.navwords:hover {
-  color: #271c14;
-  text-decoration: none;
-}
-
-#logout {
-  position: absolute;
-  right: 30px;
-}
-
-h1 {
+h1  {
   color: #0191DA;
-  font-style: bold;
   font-size: 35px;
   align-items: center;
   justify-content: center;
   letter-spacing: .08rem;
+  text-align: center;
 }
 
-#caffeinate {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-#me {
-  font-family: 'Style Script';
-  border: 0;
-  margin: 0;
-  padding: 0;
-  font-size: 50px;
-}
-
-h2 {
-  color: #518453;
-  font-size: 15px;
+h2{
+  color: #0191DA;
+  font-size: 20px;
   align-items: center;
   justify-content: center;
   letter-spacing: .08rem;
 }
 
-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.right {
-  margin-left: auto;
-}
-
-#remove {
-  width: 50px;
-}
-
-.textbox {
-  width: 140px;
-  height: 20px;
-  border-radius: 10px;
-}
-
-#remove {
-  width: 50px;
-}
-
 #error-img {
   max-width: 300px;
+  border-radius: 10px;
 }
 
 #error{
@@ -146,7 +46,6 @@ main {
 }
 
 #notfounderror{
-    font-size: 15px;
-    text-shadow: 10px 10px 9px #000000;
+    font-size: 16px;
     font-family: 'Puritan', sans-serif;
 }

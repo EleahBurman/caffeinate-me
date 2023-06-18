@@ -5,7 +5,6 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
   justify-content: center;
 }
 
@@ -209,7 +208,6 @@ main {
 #meryl {
   display: flex;
   max-width: 50%;
-  vertical-align: center;
   border-radius:10px;
 }
 

@@ -8,17 +8,6 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  background-color: #271c14;
-  font-family: 'Abril Fatface', serif;
-  margin: 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  min-height: 100%;
-  letter-spacing: .08rem;
-}
-
 .navbar {
   background-color: #b7835f;
   align-items: center;
