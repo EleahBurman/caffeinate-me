@@ -34,6 +34,7 @@ html {
   padding: 2px;
   border-radius: 10px;
   margin-bottom: 5x;
+  border: 2px solid transparent;
 }
 
 .navwords:hover {
