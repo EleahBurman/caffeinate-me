@@ -1,0 +1,257 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  justify-content: center;
+}
+
+.border {
+  flex-wrap: wrap;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000000;
+  box-shadow: 0px 0px 2px 2px #0191DA;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 25px;
+  width: 600px;
+  max-width: 100%;
+  height: fit-content;
+}
+
+#no-bottom-margin {
+  margin-bottom: 0;
+}
+
+body {
+  background-color:white;
+  color: #0191DA;
+  font-family:  'Abril Fatface', serif;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100%;
+  letter-spacing: .08rem;
+}
+
+h1  {
+  margin-bottom: 0;
+  color: #0191DA;
+  font-size: 35px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: .08rem;
+}
+
+h2{
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #0191DA;
+  font-size: 20px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: .08rem;
+}
+
+#reviews{
+  margin-bottom: 10px;
+}
+
+p{
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.multi-reviewers-row{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  border: 1px solid #000000;
+  box-shadow: 0px 0px 2px 2px #0191DA;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.multi-reviewers-row:not(:first-child) {
+  margin-top: 25px;
+}
+
+
+.column1 {
+  flex-direction: column;
+  width: 70%;
+  color: #0191DA;
+}
+
+.column1:not(.column-2) {
+  width: 100%;
+  margin-bottom: -5px;
+}
+
+.column-2 {
+  flex-direction: column;
+  width: 30%;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  list-style:none;
+}
+
+.right {
+  margin-left: auto;
+}
+
+.button {
+  border: none;
+  background: #c2e7ff;
+  color: #001d35;
+  font-weight: bold;
+  font-family: 'Puritan', sans-serif;
+  font-size: 15px;
+  width: fit-content;
+  justify-content: center;
+  text-transform: uppercase;
+  height: 28px;
+  border-radius: 10px;
+}
+
+.button:hover {
+  background: #85ccfc;
+  font-weight: bold;
+  box-shadow: 0px 4px 2px -2px #c6c6c6;
+}
+
+#remove {
+  width: 50px;
+}
+
+.textbox {
+  width: 300px; 
+  border-radius:10px;
+  border: 1px solid #c6c6c6;
+  background: #e0ebf1;
+  padding: 2px;
+  font-family: 'Abril-Fatface';
+  font-size: 16px;
+  height: 28px;
+  margin: 0px 5px 4px 0px;
+}
+
+#remove {
+  width: 50px;
+}
+
+.list {
+  list-style: none;
+  line-height: 7px;
+  justify-content: center;
+}
+
+#remove {
+  width: 50px;
+}
+
+.addreviewborder{
+  margin-top: 10px;
+  display: flex;
+  width: 80%;
+  background-color: white;
+  display: flex;
+  border: 1px solid #000000;
+  box-shadow: 0px 0px 2px 2px #0191DA;
+  border-radius: 10px;
+  padding: 25px;
+  justify-content: left;
+}
+
+.reviewborder{
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  background-color: white;
+  display: flex;
+  border: 1px solid #000000;
+  box-shadow: 0px 0px 2px 2px #0191DA;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.marginbottom{
+  margin-bottom: 5px;
+}
+
+.meryl{
+  margin-top: 20px;
+  max-width: 60%;
+  margin-left: 20%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
+}
+
+#meryl {
+  display: flex;
+  max-width: 50%;
+  border-radius:10px;
+}
+
+#favoriteCoffee, #leastCoffee, #milk-select, #priceLatte {
+  display: block;
+}
+
+#milk-select{
+  height: 28px;
+}
+#add-review-form{
+  color: #0191DA;
+}
+
+#addreview{
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+#addreviewbutton{
+  margin-top: 10px;
+}
+
+#name-title,
+#favoritecoffee-title,
+#leastfavcoffee-title,
+#milkpref-title,
+#price-title, label{
+  color: #0156d2;
+  width: 300px;
+  height: 28px;
+}
+
+li{
+  color:black;
+  border: 1px solid #c6c6c6;
+  background: #e0ebf1;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  margin-right: 5px;
+  padding: 2px;
+}

@@ -1,0 +1,40 @@
+  <% if (!user) { %>
+    <script defer src="https://accounts.google.com/gsi/client"></script>
+  <% } %>
+</head>
+<body>
+  <nav class="navbar">
+    <% if (user) { %>
+      <div>
+        <div id="navwordscontainer">
+          <div id="cafword">Caffeinate-</div><div id="meword">Me</div>
+          <span>
+            <a class="navwords" id="profilesnav" href="/profiles">PROFILES</a>
+          </span>
+          <span>
+            <a class="navwords" id="cafesnav" href="/cafes">CAFES</a>
+          </span>
+          <a href="/auth/logout" class="right">
+            <a class="navwords" id="logout" href="/cafes">LOGOUT</a></button>
+          </a>
+        </div>
+      </div>
+    <% } else { %>
+        <div 
+          id="g_id_onload"
+          data-client_id="<%= googleClientID %>"
+          data-login_uri="/auth/google"
+          data-auto_prompt="false"
+          data-prompt_parent_id="g_id_onload"
+        ></div>
+        <div 
+          class="g_id_signin right"
+          data-type="standard"
+          data-size="large"
+          data-theme="outline"
+          data-text="sign_in_with"
+          data-shape="rectangular"
+          data-logo_alignment="left"
+        ></div>
+      <% } %>
+  </nav>

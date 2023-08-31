@@ -1,0 +1,32 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/cafes/edit.css" />
+<%- include('../partials/nav') %>
+<main>
+  <div class= "border" id="editcafe">
+    <h1 class= "animate__animated animate__lightSpeedInLeft">☕️Edit Review☕️</h1>
+    <form id="update-review" action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>?_method=PUT" method="POST">
+      <% cafe.reviews.forEach(review => { %>
+        <div id="column">
+          <label for="favoriteCoffee">Favorite Coffee:</label>
+          <input type="text" class="textbox" name="favoriteCoffee" id="favoriteCoffee" value="<%= review.favoriteCoffee %>"></input> 
+          <label for="leastCoffee">Least Favorite Coffee:</label>
+          <input type="text" class="textbox" name="leastCoffee" id="leastCoffee" value="<%= review.leastCoffee %>"></input>
+          <label for="milk-select">Milk:</label>
+          <select style="width: 100px" name="milk" id="milk-select">
+            <option value="Whole" <%= review.milk === 'Whole' ? 'selected' : '' %>>Whole</option>
+            <option value="Oat" <%= review.milk === 'Oat' ? 'selected' : '' %>>Oat</option>
+            <option value="Skim" <%= review.milk === 'Skim' ? 'selected' : '' %>>Skim</option>
+            <option value="Soy" <%= review.milk === 'Soy' ? 'selected' : '' %>>Soy</option>
+            <option value="Almond" <%= review.milk === 'Almond' ? 'selected' : '' %>>Almond</option>
+          </select>          
+          <label for="priceLatte">Price of Latte: $</label>
+          <input type="number" class="textbox" name="priceLatte" id="priceLatte" value="<%= review.priceLatte %>"></input>
+        </div>
+      <% }) %>
+      <button type="submit" id="save">Save Review</button>
+    </form>
+    <br></br>
+    <img class=darkness id="hellodarkness" src="/images/HelloDarkness.png" alt="Hello Darkness">
+  </div>
+</main>
+<%- include('../partials/footer') %>

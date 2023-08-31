@@ -1,0 +1,152 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  justify-content: center;
+}
+
+.border{
+  flex-wrap: wrap;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000000;
+  box-shadow: 0px 0px 2px 2px #0191DA;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 25px;
+  width: 600px;
+  height: fit-content;
+}
+
+body {
+  background-color:white;
+  color: #0191DA;
+  font-family:  'Abril Fatface', serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100%;
+  letter-spacing: .08rem;
+}
+
+#editcafe {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.8, 0.8);
+  -ms-transform: scale(0.8, 0.8); /* IE 9 */
+  -webkit-transform: scale(0.8, 0.8); /* Safari and Chrome */
+  -o-transform: scale(0.8, 0.8); /* Opera */
+  -moz-transform: scale(0.8, 0.8); /* Firefox */
+}
+
+.edit{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#column {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+}
+
+label{
+  color: #0156d2;
+}
+
+#favoriteCoffee,
+#leastCoffee,
+#milk-select,
+#priceLatte {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #c6c6c6;
+  background: #e0ebf1;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  margin-right: 5px;
+  padding: 2px;
+  width: 300px;
+  height: 28px;
+  font-size: 16px;
+}
+
+h1  {
+  color: #0191DA;
+  font-size: 35px;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: .08rem;
+}
+
+h2{
+  color: #0191DA;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: .08rem;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  list-style:none;
+  letter-spacing: .08rem;
+}
+
+#update-review{
+  font-size: 20px;
+  margin-top: 0%;
+}
+
+.list {
+  list-style: none;
+  line-height: 7px;
+  justify-content: center;
+}
+
+.darkness {
+  max-width: 40%;
+  border-radius:10px;
+}
+
+#hellowdarkness {
+  display: flex;
+  border-radius:10px;
+  vertical-align: center;
+}
+
+.column{
+  color: #0191DA;
+}
+
+#save {
+  border: none;
+  background: #c2e7ff;
+  color: #001d35;
+  font-weight: bold;
+  font-family: 'Puritan', sans-serif;
+  font-size: 15px;
+  width: fit-content;
+  justify-content: center;
+  text-transform: uppercase;
+  height: 30px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+#save:hover {
+  background: #85ccfc;
+  font-weight: bold;
+  box-shadow: 0px 4px 2px -2px #c6c6c6;
+}

@@ -1,0 +1,51 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color:white;
+  font-family:  'Abril Fatface', serif;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100%;
+  letter-spacing: .08rem;
+}
+
+h1  {
+  color: #0191DA;
+  font-size: 35px;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: .08rem;
+  text-align: center;
+}
+
+h2{
+  color: #0191DA;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: .08rem;
+}
+
+#error-img {
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+#error{
+  font-size: 20px;
+}
+
+#notfounderror{
+    font-size: 16px;
+    font-family: 'Puritan', sans-serif;
+}

@@ -1,0 +1,128 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.navbar {
+  background-color: #b7835f;
+  align-items: center;
+  padding: 10px;
+  max-height: 60px;
+  min-height: 40px;
+  letter-spacing: .18rem;
+  font-size: 35px;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+
+.navwordscontainer {
+  display: flex;
+  flex-grow: 1;
+  margin-bottom: 5x;
+}
+
+.navwords {
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+  padding: 2px;
+  border-radius: 10px;
+  margin-bottom: 5x;
+  font-size: 35px;
+  border: 2px solid transparent;
+}
+
+.navwords:hover {
+  border: 2px solid white;
+}
+
+#cafword {
+  color: white;
+  text-decoration: none;
+  margin-left: 30px;
+  border-radius: 10px;
+  font-style: "Abril Fatface";
+  font-size: 15px;
+  margin-bottom: 5x;
+}
+
+#meword {
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-family: 'Style Script';
+  font-size: 15px;
+  margin-bottom: 5x;
+}
+
+#cafword,
+#meword {
+  display: inline-block;
+}
+
+#logout {
+  position: absolute;
+  right: 30px;
+}
+
+h1 {
+  color: #0191DA;
+  font-style: bold;
+  font-size: 35px;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: .08rem;
+}
+
+#caffeinate {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#me {
+  font-family: 'Style Script';
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+}
+
+h2 {
+  color: #518453;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: .08rem;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.right {
+  margin-left: auto;
+}
+
+#remove {
+  width: 50px;
+}
+
+.textbox {
+  width: 140px;
+  height: 20px;
+  border-radius: 10px;
+}
+
+#remove {
+  width: 50px;
+}

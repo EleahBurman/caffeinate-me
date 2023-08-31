@@ -1,0 +1,93 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/cafes/index.css" />
+<%- include('../partials/nav') %>
+<main>
+  <div class="border">
+    <h1 class="animate__animated animate__lightSpeedInLeft">☕️All Cafes☕️</h1>
+    <table id="listnames">
+      <thead>
+        <tr>
+          <th class="namelocation">Name</th>
+          <th class="namelocation">Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% cafes.forEach((cafe) => {  %>
+          <tr>
+            <td class="cafe-name"><%= cafe.name %></td>
+            <td class="location-name"><%= cafe.location %></td>
+            <%# button for reviews %>
+            <td>
+              <form id="reviews" action="/cafes/<%= cafe._id %>" method="GET"><button class="button" id="reviews">REVIEWS</button>
+              </form>
+            </td>
+            <%# button for delete cafes%>
+            <td>
+              <form action="/cafes/<%= cafe._id %>?_method=DELETE" method="POST">
+                <button class="button" id="remove" type="submit">X</button>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <h2>☕️Add Cafe☕️</h2>
+    <form id="new-form" action="/cafes" method="POST" autocomplete="off">
+      <label for="name-input">Name:</label>
+      <input type="text" class="textbox" name="name" id="name-input" placeholder="Luke's Diner">
+      <label for="location-select">Location:</label>
+      <select name="location" id="location-select">
+        <option value="AL">AL</option>
+        <option value="AK">AK</option>
+        <option value="AZ">AZ</option>
+        <option value="AR">AR</option>
+        <option value="CA">CA</option>
+        <option value="CO">CO</option>
+        <option value="CT" selected>CT</option>
+        <option value="DE">DE</option>
+        <option value="FL">FL</option>
+        <option value="GA">GA</option>
+        <option value="HI">HI</option>
+        <option value="ID">ID</option>
+        <option value="IL">IL</option>
+        <option value="IN">IN</option>
+        <option value="IA">IA</option>
+        <option value="KS">KS</option>
+        <option value="KY">KY</option>
+        <option value="LA">LA</option>
+        <option value="MA">MA</option>
+        <option value="MD">MD</option>
+        <option value="MA">MA</option>
+        <option value="MI">MI</option>
+        <option value="MN">MN</option>
+        <option value="MS">MS</option>
+        <option value="MT">MT</option>
+        <option value="NE">NE</option>
+        <option value="NV">NV</option>
+        <option value="NH">NH</option>
+        <option value="NJ">NJ</option>
+        <option value="NY">NY</option>
+        <option value="NC">NC</option>
+        <option value="ND">ND</option>
+        <option value="OH">OH</option>
+        <option value="OK">OK</option>
+        <option value="OR">OR</option>
+        <option value="PA">PA</option>
+        <option value="RI">RI</option>
+        <option value="SC">SC</option>
+        <option value="SD">SD</option>
+        <option value="TN">TN</option>
+        <option value="TX">TX</option>
+        <option value="UT">UT</option>
+        <option value="VT">VT</option>
+        <option value="VA">VA</option>
+        <option value="WA">WA</option>
+        <option value="WV">WV</option>
+        <option value="WI">WI</option>
+        <option value="WY">WY</option>
+      </select>
+      <button class="button" type="submit">Add Cafe</button>
+    </form>
+  </div>
+</main>
+<%- include('../partials/footer') %>
