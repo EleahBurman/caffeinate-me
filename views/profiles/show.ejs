@@ -33,9 +33,9 @@
       <form action="/profiles/<%= profile._id %>/addGif" method="POST">
         <select name="selectedGif">
           <% availableGifs.forEach(gif => { %>
-            <option value="<%= gif%>"><%= gif %></option>
+            <option value="<%= gif %>"><%= gif.replace(/-/g, ' ').slice(0, -4) %></option>
           <% }) %>
-        </select>        
+        </select>            
         <button class="button" type="submit">Add GIF to Profile</button>
       </form>
     <% } %>
