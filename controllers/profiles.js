@@ -44,7 +44,8 @@ function getAvailableGifs(dirname) {
 }
 
 function show(req, res) {
-  Profile.findById(req.params.profileId)
+  const profileId = req.params.profileId;
+  Profile.findById(profileId)
     .populate('cafes')
     .then(profile => {
       Profile.findById(req.user.profile)
@@ -67,17 +68,18 @@ function show(req, res) {
               title: profile.name,
               profile,
               userProfile,
-              availableGifs, // Pass the list of available GIF filenames to the view
+              availableGifs,
+              gifIndex: req.params.gifIndex, // Pass gifIndex to the template
             });
           });
         })
         .catch(err => {
-          console.log(err);
+          console.error(err);
           res.redirect('/profiles');
         });
     })
     .catch(err => {
-      console.log(err);
+      console.error(err);
       res.redirect('/profiles');
     });
 }
@@ -234,11 +236,46 @@ function addGif(req, res) {
     });
 }
 
+function clearGifs(req, res) {
+  Profile.findById(req.params.profileId)
+    .then((userProfile) => {
+      if (!userProfile) {
+        console.error('User profile not found');
+        return res.redirect('/profiles');
+      }
+
+      // Check if the userProfile matches the currently logged-in user
+      if (!userProfile.equals(req.user.profile)) {
+        console.error('User does not have permission to clear GIFs');
+        return res.redirect('/profiles');
+      }
+
+      // Clear the user's gifs array
+      userProfile.gifs = [];
+
+      // Save the changes to the user's profile
+      userProfile.save()
+        .then(() => {
+          res.redirect('/profiles'); // Redirect to the user's profile page
+        })
+        .catch((err) => {
+          console.error(err);
+          res.redirect('/profiles');
+        });
+    })
+    .catch((err) => {
+      console.error(err);
+      res.redirect('/profiles');
+    });
+}
+
+
 export {
   index,
   show,
   requestFriend,
   acceptFriend,
   removeFriend,
-  addGif
+  addGif,
+  clearGifs
 }

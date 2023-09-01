@@ -205,6 +205,7 @@ function deleteCafe(req, res){
     })
   }
 
+  
 export {
   index,
   newCafe as new,

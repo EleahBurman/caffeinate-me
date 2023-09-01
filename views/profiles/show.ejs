@@ -15,6 +15,17 @@
     <% profile.gifs.forEach(gifPath => { %>
       <img src="<%= gifPath %>" alt="User's GIF">
     <% }) %>
+    
+        <!-- Add a form for clearing GIFs -->
+  <% if (userProfile && userProfile.equals(profile._id)) { %>
+    <% if (profile.gifs.length > 0) { %>
+      <div>
+        <form action="/profiles/<%= profile._id %>/clearGifs" method="POST">
+          <button class="button" type="submit">Clear All GIFs</button>
+        </form>
+      </div>
+    <% } %>
+  <% } %>
 
     <% if (userProfile && userProfile.equals(profile._id)) { %>
       <!-- Render this section only if the logged-in user is viewing their own profile -->
