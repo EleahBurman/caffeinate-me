@@ -213,7 +213,7 @@ function addGif(req, res) {
       const selectedGif = req.body.selectedGif;
 
       // Construct the file path to the selected GIF
-      const gifPath = `/images/available-gifs/${selectedGif}.gif`;
+      const gifPath = `/images/available-gifs/${selectedGif}`;
 
       // Save the selected GIF to the user's profile
       userProfile.gifs.push(gifPath);
