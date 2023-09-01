@@ -11,7 +11,7 @@
       </div>
     </div>
 
-    <h2>Favorite Coffee GIFs</h2>
+    <h2 id="title-coffee-gifs">Favorite Coffee GIFs</h2>
     <% profile.gifs.forEach(gifPath => { %>
       <img src="<%= gifPath %>" class="gif" alt="User's GIF">
     <% }) %>
@@ -29,7 +29,7 @@
 
     <% if (userProfile && userProfile.equals(profile._id)) { %>
       <!-- Render this section only if the logged-in user is viewing their own profile -->
-      <h2>Add a GIF to Your Profile</h2>
+      <h2 class="add-title">Add a GIF</h2>
       <form action="/profiles/<%= profile._id %>/addGif" method="POST">
         <select name="selectedGif">
           <% availableGifs.forEach(gif => { %>
@@ -39,7 +39,7 @@
           <% }) %>
         </select>
                   
-        <button class="button" type="submit">Add GIF to Profile</button>
+        <button class="button" type="submit">Add</button>
       </form>
     <% } %>
 
