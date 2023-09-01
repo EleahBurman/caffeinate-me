@@ -11,6 +11,7 @@ const profileSchema = new Schema({
   friends: [{type: Schema.Types.ObjectId, ref: 'Profile'}],
   pendingOutgoingInvites: [{type: Schema.Types.ObjectId, ref: 'Profile'}],
   pendingIncomingInvites: [{type: Schema.Types.ObjectId, ref: 'Profile'}],
+  gifs: [{ type: String }],
 }, {
   timestamps: true
 });

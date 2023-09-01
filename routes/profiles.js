@@ -11,4 +11,5 @@ router.get('/:profileId', isLoggedIn, profilesCtrl.show)
 router.post('/requestFriend/:profileId', isLoggedIn, profilesCtrl.requestFriend)
 router.patch('/acceptFriend/:profileId', isLoggedIn, profilesCtrl.acceptFriend)
 router.delete('/removeFriend/:profileId', isLoggedIn, profilesCtrl.removeFriend)
+router.post('/:profileId/addGif', isLoggedIn, profilesCtrl.addGif);
 export { router }

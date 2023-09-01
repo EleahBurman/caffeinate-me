@@ -1,4 +1,16 @@
 import { Profile } from "../models/profile.js"
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+// Use fileURLToPath to get the current module's filename
+const __filename = fileURLToPath(import.meta.url);
+
+// Derive the directory name from the filename
+const __dirname = path.dirname(__filename);
+
+// Load the list of available GIFs from the folder
+const availableGifs = getAvailableGifs(__dirname);
 
 function index(req, res) {
   Profile.find({})
@@ -9,7 +21,8 @@ function index(req, res) {
         title: 'All Profiles',
         profiles: profiles,
         nav: 'profiles',
-        userProfile
+        userProfile,
+        availableGifs,
       })
     })
     .catch(err => {
@@ -23,20 +36,50 @@ function index(req, res) {
   })
 }
 
+// Helper function to get available GIFs
+function getAvailableGifs(dirname) {
+  const gifFilesPath = path.join(dirname, '../public/images/available-gifs');
+  const gifFiles = fs.readdirSync(gifFilesPath);
+  return gifFiles.map(file => file.replace('.gif', ''));
+}
+
 function show(req, res) {
   Profile.findById(req.params.profileId)
-  .populate('cafes')
-  .then(profile => {
-    res.render('profiles/show', {
-      // Set the title of the page to the profile name
-      title: profile.name,
-      profile
+    .populate('cafes')
+    .then(profile => {
+      Profile.findById(req.user.profile)
+        .then(userProfile => {
+          // Specify the path to the folder containing the available GIFs
+          const gifsFolder = path.join(__dirname, '../public/images/available-gifs');
+
+          // Read the files in the folder to get the list of available GIFs
+          fs.readdir(gifsFolder, (err, files) => {
+            if (err) {
+              console.error(err);
+              res.redirect('/profiles');
+              return;
+            }
+
+            // Filter the files to include only GIFs
+            const availableGifs = files.filter(file => file.endsWith('.gif'));
+
+            res.render('profiles/show', {
+              title: profile.name,
+              profile,
+              userProfile,
+              availableGifs, // Pass the list of available GIF filenames to the view
+            });
+          });
+        })
+        .catch(err => {
+          console.log(err);
+          res.redirect('/profiles');
+        });
     })
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect('/profiles')
-  })
+    .catch(err => {
+      console.log(err);
+      res.redirect('/profiles');
+    });
 }
 
 function requestFriend(req, res) {
@@ -157,10 +200,45 @@ function removeFriend(req, res) {
   })
 }
 
+function addGif(req, res) {
+  // Assuming the user is logged in and you have access to their profile ID
+  Profile.findById(req.user.profile)
+    .then(userProfile => {
+      if (!userProfile) {
+        console.error('User profile not found');
+        return res.redirect('/profiles');
+      }
+
+      // Fetch the selectedGif from the request body
+      const selectedGif = req.body.selectedGif;
+
+      // Construct the file path to the selected GIF
+      const gifPath = `/images/available-gifs/${selectedGif}.gif`;
+
+      // Save the selected GIF to the user's profile
+      userProfile.gifs.push(gifPath);
+
+      // Save the changes to the user's profile
+      userProfile.save()
+        .then(() => {
+          res.redirect('/profiles'); // Redirect to the user's profile page
+        })
+        .catch(err => {
+          console.error(err);
+          res.redirect('/profiles');
+        });
+    })
+    .catch(err => {
+      console.error(err);
+      res.redirect('/profiles');
+    });
+}
+
 export {
   index,
   show,
   requestFriend,
   acceptFriend,
-  removeFriend
+  removeFriend,
+  addGif
 }

@@ -3,21 +3,32 @@
 <%- include('../partials/nav') %>
 <main>
   <div class="border">
-    <h1 class= "animate__animated animate__lightSpeedInLeft">☕️<%= profile.name %>'s Profile☕️</h1>
+    <h1 class="animate__animated animate__lightSpeedInLeft">☕️<%= profile.name %>'s Profile☕️</h1>
     <div id="emptyspace">
       <div class="profcard">
         <img id="profileimg" src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
         <h2 class="profilefavecafes"><%= profile.name  %>'s Favorite Cafes</h2>
       </div>
     </div>
-    <% profile.cafes.forEach(cafe => { %>
-      <ul>
-        <div class="centerlist">
-          <li class="list">☕️<a class="cafes" href="/cafes/<%= cafe._id%>"><%= cafe.name%></a></li>
-        </div>
-      </ul>
+
+    <h2>Favorite GIFs</h2>
+    <% profile.gifs.forEach(gifPath => { %>
+      <img src="<%= gifPath %>" alt="User's GIF">
     <% }) %>
-    <img id="lorelai" src="/images/lorelaicoffee.gif" alt="Lorelai Needs Coffee">
+
+    <% if (userProfile && userProfile.equals(profile._id)) { %>
+      <!-- Render this section only if the logged-in user is viewing their own profile -->
+      <h2>Add a GIF to Your Profile</h2>
+      <form action="/profiles/<%= profile._id %>/addGif" method="POST">
+        <select name="selectedGif">
+          <% availableGifs.forEach(gif => { %>
+            <option value="<%= gif %>"><%= gif %></option>
+          <% }) %>
+        </select>        
+        <button type="submit">Add GIF to Profile</button>
+      </form>
+    <% } %>
+
     <a href="/profiles/index"><button class="button profilesbutton">Profiles</button></a>
   </div>
 </main>
