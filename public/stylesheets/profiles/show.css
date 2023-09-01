@@ -166,17 +166,16 @@ main {
   border-radius: 50%;
 }
 
-#lorelai {
-  border-radius:10px;
-  margin-bottom: 10px;
-  max-width: 350px;
-  margin-top: 1%;
-  align-items: center;
-  justify-content: center;
+.gif {
+  max-width: 200px;
+  margin: auto;
+  border-radius: 10px;
 }
 
 .profcard, #lorelai {
   margin: 0 auto;
+  width: 200px;
+  height: 200px;
 }
 
 .profilesbutton{
