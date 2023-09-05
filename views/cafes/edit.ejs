@@ -21,16 +21,13 @@
           </select>          
           <label for="priceLatte">Price of Latte: $</label>
           <input type="number" class="textbox" name="priceLatte" id="priceLatte" value="<%= review.priceLatte %>"></input>
+          <!-- Star Rating Selector -->
           <label for="rating">Rating:</label>
-          <div class="star-rating" id="rating">
-            <% for (let i = 1; i <= 5; i++) { %>
-              <% if (i <= review.rating) { %>
-                <input type="radio" id="star<%= i %>" name="rating" value="<%= i %>" checked/><label for="star<%= i %>"></label>
-              <% } else { %>
-                <input type="radio" id="star<%= i %>" name="rating" value="<%= i %>"/><label for="star<%= i %>"></label>
-              <% } %>
-            <% } %>
-          </div>
+          <input type="radio" id="star2" name="rating" value="2" onclick="updateStarRating(2)" /><label for="star2"></label>
+          <input type="radio" id="star3" name="rating" value="3" onclick="updateStarRating(3)" /><label for="star3"></label>
+          <input type="radio" id="star4" name="rating" value="4" onclick="updateStarRating(4)" /><label for="star4"></label>
+          <input type="radio" id="star5" name="rating" value="5" onclick="updateStarRating(5)" /><label for="star5"></label>
+                  
         </div>
       <% }) %>
       <button type="submit" id="save">Save Review</button>
@@ -38,5 +35,19 @@
     <br></br>
     <img class="darkness" id="hellodarkness" src="/images/HelloDarkness.png" alt="Hello Darkness">
   </div>
+  <script>
+    function updateStarRating(rating) {
+      const starRating = document.querySelector('.star-rating');
+      const stars = starRating.querySelectorAll('label');
+      
+      stars.forEach((star, index) => {
+        if (index < rating) {
+          star.classList.add('active');
+        } else {
+          star.classList.remove('active');
+        }
+      });
+    }    
+  </script> 
 </main>
 <%- include('../partials/footer') %>
