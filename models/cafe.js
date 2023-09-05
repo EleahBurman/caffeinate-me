@@ -9,6 +9,11 @@ const reviewSchema = new Schema({
   priceLatte: {	
     type: mongoose.Decimal128,
     get: v => new mongoose.Types.Decimal128((+v.toString()).toFixed(2)),},
+  rating: {
+    type: Number,
+    min: 1,
+    max: 5,
+    },
   reviewer: { type: Schema.Types.ObjectId, ref: 'Profile' },
 })
 

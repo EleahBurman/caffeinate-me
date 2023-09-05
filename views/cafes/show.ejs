@@ -19,8 +19,17 @@
             <li><span id="leastfavcoffee-title">☕️Least Favorite Coffee: </span><%= review.leastCoffee %></li>
             <li><span id="milkpref-title">☕️Milk Preference: </span><%= review.milk %></li>
             <li><span id="price-title">☕️Price of Latte: </span>$<%= review.priceLatte %></li>
-          </div>
-        <% } %>
+            <li><span id="rating-title">☕️Rating: </span>
+              <% for (let i = 1; i <= 5; i++) { %>
+                <% if (i <= review.rating) { %>
+                  <span class="star active">★</span>
+                <% } else { %>
+                  <span class="star inactive"></span>
+                <% } %>
+              <% } %>
+            </li>
+            
+          <% } %>
         <% if(review.reviewer.equals(user?.profile._id)) { %>
           <div class="column-2">
             <div class="marginbottom">
@@ -35,7 +44,6 @@
         <% } %>
       <% }) %>
     </div>
-
 
     <h3 id="addreview">Add Review</h3>
     <div class="addreviewborder">
@@ -54,9 +62,32 @@
         </select>
         <label for="priceLatte">Price of Latte: $</label>
         <input type="number" class="textbox" name="priceLatte" id="priceLatte" class="rowtwo" placeholder="4.00"></input>
+        <!-- Star Rating Selector -->
+        <label for="rating">Rating:</label>
+        <div class="star-rating" id="rating">
+          <input type="radio" id="star1" name="rating" value="1" onclick="updateStarRating(1)" /><label for="star1"></label>
+          <input type="radio" id="star2" name="rating" value="2" onclick="updateStarRating(2)" /><label for="star2"></label>
+          <input type="radio" id="star3" name="rating" value="3" onclick="updateStarRating(3)" /><label for="star3"></label>
+          <input type="radio" id="star4" name="rating" value="4" onclick="updateStarRating(4)" /><label for="star4"></label>
+          <input type="radio" id="star5" name="rating" value="5" onclick="updateStarRating(5)" /><label for="star5"></label>
+        </div>
         <button class="button" id="addreviewbutton" type="submit">Add Review</button>
       </form>
     </div>
   </div>
+  <script>
+    function updateStarRating(rating) {
+      const starRating = document.querySelector('.star-rating');
+      const stars = starRating.querySelectorAll('label');
+      
+      stars.forEach((star, index) => {
+        if (index < rating) {
+          star.classList.add('active');
+        } else {
+          star.classList.remove('active');
+        }
+      });
+    }    
+  </script>
 </main>
 <%- include('../partials/footer') %>
