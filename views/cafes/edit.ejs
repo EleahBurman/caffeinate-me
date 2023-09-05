@@ -2,8 +2,8 @@
 <link rel="stylesheet" href="/stylesheets/cafes/edit.css" />
 <%- include('../partials/nav') %>
 <main>
-  <div class= "border" id="editcafe">
-    <h1 class= "animate__animated animate__lightSpeedInLeft">☕️Edit Review☕️</h1>
+  <div class="border" id="editcafe">
+    <h1 class="animate__animated animate__lightSpeedInLeft">☕️Edit Review☕️</h1>
     <form id="update-review" action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>?_method=PUT" method="POST">
       <% cafe.reviews.forEach(review => { %>
         <div id="column">
@@ -21,12 +21,22 @@
           </select>          
           <label for="priceLatte">Price of Latte: $</label>
           <input type="number" class="textbox" name="priceLatte" id="priceLatte" value="<%= review.priceLatte %>"></input>
+          <label for="rating">Rating:</label>
+          <div class="star-rating" id="rating">
+            <% for (let i = 1; i <= 5; i++) { %>
+              <% if (i <= review.rating) { %>
+                <input type="radio" id="star<%= i %>" name="rating" value="<%= i %>" checked/><label for="star<%= i %>"></label>
+              <% } else { %>
+                <input type="radio" id="star<%= i %>" name="rating" value="<%= i %>"/><label for="star<%= i %>"></label>
+              <% } %>
+            <% } %>
+          </div>
         </div>
       <% }) %>
       <button type="submit" id="save">Save Review</button>
     </form>
     <br></br>
-    <img class=darkness id="hellodarkness" src="/images/HelloDarkness.png" alt="Hello Darkness">
+    <img class="darkness" id="hellodarkness" src="/images/HelloDarkness.png" alt="Hello Darkness">
   </div>
 </main>
 <%- include('../partials/footer') %>

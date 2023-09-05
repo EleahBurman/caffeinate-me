@@ -258,6 +258,11 @@ li{
   width: 100%;
 }
 
+.addreviewborder{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
 /* Star Rating CSS */
 .star-rating {
   display: flex;
