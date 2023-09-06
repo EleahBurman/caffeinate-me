@@ -13,6 +13,7 @@ main{
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background-color: #ebe9e9;
 
 }
 
@@ -21,8 +22,8 @@ main{
   background-color: white;
   display: flex;
   flex-direction: column;
-  border: 1px solid #000000;
-  box-shadow: 0px 0px 2px 2px #0191DA;
+  border: 1px #c2c1c1;
+  box-shadow: 0px 0px 2px 2px #c2c1c1;
   border-radius: 10px;
   padding: 10px;
   margin: 25px;
@@ -72,8 +73,8 @@ h2{
   background-color: white;
   display: flex;
   flex-direction: column;
-  border: 1px solid #000000;
-  box-shadow: 0px 0px 2px 2px #0191DA;
+  border: 1px #c2c1c1;
+  box-shadow: 0px 0px 2px 2px #c2c1c1;
   border-radius: 10px;
   padding: 10px;
   margin: 25px;

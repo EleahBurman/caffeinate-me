@@ -8,12 +8,16 @@ html {
   justify-content: center;
 }
 
+main{
+  background-color: #ebe9e9;
+}
+
 .border {
   background-color: white;
   display: flex;
   flex-direction: column;
-  border: 1px solid #000000;
-  box-shadow: 0px 0px 2px 2px #0191DA;
+  border: 1px #c2c1c1;
+  box-shadow: 0px 0px 2px 2px #c2c1c1;
   border-radius: 10px;
   margin: 50px;
   width: 600px;
@@ -61,7 +65,7 @@ h2{
 }
 
 #reviews{
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   text-align: center;
 }
 
@@ -185,8 +189,8 @@ main {
   width: 500px;
   background-color: white;
   display: flex;
-  border: 1px solid #000000;
-  box-shadow: 0px 0px 2px 2px #0191DA;
+  border: 1px #c2c1c1;
+  box-shadow: 0px 0px 2px 2px #c2c1c1;
   border-radius: 10px;
   padding: 25px;
   justify-content: left;
@@ -194,8 +198,8 @@ main {
 }
 
 .addreviewborder-no-reviews{
-  border: 1px solid #000000;
-  box-shadow: 0px 0px 2px 2px #0191DA;
+  border: 1px #c2c1c1;
+  box-shadow: 0px 0px 2px 2px #c2c1c1;
   justify-content: center;
   text-align: left;
   padding: 25px;
@@ -205,8 +209,6 @@ main {
   border-radius: 10px;
 }
 .eachreview{
-  border: 1px solid #000000;
-  box-shadow: 0px 0px 2px 2px #0191DA;
   border-radius: 10px;
   padding: 50px;
   margin-top: 50px;
@@ -218,8 +220,8 @@ main {
   flex-wrap: wrap;
   background-color: white;
   display: flex;
-  border: 1px solid #000000;
-  box-shadow: 0px 0px 2px 2px #0191DA;
+  border: 1px #c2c1c1;
+  box-shadow: 0px 0px 2px 2px #c2c1c1;
   border-radius: 10px;
   width: 500px;
   margin-left: 60px;
@@ -261,6 +263,7 @@ main {
 #addreview{
   margin-top: 20px;
   margin-bottom: 0px;
+  color: #0156d1;
 }
 
 #addreviewbutton{
@@ -316,6 +319,7 @@ li{
 
 .star-rating label:before {
   content: '★';
+  color:#c2c1c1;
 }
 #rating{
   justify-content: left;

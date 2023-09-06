@@ -9,13 +9,17 @@ html {
   justify-content: center;
 }
 
+main{
+  background-color: #ebe9e9;
+}
+
 .border{
   flex-wrap: wrap;
   background-color: white;
   display: flex;
   flex-direction: column;
-  border: 1px solid #000000;
-  box-shadow: 0px 0px 2px 2px #0191DA;
+  border: 1px #c2c1c1;
+  box-shadow: 0px 0px 2px 2px #c2c1c1;
   border-radius: 10px;
   padding: 10px;
   margin: 25px;
@@ -160,6 +164,7 @@ main {
 
 .star-rating input[type="radio"] {
   display: none;
+  justify-content: left;
 }
 
 .star-rating label {
@@ -169,9 +174,19 @@ main {
 }
 
 .star-rating label:before {
-  content: '★'; /* Use a filled star character */
+  content: '★';
+  color:#c2c1c1;
 }
-
+#rating{
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+}
 .star-rating label.active:before {
   color: gold; /* Color active stars gold */
+}
+
+.star-display{
+  color: gold;
+  text-align: left;
 }
