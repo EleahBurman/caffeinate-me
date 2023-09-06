@@ -21,7 +21,7 @@
     <% if (profile.gifs.length > 0) { %>
       <div>
         <form action="/profiles/<%= profile._id %>/clearGifs" method="POST">
-          <button class="button" id="clear" type="submit">Clear All GIFs</button>
+          <button class="button" id="clear" type="submit"><i class="fa-solid fa-trash-can"></i></button>
         </form>
       </div>
     <% } %>
@@ -39,11 +39,11 @@
           <% }) %>
         </select>
                   
-        <button class="button" type="submit">Add</button>
+        <button class="button" type="submit"><i class="fa-solid fa-plus"></i></button>
       </form>
     <% } %>
 
-    <a href="/profiles/index"><button class="button profilesbutton">Profiles</button></a>
+    <a href="/profiles/index"><button class="button profilesbutton"><i class="fa-regular fa-user"></i></button></a>
   </div>
 </main>
 <%- include('../partials/footer') %>
