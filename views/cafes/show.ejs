@@ -19,16 +19,7 @@
             <li><span id="leastfavcoffee-title">☕️Least Favorite Coffee: </span><%= review.leastCoffee %></li>
             <li><span id="milkpref-title">☕️Milk Preference: </span><%= review.milk %></li>
             <li><span id="price-title">☕️Price of Latte: </span>$<%= review.priceLatte %></li>
-            <li><span id="rating-title">☕️Rating: </span>
-              <% for (let i = 1; i <= 5; i++) { %>
-                <% if (i <= review.rating) { %>
-                  <span class="star active">★</span>
-                <% } else { %>
-                  <span class="star inactive"></span>
-                <% } %>
-              <% } %>
-            </li>
-            
+            <li><span id="rating-title">☕️Rating: </span><%= '★'.repeat(review.rating) %></li>
           <% } %>
         <% if(review.reviewer.equals(user?.profile._id)) { %>
           <div class="column-2">
@@ -88,7 +79,7 @@
           star.classList.remove('active');
         }
       });
-    }    
+    }
   </script>
 </main>
 <%- include('../partials/footer') %>
