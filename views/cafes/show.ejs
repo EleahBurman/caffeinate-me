@@ -15,12 +15,12 @@
         <% cafe.reviews.forEach(review => { %>
           <% if (review.reviewer) { %>
             <div class="<%= cafe.reviews.length > 1 ? 'multi-reviewers-row' : 'column1' %>">
-              <li><span id="name-title">☕️Name: </span><%= review.reviewer.name %></li>
-              <li><span id="favoritecoffee-title">☕️Favorite Coffee: </span><%= review.favoriteCoffee %></li>
-              <li><span id="leastfavcoffee-title">☕️Least Favorite Coffee: </span><%= review.leastCoffee %></li>
-              <li><span id="milkpref-title">☕️Milk Preference: </span><%= review.milk %></li>
-              <li><span id="price-title">☕️Price of Latte: </span>$<%= review.priceLatte %></li>
-              <li><span id="rating-title">☕️Rating: </span><%= '★'.repeat(review.rating) %></li>
+              <li><span id="name-title">☕️Name: </span><p class="nobg"><%= review.reviewer.name %></p></li>
+              <li><span id="favoritecoffee-title">☕️Favorite Coffee: </span><p class="nobg"><%= review.favoriteCoffee %></p></li>
+              <li><span id="leastfavcoffee-title">☕️Least Favorite Coffee: </span><p class="nobg"><%= review.leastCoffee %></p></li>
+              <li><span id="milkpref-title">☕️Milk Preference: </span><p class="nobg"><%= review.milk %></p></li>
+              <li><span id="price-title">☕️Price of Latte: </span><p class="nobg">$<%= review.priceLatte %></p></li>
+              <li><span id="rating-title">☕️Rating: </span><p class="star-display nobg"><%= '★'.repeat(review.rating) %></p></li>
             <% } %>
           <% if(review.reviewer.equals(user?.profile._id)) { %>
             <div class="row-2">
