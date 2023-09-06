@@ -211,7 +211,7 @@ main {
 .eachreview{
   border-radius: 10px;
   padding: 50px;
-  margin-top: 50px;
+  padding-bottom:0px;
 }
 
 .reviewborder{
@@ -225,6 +225,7 @@ main {
   border-radius: 10px;
   width: 500px;
   margin-left: 60px;
+  padding-bottom:25px;
 }
 
 .marginbottom{
