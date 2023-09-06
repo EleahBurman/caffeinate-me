@@ -4,38 +4,47 @@
 
 <main>
   <div class="border" id="no-bottom-margin">
-    <h1 class="animate__animated animate__lightSpeedInLeft">☕️<%= cafe.name %>☕️</h1>
+    <h1 class="animate__animated animate__lightSpeedInLeft center">☕️<%= cafe.name %>☕️</h1>
     <h2><%= cafe.location %></h2>
     <div class="meryl">
       <img id="meryl" src="/images/merylcoffee.gif" alt="Even Meryl Streep Needs Coffee">
     </div>
-    <h3 id="reviews">Reviews</h3>
-    <div class="row reviewborder">
-      <div class="eachreview">
-        <% cafe.reviews.forEach(review => { %>
-          <% if (review.reviewer) { %>
-            <div class="<%= cafe.reviews.length > 1 ? 'multi-reviewers-row' : 'column1' %>">
-              <li><span id="name-title">☕️Name: </span><p class="nobg"><%= review.reviewer.name %></p></li>
-              <li><span id="favoritecoffee-title">☕️Favorite Coffee: </span><p class="nobg"><%= review.favoriteCoffee %></p></li>
-              <li><span id="leastfavcoffee-title">☕️Least Favorite Coffee: </span><p class="nobg"><%= review.leastCoffee %></p></li>
-              <li><span id="milkpref-title">☕️Milk Preference: </span><p class="nobg"><%= review.milk %></p></li>
-              <li><span id="price-title">☕️Price of Latte: </span><p class="nobg">$<%= review.priceLatte %></p></li>
-              <li><span id="rating-title">☕️Rating: </span><p class="star-display nobg"><%= '★'.repeat(review.rating) %></p></li>
+
+    <% if (cafe.reviews.length > 0) { %>
+      <h3 id="reviews">Reviews</h3>
+    <% } %>
+
+    <% if (cafe.reviews.length > 0) { %>
+      <div class="row reviewborder">
+        <div class="eachreview">
+          <% cafe.reviews.forEach(review => { %>
+            <% if (review.reviewer) { %>
+              <div class="<%= cafe.reviews.length > 1 ? 'multi-reviewers-row' : 'column1' %>">
+                <li><span id="name-title">☕️Name: </span><p class="nobg"><%= review.reviewer.name %></p></li>
+                <li><span id="favoritecoffee-title">☕️Favorite Coffee: </span><p class="nobg"><%= review.favoriteCoffee %></p></li>
+                <li><span id="leastfavcoffee-title">☕️Least Favorite Coffee: </span><p class="nobg"><%= review.leastCoffee %></p></li>
+                <li><span id="milkpref-title">☕️Milk Preference: </span><p class="nobg"><%= review.milk %></p></li>
+                <li><span id="price-title">☕️Price of Latte: </span><p class="nobg">$<%= review.priceLatte %></p></li>
+                <li><span id="rating-title">☕️Rating: </span><p class="star-display nobg"><%= '★'.repeat(review.rating) %></p></li>
+              </div>
             <% } %>
-          <% if(review.reviewer.equals(user?.profile._id)) { %>
-            <div class="row-2">
-              <form action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>/edit" method="GET">
-                <button class="button" id="edit-review"><i class="fa-regular fa-pen-to-square"></i></button>
-              </form>
-              <form action="/cafes/<%= cafe._id %>/reviews/<%=review._id%>?_method=DELETE" method="POST">
-                <button class="button"><i class="fa-solid fa-trash-can"></i></button>
-              </form>
-            </div>
-          <% } %>
-        <% }) %>
+
+            <% if(review.reviewer.equals(user?.profile._id)) { %>
+              <div class="row-2">
+                <form action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>/edit" method="GET">
+                  <button class="button" id="edit-review"><i class="fa-regular fa-pen-to-square"></i></button>
+                </form>
+                <form action="/cafes/<%= cafe._id %>/reviews/<%=review._id%>?_method=DELETE" method="POST">
+                  <button class="button"><i class="fa-solid fa-trash-can"></i></button>
+                </form>
+              </div>
+            <% } %>
+          <% }) %>
+        </div>
       </div>
-    </div>
-    <div class="addreviewborder">
+    <% } %>
+
+    <div class="<%= cafe.reviews.length > 0 ? 'addreviewborder' : 'addreviewborder-no-reviews' %>">
       <div class="add-review-title">
         <h3 id="addreview">Add Review</h3>
       </div>
@@ -67,11 +76,12 @@
       </form>
     </div>
   </div>
+
   <script>
     function updateStarRating(rating) {
       const starRating = document.querySelector('.star-rating');
       const stars = starRating.querySelectorAll('label');
-      
+
       stars.forEach((star, index) => {
         if (index < rating) {
           star.classList.add('active');
