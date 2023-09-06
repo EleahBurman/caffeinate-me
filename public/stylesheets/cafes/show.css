@@ -281,6 +281,10 @@ main {
   height: 28px;
 }
 
+#rating-title{
+  color: #0156d2;
+}
+
 li{
   display: flex;
   flex-direction: column;
