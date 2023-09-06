@@ -139,10 +139,11 @@ main {
 
 #reviews {
   margin: 0;
+  width: 30px;
 }
 
 #remove {
-  width: 50px;
+  width: 30px;
   margin-right: 170px;
 }
 
