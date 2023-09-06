@@ -11,34 +11,34 @@
     </div>
     <h3 id="reviews">Reviews</h3>
     <div class="row reviewborder">
-      <% cafe.reviews.forEach(review => { %>
-        <% if (review.reviewer) { %>
-          <div class="<%= cafe.reviews.length > 1 ? 'multi-reviewers-row' : 'column1' %>">
-            <li><span id="name-title">☕️Name: </span><%= review.reviewer.name %></li>
-            <li><span id="favoritecoffee-title">☕️Favorite Coffee: </span><%= review.favoriteCoffee %></li>
-            <li><span id="leastfavcoffee-title">☕️Least Favorite Coffee: </span><%= review.leastCoffee %></li>
-            <li><span id="milkpref-title">☕️Milk Preference: </span><%= review.milk %></li>
-            <li><span id="price-title">☕️Price of Latte: </span>$<%= review.priceLatte %></li>
-            <li><span id="rating-title">☕️Rating: </span><%= '★'.repeat(review.rating) %></li>
-          <% } %>
-        <% if(review.reviewer.equals(user?.profile._id)) { %>
-          <div class="column-2">
-            <div class="marginbottom">
+      <div class="eachreview">
+        <% cafe.reviews.forEach(review => { %>
+          <% if (review.reviewer) { %>
+            <div class="<%= cafe.reviews.length > 1 ? 'multi-reviewers-row' : 'column1' %>">
+              <li><span id="name-title">☕️Name: </span><%= review.reviewer.name %></li>
+              <li><span id="favoritecoffee-title">☕️Favorite Coffee: </span><%= review.favoriteCoffee %></li>
+              <li><span id="leastfavcoffee-title">☕️Least Favorite Coffee: </span><%= review.leastCoffee %></li>
+              <li><span id="milkpref-title">☕️Milk Preference: </span><%= review.milk %></li>
+              <li><span id="price-title">☕️Price of Latte: </span>$<%= review.priceLatte %></li>
+              <li><span id="rating-title">☕️Rating: </span><%= '★'.repeat(review.rating) %></li>
+            <% } %>
+          <% if(review.reviewer.equals(user?.profile._id)) { %>
+            <div class="row-2">
               <form action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>/edit" method="GET">
-                <button class="button" id="edit-review">EDIT REVIEW</button>
+                <button class="button" id="edit-review"><i class="fa-regular fa-pen-to-square"></i></button>
+              </form>
+              <form action="/cafes/<%= cafe._id %>/reviews/<%=review._id%>?_method=DELETE" method="POST">
+                <button class="button"><i class="fa-solid fa-trash-can"></i></button>
               </form>
             </div>
-            <form action="/cafes/<%= cafe._id %>/reviews/<%=review._id%>?_method=DELETE" method="POST">
-              <button class="button">X</button>
-            </form>
-          </div>
-        <% } %>
-      <% }) %>
-    </div>
-    <div class="add-review-title">
-      <h3 id="addreview">Add Review</h3>
+          <% } %>
+        <% }) %>
+      </div>
     </div>
     <div class="addreviewborder">
+      <div class="add-review-title">
+        <h3 id="addreview">Add Review</h3>
+      </div>
       <form id="add-review-form" action="/cafes/<%= cafe._id%>/reviews" method="POST" autocomplete="off">
         <label for="favoriteCoffee">Favorite Coffee:</label>
         <input type="text" class="textbox" name="favoriteCoffee" class="rowtwo" id="favoriteCoffee" placeholder="Vanilla Latte"></input>
@@ -63,7 +63,7 @@
           <input type="radio" id="star4" name="rating" value="4" onclick="updateStarRating(4)" /><label for="star4"></label>
           <input type="radio" id="star5" name="rating" value="5" onclick="updateStarRating(5)" /><label for="star5"></label>
         </div>
-        <button class="button" id="addreviewbutton" type="submit">Add Review</button>
+        <button class="button" id="addreviewbutton" type="submit"><i class="fa-solid fa-plus"></i></button>
       </form>
     </div>
   </div>

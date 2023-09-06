@@ -20,7 +20,7 @@ html {
   margin: 25px;
   width: 600px;
   max-width: 100%;
-  height: fit-content;
+  height: 1500px;
 }
 
 #no-bottom-margin {
@@ -100,12 +100,16 @@ p{
   margin-right: 10px;
 }
 
-.column-2 {
-  flex-direction: column;
+.row-2 {
+  display:flex;
+  flex-direction: row;
   width: 30%;
   margin-top:10px;
 }
 
+#edit-review{
+  margin-right: 10px;
+}
 main {
   display: flex;
   align-items: center;
@@ -169,7 +173,7 @@ main {
 }
 
 .addreviewborder{
-  margin-top: 10px;
+  margin-top: 50px;
   display: flex;
   width: 80%;
   background-color: white;
@@ -181,6 +185,12 @@ main {
   justify-content: left;
 }
 
+.eachreview{
+  border: 1px solid #000000;
+  box-shadow: 0px 0px 2px 2px #0191DA;
+  border-radius: 10px;
+  padding: 25px;
+}
 .reviewborder{
   margin-top: 10px;
   display: flex;
