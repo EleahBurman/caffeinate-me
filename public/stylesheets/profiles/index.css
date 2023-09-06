@@ -82,6 +82,9 @@ h2{
   height: 240px;
   align-items: center;
   align-content: center;
+  justify-content: center;
+  vertical-align: center;
+  text-align: center;
 }
 
 .row{
@@ -119,8 +122,11 @@ main {
   font-size: 15px;
   width: fit-content;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   text-transform: uppercase;
   height: 30px;
+  width: 30px;
   border-radius: 10px;
 }
 
@@ -138,11 +144,12 @@ main {
   font-family: 'Lato', sans-serif;
   font-size: 12px;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   text-transform: uppercase;
-  height: 20px;
-  width: 100px;
+  height: 30px;
+  width: 30px;
   border-radius:10px;
-  margin-left: 12px;
   margin-top: 5px;
 }
 
@@ -160,11 +167,12 @@ main {
   font-family: 'Lato', sans-serif;
   font-size: 12px;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   text-transform: uppercase;
-  height: 20px;
-  width: 110px;
+  height: 30px;
+  width: 30px;
   border-radius:10px;
-  margin-left: 6px;
   margin-top: 10px;
 }
 
@@ -191,13 +199,14 @@ main {
   color: #001d35;
   font-weight: bold;
   margin-top: 0;
-  margin-left: 9%;
   font-family: 'Lato', sans-serif;
   font-size: 12px;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   text-transform: uppercase;
-  height: 20px;
-  width: 100px;
+  height: 30px;
+  width: 30px;
   border-radius:10px;
   margin-bottom: 2px;
 }
