@@ -77,8 +77,7 @@ p{
 }
 
 .row{
-  display: flex;
-  flex-direction: row;
+  display: block;
   padding-bottom: 50px;
   margin-left: 50px;
 }
@@ -112,10 +111,13 @@ p{
   flex-direction: row;
   width: 30%;
   margin-top:30px;
+  margin-left:0px;
+  padding-left:0px;
 }
 
 #edit-review{
   margin-right: 10px;
+  margin-left: 0px;
 }
 main {
   display: flex;
@@ -185,10 +187,9 @@ main {
 
 .addreviewborder{
   margin-top: 50px;
-  display: flex;
+  display: block;
   width: 500px;
   background-color: white;
-  display: flex;
   border: 1px #c2c1c1;
   box-shadow: 0px 0px 2px 2px #c2c1c1;
   border-radius: 10px;
@@ -212,14 +213,13 @@ main {
   border-radius: 10px;
   padding: 50px;
   padding-bottom:0px;
+  width:400px;
 }
 
 .reviewborder{
   margin-top: 10px;
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
   background-color: white;
-  display: flex;
   border: 1px #c2c1c1;
   box-shadow: 0px 0px 2px 2px #c2c1c1;
   border-radius: 10px;
@@ -259,8 +259,11 @@ main {
 }
 #add-review-form{
   color: #0191DA;
+  margin-left:20px;
 }
-
+.add-review-title{
+  margin-left:20px;
+}
 #addreview{
   margin-top: 20px;
   margin-bottom: 0px;
@@ -349,9 +352,9 @@ li{
   padding-left:5px;
 }
 input[type="text"]{
-  width: 214.89px;
+  width: 284px;
 }
 
 input#priceLatte.textbox{
-  width: 214.89px;
+  width: 284px;
 }
