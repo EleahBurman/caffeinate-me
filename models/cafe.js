@@ -1,14 +1,14 @@
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
 
-const Schema = mongoose.Schema
+const Schema = mongoose.Schema;
 
 const reviewSchema = new Schema({
   favoriteCoffee: String,
   leastCoffee: String,
   milk: String,
-  priceLatte: {	
+  priceLatte: {
     type: mongoose.Decimal128,
-    get: v => new mongoose.Types.Decimal128((+v.toString()).toFixed(2)),
+    get: (v) => new mongoose.Types.Decimal128((+v.toString()).toFixed(2)),
   },
   rating: {
     type: Number,
@@ -17,17 +17,26 @@ const reviewSchema = new Schema({
   },
   reviewer: { type: Schema.Types.ObjectId, ref: 'Profile' },
 });
+
+const meetupSchema = new Schema({
+  date: Date, // Date and time of the meetup
+  description: String,
+  email: String,
+  attendees: [{ type: Schema.Types.ObjectId, ref: 'Profile' }], // Users attending the meetup
+});
+
 const cafeSchema = new Schema({
   name: String,
   location: String,
   reviews: [reviewSchema],
-  owner: {type: Schema.Types.ObjectId, ref: "Profile"},
+  meetups: [meetupSchema], // Embed meetups as an array
+  owner: { type: Schema.Types.ObjectId, ref: 'Profile' },
 }, {
-  timestamps: true
-})
+  timestamps: true,
+});
 
-const Cafe = mongoose.model('Cafe', cafeSchema)
+const Cafe = mongoose.model('Cafe', cafeSchema);
 
 export {
-  Cafe
-}
+  Cafe,
+};

@@ -53,25 +53,38 @@ function create(req, res){
   })
 }
 
-function show(req, res){
+function show(req, res) {
   Cafe.findById(req.params.cafeId)
-  .populate([
-    {path: 'owner',
-    model: 'Profile'},
-    {path: 'reviews.reviewer',
-    model: 'Profile'}
-  ])
-  .then(cafe=> {
-    res.render('cafes/show', {
-      title: 'Cafe Detail',
-      cafe: cafe,
+    .populate([
+      {
+        path: 'owner',
+        model: 'Profile',
+      },
+      {
+        path: 'reviews.reviewer',
+        model: 'Profile',
+      },
+      {
+        path: 'meetups.attendees',
+        model: 'Profile'
+      }
+    ])
+    .then((cafe) => {
+      if (!cafe) {
+        return res.status(404).json({ error: 'Cafe not found' });
+      }
+
+      res.render('cafes/show', {
+        title: 'Cafe Detail',
+        cafe: cafe,
+      });
     })
-  }) 
-  .catch(err => {
-    console.log(err)
-    res.redirect('/cafes')
-  })
+    .catch((err) => {
+      console.log(err);
+      res.redirect('/cafes');
+    });
 }
+
 
 function update(req, res) {
   //the id is called via the parameters
@@ -205,6 +218,38 @@ function deleteCafe(req, res){
     })
   }
 
+  function createMeetup(req, res) {
+    const cafeId = req.params.cafeId;
+    const { date, description } = req.body;
+  
+    // Validate input data here if necessary
+  
+    Cafe.findById(cafeId)
+      .then((cafe) => {
+        if (!cafe) {
+          return res.status(404).json({ error: 'Cafe not found' });
+        }
+  
+        const meetup = {
+          date,
+          description,
+          attendees: [], // You can initialize attendees as an empty array
+        };
+  
+        cafe.meetups.push(meetup);
+        return cafe.save();
+      })
+      .then((cafe) => {
+        // Cafe and meetup saved successfully
+        // Redirect to the cafe's show page after creating the meetup
+        res.redirect(`/cafes/${cafe._id}`);
+      })
+      .catch((err) => {
+        console.error(err);
+        res.status(500).json({ error: 'Internal server error' });
+      });
+  }
+  
   
 export {
   index,
@@ -216,5 +261,6 @@ export {
   editReview,
   updateReview,
   deleteReview,
-  deleteCafe as delete
+  deleteCafe as delete,
+  createMeetup
 }
