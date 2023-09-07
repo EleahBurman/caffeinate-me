@@ -25,6 +25,12 @@ const meetupSchema = new Schema({
   attendees: [{ type: Schema.Types.ObjectId, ref: 'Profile' }], // Users attending the meetup
 });
 
+// Add a virtual property to format the date
+meetupSchema.virtual('formattedDate').get(function () {
+  const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true };
+  return this.date.toLocaleDateString(undefined, options);
+});
+
 const cafeSchema = new Schema({
   name: String,
   location: String,
