@@ -76,35 +76,6 @@
       </form>
     </div>
 
-    <!-- Display Meetup Information -->
-    <% if (cafe.meetups && cafe.meetups.length > 0) { %>
-      <h3>Meetups</h3>
-      <ul>
-        <% cafe.meetups.forEach(meetup => { %>
-          <li>
-            <strong>Date:</strong> formatDate<%= meetup.date %><br>
-            <strong>Description:</strong> <%= meetup.description %>
-            <strong>Email:</strong><%= meetup.email %>
-          </li>
-        <% }) %>
-      </ul>
-    <% } %>
-
-    <!-- Form for Creating Meetups -->
-    <div class="add-meetup-form">
-      <h3>Create a New Meetup</h3>
-      <form action="/cafes/<%= cafe._id %>/meetups" method="POST">
-        <label for="meetupDate">Date:</label>
-        <input type="text" name="date" id="meetupDate" readonly placeholder="Click here">              
-        <label for="meetupDescription">Description:</label>
-        <textarea name="description" id="meetupDescription" rows="3"></textarea>
-        <label for="meetupEmail">Email:</label>
-        <input type="email" name="email" id="meetupEmail">
-        <button type="submit">Create Meetup</button>
-      </form>
-    </div>
-  </div>
-
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/default.js"></script>
   <script>
@@ -120,30 +91,6 @@
         }
       });
     }
-  // Get references to DOM elements
-  const dateInput = document.getElementById('meetupDate');
-
-  // Function to initialize the date picker
-  function initDatePicker() {
-    console.log("Initializing date picker..."); // Debugging statement
-    const options = {
-      dateFormat: 'F j, Y h:i K', // Customize the date format
-      minDate: "today",
-      timeFormat: 'HH:mm',
-      timeInterval: 15,
-      enableTime: true,
-      allowInput: true,
-      time_24hr: false,
-      onClose: null, // Set onClose to null to disable automatic closing
-    };
-    
-      // Initialize the date picker using flatpickr library
-      flatpickr(dateInput, options);
-    }
-
-  // Call the initDatePicker function to set up the date picker
-  initDatePicker();
-
 </script>
 </main>
 <%- include('../partials/footer') %>

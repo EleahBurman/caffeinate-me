@@ -64,10 +64,6 @@ function show(req, res) {
         path: 'reviews.reviewer',
         model: 'Profile',
       },
-      {
-        path: 'meetups.attendees',
-        model: 'Profile'
-      }
     ])
     .then((cafe) => {
       if (!cafe) {
@@ -217,39 +213,6 @@ function deleteCafe(req, res){
       res.redirect('/cafes')
     })
   }
-
-  function createMeetup(req, res) {
-    const cafeId = req.params.cafeId;
-    const { date, description } = req.body;
-  
-    // Validate input data here if necessary
-  
-    Cafe.findById(cafeId)
-      .then((cafe) => {
-        if (!cafe) {
-          return res.status(404).json({ error: 'Cafe not found' });
-        }
-  
-        const meetup = {
-          date,
-          description,
-          attendees: [], // You can initialize attendees as an empty array
-        };
-  
-        cafe.meetups.push(meetup);
-        return cafe.save();
-      })
-      .then((cafe) => {
-        // Cafe and meetup saved successfully
-        // Redirect to the cafe's show page after creating the meetup
-        res.redirect(`/cafes/${cafe._id}`);
-      })
-      .catch((err) => {
-        console.error(err);
-        res.status(500).json({ error: 'Internal server error' });
-      });
-  }
-  
   
 export {
   index,
@@ -262,5 +225,4 @@ export {
   updateReview,
   deleteReview,
   deleteCafe as delete,
-  createMeetup
 }
