@@ -260,7 +260,7 @@ main {
 }
 #add-review-form{
   color: #0191DA;
-  margin-left:20px;
+  margin-left:10%;
 }
 .add-review-title{
   margin-left:20px;
@@ -268,9 +268,13 @@ main {
 #addreview{
   margin-top: 20px;
   margin-bottom: 0px;
+  margin-left:25%;
   color: #0156d1;
 }
 
+.review-form-content{
+  margin-left:10%;
+}
 #addreviewbutton{
   margin-top: 10px;
 }

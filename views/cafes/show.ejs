@@ -45,37 +45,38 @@
     <% } %>
 
     <div class="<%= cafe.reviews.length > 0 ? 'addreviewborder' : 'addreviewborder-no-reviews' %>">
-      <div class="add-review-title">
-        <h3 id="addreview">Add Review</h3>
-      </div>
-      <form id="add-review-form" action="/cafes/<%= cafe._id%>/reviews" method="POST" autocomplete="off">
-        <label for="favoriteCoffee">Favorite Coffee:</label>
-        <input type="text" class="textbox" name="favoriteCoffee" class="rowtwo" id="favoriteCoffee" placeholder="Vanilla Latte"></input>
-        <label for="leastCoffee">Least Favorite Coffee:</label>
-        <input type="text" class="textbox" name="leastCoffee" id="leastCoffee" class="rowtwo" placeholder="Black Coffee"></input>
-        <label for="milk-select">Milk:</label>
-        <select name="milk" id="milk-select" class="rowtwo">
-          <option value="Whole">Whole</option>
-          <option value="Oat" selected>Oat</option>
-          <option value="Skim">Skim</option>
-          <option value="Soy">Soy</option>
-          <option value="Almond">Almond</option>
-        </select>
-        <label for="priceLatte">Price of Latte: $</label>
-        <input type="number" class="textbox" name="priceLatte" id="priceLatte" class="rowtwo" placeholder="4.00"></input>
-        <!-- Star Rating Selector -->
-        <label for="rating">Rating:</label>
-        <div class="star-rating" id="rating">
-          <input type="radio" id="star1" name="rating" value="1" onclick="updateStarRating(1)" /><label for="star1"></label>
-          <input type="radio" id="star2" name="rating" value="2" onclick="updateStarRating(2)" /><label for="star2"></label>
-          <input type="radio" id="star3" name="rating" value="3" onclick="updateStarRating(3)" /><label for="star3"></label>
-          <input type="radio" id="star4" name="rating" value="4" onclick="updateStarRating(4)" /><label for="star4"></label>
-          <input type="radio" id="star5" name="rating" value="5" onclick="updateStarRating(5)" /><label for="star5"></label>
+      <div class="review-form-content">
+        <div class="add-review-title">
+          <h3 id="addreview">Add Review</h3>
         </div>
-        <button class="button" id="addreviewbutton" type="submit"><i class="fa-solid fa-plus"></i></button>
-      </form>
+        <form id="add-review-form" action="/cafes/<%= cafe._id%>/reviews" method="POST" autocomplete="off">
+          <label for="favoriteCoffee">Favorite Coffee:</label>
+          <input type="text" class="textbox" name="favoriteCoffee" class="rowtwo" id="favoriteCoffee" placeholder="Vanilla Latte"></input>
+          <label for="leastCoffee">Least Favorite Coffee:</label>
+          <input type="text" class="textbox" name="leastCoffee" id="leastCoffee" class="rowtwo" placeholder="Black Coffee"></input>
+          <label for="milk-select">Milk:</label>
+          <select name="milk" id="milk-select" class="rowtwo">
+            <option value="Whole">Whole</option>
+            <option value="Oat" selected>Oat</option>
+            <option value="Skim">Skim</option>
+            <option value="Soy">Soy</option>
+            <option value="Almond">Almond</option>
+          </select>
+          <label for="priceLatte">Price of Latte: $</label>
+          <input type="number" class="textbox" name="priceLatte" id="priceLatte" class="rowtwo" placeholder="4.00"></input>
+          <!-- Star Rating Selector -->
+          <label for="rating">Rating:</label>
+          <div class="star-rating" id="rating">
+            <input type="radio" id="star1" name="rating" value="1" onclick="updateStarRating(1)" /><label for="star1"></label>
+            <input type="radio" id="star2" name="rating" value="2" onclick="updateStarRating(2)" /><label for="star2"></label>
+            <input type="radio" id="star3" name="rating" value="3" onclick="updateStarRating(3)" /><label for="star3"></label>
+            <input type="radio" id="star4" name="rating" value="4" onclick="updateStarRating(4)" /><label for="star4"></label>
+            <input type="radio" id="star5" name="rating" value="5" onclick="updateStarRating(5)" /><label for="star5"></label>
+          </div>
+          <button class="button" id="addreviewbutton" type="submit"><i class="fa-solid fa-plus"></i></button>
+        </form>
+      </div>
     </div>
-
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/default.js"></script>
   <script>
