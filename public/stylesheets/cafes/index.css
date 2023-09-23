@@ -45,7 +45,7 @@ main{
 }
 
 body {
-  background-color: white;
+  background-color: #ebe9e9;
   color: #0191DA;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family: 'Abril Fatface', serif;
@@ -111,6 +111,7 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-top:0;
 }
 
 .right {
