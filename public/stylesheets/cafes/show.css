@@ -147,6 +147,7 @@ main {
   text-transform: uppercase;
   height: 28px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .button:hover {

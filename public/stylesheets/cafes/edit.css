@@ -131,6 +131,10 @@ main {
   border-radius:10px;
 }
 
+.button{
+  cursor: pointer;
+}
+
 #hellowdarkness {
   display: flex;
   border-radius:10px;

@@ -124,6 +124,7 @@ main {
   text-transform: uppercase;
   height: 30px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -193,6 +194,7 @@ main {
 
 .profilesbutton{
   margin-top: 10px;
+  cursor: pointer;
 }
 
 #emptyspace{
