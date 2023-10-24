@@ -20,7 +20,7 @@ main{
 .location-name, #name-input,
 #location-select{
   border-radius:10px;
-  padding: 2px;
+  padding: 10px;
   font-family: 'Abril-Fatface';
   font-size: 16px;
   height: 28px;
@@ -60,10 +60,11 @@ body {
 
 td.location-name, td.cafe-name{
   margin-left: 5px;
+  margin-bottom: 15px;
 }
 
 tr{
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 #cafword {
   color: white;
