@@ -70,6 +70,7 @@ body > main {
   height: fit-content;
   align-items: center;
   justify-content: center;
+  border: 2px dashed #b7835e;
 }
 
 #profilepage {
@@ -194,6 +195,7 @@ main {
   width: 200px;
   height: 200px;
 }
+
 
 .profilesbutton{
   margin-top: 10px;

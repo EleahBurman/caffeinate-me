@@ -86,6 +86,7 @@ h2{
   justify-content: center;
   vertical-align: center;
   text-align: center;
+  border: 2px dashed #b7835e;
 }
 
 .row{
