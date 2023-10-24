@@ -42,6 +42,7 @@ main{
   width: 600px;
   height: fit-content;
   padding-left: 35px;
+  border: 2px dashed #b7835e;
 }
 
 body {

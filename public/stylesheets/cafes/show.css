@@ -24,6 +24,7 @@ main{
   max-width: 100%;
   height: fit-content;
   padding-bottom:50px;
+  border: 2px dashed #b7835e;
 }
 
 #no-bottom-margin {
@@ -197,6 +198,7 @@ main {
   padding: 25px;
   justify-content: left;
   margin-left: 50px;
+  border: 2px dashed #b7835e;
 }
 
 .addreviewborder-no-reviews{
@@ -209,6 +211,7 @@ main {
   margin-left: 50px;
   margin-top: 50px;
   border-radius: 10px;
+  border: 2px dashed #b7835e;
 }
 .eachreview{
   border-radius: 10px;
@@ -228,6 +231,7 @@ main {
   width: 500px;
   margin-left: 60px;
   padding-bottom:25px;
+  border: 2px dashed #b7835e;
 }
 
 .marginbottom{
