@@ -28,6 +28,10 @@ main{
   font-weight: bold;
 }
 
+#location-select{
+  padding: 5px;
+}
+
 
 .border {
   flex-wrap: wrap;
