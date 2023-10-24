@@ -18,13 +18,13 @@
             <td class="location-name"><%= cafe.location %></td>
             <%# button for reviews %>
             <td>
-              <form id="reviews" action="/cafes/<%= cafe._id %>" method="GET"><button class="button" id="reviews"><i class="fa-regular fa-newspaper"></i></button>
+              <form id="reviews" action="/cafes/<%= cafe._id %>" method="GET"><button class="button" id="reviews">Edit <i class="fa-regular fa-newspaper"></i></button>
               </form>
             </td>
             <%# button for delete cafes%>
             <td>
               <form action="/cafes/<%= cafe._id %>?_method=DELETE" method="POST">
-                <button class="button" id="remove" type="submit"><i class="fa-solid fa-trash-can"></i></button>
+                <button class="button" id="remove" type="submit">Delete <i class="fa-solid fa-trash-can"></i></button>
               </form>
             </td>
           </tr>
@@ -86,7 +86,7 @@
         <option value="WI">WI</option>
         <option value="WY">WY</option>
       </select>
-      <button class="button" type="submit"><i class="fa-solid fa-plus"></i></button>
+      <button class="button" type="submit">Add <i class="fa-solid fa-plus"></i></button>
     </form>
   </div>
 </main>

@@ -121,13 +121,11 @@ main {
   font-weight: bold;
   font-family: 'Puritan', sans-serif;
   font-size: 15px;
-  width: fit-content;
+  width: 70px;
   justify-content: center;
   align-items: center;
   text-align: center;
-  text-transform: uppercase;
   height: 30px;
-  width: 30px;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -148,9 +146,8 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  text-transform: uppercase;
   height: 30px;
-  width: 30px;
+  width: 70px;
   border-radius:10px;
   margin-top: 5px;
 }
@@ -173,7 +170,7 @@ main {
   text-align: center;
   text-transform: uppercase;
   height: 30px;
-  width: 30px;
+  width: 70px;
   border-radius:10px;
   margin-top: 10px;
 }
@@ -206,9 +203,8 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  text-transform: uppercase;
   height: 30px;
-  width: 30px;
+  width: 70px;
   border-radius:10px;
   margin-bottom: 2px;
 }

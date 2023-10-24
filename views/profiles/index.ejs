@@ -13,23 +13,23 @@
               <img id="coffee-img" src="/images/coffee.png">
             </div>
             <form action="/profiles/<%= profile._id %>" method="GET">
-              <button class=button id="viewbutton"><i class="fa-regular fa-user"></i></button>
+              <button class=button id="viewbutton">Profile <i class="fa-regular fa-user"></i></button>
             </form>
           <% if (userProfile.equals(profile._id)) { %>
           <% } else { %>
             <% if (userProfile.pendingOutgoingInvites.includes(profile._id)) { %>
-              <button class="friendbutton"><i class="fa-solid fa-clock-rotate-left"></i></button>
+              <button class="friendbutton">Pending <i class="fa-solid fa-clock-rotate-left"></i></button>
             <% } else if (userProfile.pendingIncomingInvites.includes(profile._id)) { %>
               <form action="/profiles/acceptFriend/<%= profile._id %>?_method=PATCH" method="POST">
-                <button class="friendbutton" type="submit"><i class="fa-regular fa-circle-check"></i></button>
+                <button class="friendbutton" type="submit">Accept Friend <i class="fa-regular fa-circle-check"></i></button>
               </form>
             <% } else if (userProfile.friends.includes(profile._id)) { %>
               <form action="/profiles/removeFriend/<%= profile._id %>?_method=DELETE" method="POST">
-                <button class="friendbutton" type="submit"><i class="fa-solid fa-user-minus"></i></button>
+                <button class="friendbutton" type="submit">Remove Friend <i class="fa-solid fa-user-minus"></i></button>
               </form>
             <% } else { %>
               <form action="/profiles/requestFriend/<%= profile._id %>" method="POST">
-                <button class="sendbutton" type="submit"><i class="fa-solid fa-user-plus"></i></button>
+                <button class="sendbutton" type="submit">Add Friend <i class="fa-solid fa-user-plus"></i></button>
               </form>
             <% } %>
           <% } %>

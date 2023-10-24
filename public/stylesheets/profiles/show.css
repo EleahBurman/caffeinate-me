@@ -122,7 +122,6 @@ main {
   font-size: 15px;
   width: fit-content;
   justify-content: center;
-  text-transform: uppercase;
   height: 30px;
   border-radius: 10px;
   cursor: pointer;
@@ -204,4 +203,5 @@ main {
 
 #clear{
   margin-top: 10px;
+  width: 75px;
 }

@@ -32,10 +32,10 @@
             <% if(review.reviewer.equals(user?.profile._id)) { %>
               <div class="row-2">
                 <form action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>/edit" method="GET">
-                  <button class="button" id="edit-review"><i class="fa-regular fa-pen-to-square"></i></button>
+                  <button class="button" id="edit-review">Edit <i class="fa-regular fa-pen-to-square"></i></button>
                 </form>
                 <form action="/cafes/<%= cafe._id %>/reviews/<%=review._id%>?_method=DELETE" method="POST">
-                  <button class="button"><i class="fa-solid fa-trash-can"></i></button>
+                  <button class="button" id="delete">Delete <i class="fa-solid fa-trash-can"></i></button>
                 </form>
               </div>
             <% } %>
@@ -73,7 +73,7 @@
             <input type="radio" id="star4" name="rating" value="4" onclick="updateStarRating(4)" /><label for="star4"></label>
             <input type="radio" id="star5" name="rating" value="5" onclick="updateStarRating(5)" /><label for="star5"></label>
           </div>
-          <button class="button" id="addreviewbutton" type="submit"><i class="fa-solid fa-plus"></i></button>
+          <button class="button" id="addreviewbutton" type="submit">Add <i class="fa-solid fa-plus"></i></button>
         </form>
       </div>
     </div>
