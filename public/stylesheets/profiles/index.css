@@ -116,10 +116,10 @@ main {
 }
 
 .button {
+  font-weight: bold;
   border: none;
   background: #c2e7ff;
   color: #001d35;
-  font-weight: bold;
   font-family: 'Puritan', sans-serif;
   font-size: 15px;
   width: 70px;
@@ -227,6 +227,7 @@ main {
   background: #c2e7ff;
   color: #001d35;
   opacity: 90%;
+  font-weight: bold;
 }
 
 .coffee-cup{

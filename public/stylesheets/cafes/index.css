@@ -70,6 +70,15 @@ td.location-name, td.cafe-name{
 tr{
   margin-bottom: 15px;
 }
+
+tr:nth-child(even), tr:nth-child(even) td  {
+  background-color: #f0f9fb;
+  border: 0;
+  border-radius: 0;
+}
+
+
+
 #cafword {
   color: white;
   text-decoration: none;
