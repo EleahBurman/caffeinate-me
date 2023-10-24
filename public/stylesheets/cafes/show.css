@@ -172,7 +172,7 @@ main {
   width: 300px; 
   border-radius:10px;
   border: 1px solid #c6c6c6;
-  background: #e0ebf1;
+  background: #f0f9fb;
   padding: 2px;
   font-family: 'Abril-Fatface';
   font-size: 16px;
@@ -274,9 +274,11 @@ main {
   color: #0191DA;
   margin-left:10%;
 }
+
 .add-review-title{
   margin-left:20px;
 }
+
 #addreview{
   margin-top: 20px;
   margin-bottom: 0px;
@@ -310,7 +312,7 @@ li{
   flex-direction: column;
   color:black;
   border: 1px solid #c6c6c6;
-  background: #e0ebf1;
+  background: #f0f9fb;
   border-radius: 10px;
   margin-bottom: 4px;
   margin-right: 5px;
@@ -324,10 +326,9 @@ li{
   align-items: center;
   margin-left: 60px;
 }
-/* Star Rating CSS */
 .star-rating {
   display: flex;
-  flex-direction: row; /* Stars in original order */
+  flex-direction: row;
   font-size: 0;
 }
 
@@ -346,13 +347,14 @@ li{
   content: '★';
   color:#c2c1c1;
 }
+
 #rating{
   justify-content: left;
   align-items: left;
   text-align: left;
 }
 .star-rating label.active:before {
-  color: gold; /* Color active stars gold */
+  color: gold;
 }
 
 .star-display{
