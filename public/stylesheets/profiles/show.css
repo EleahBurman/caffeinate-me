@@ -131,8 +131,9 @@ main {
 .button:hover {
   background: #85ccfc;
   font-weight: bold;
-  box-shadow: 0px 7px 2px -2px #c6c6c6;
+  box-shadow: 0px 7px 2px -2px #c6c6c6, inset 0 0 0 3px #ffffff;
   outline: 3px solid #21a3fa;
+  transition: 0.4s;
 }
 
 
@@ -165,11 +166,12 @@ main {
 }
 
 .cafes:hover {
-  color: #0156d2;
   text-decoration: none;
+  background: #85ccfc;
   font-weight: bold;
-  box-shadow: 0px 7px 2px -2px #c6c6c6;
+  box-shadow: 0px 7px 2px -2px #c6c6c6, inset 0 0 0 3px #ffffff;
   outline: 3px solid #21a3fa;
+  transition: 0.4s;
 }
 
 #profileimg {
