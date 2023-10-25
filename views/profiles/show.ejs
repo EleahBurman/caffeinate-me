@@ -34,7 +34,9 @@
       <% } %>
     </div>
 
-    <h2 id="title-coffee-gifs">Favorite Coffee GIFs</h2>
+    <% if (profile.gifs.length > 0) { %>
+      <h2 id="title-coffee-gifs">Favorite Coffee GIFs</h2>
+    <% } %>
     <% profile.gifs.forEach(gifPath => { %>
       <img src="<%= gifPath %>" class="gif" alt="User's GIF">
     <% }) %>
