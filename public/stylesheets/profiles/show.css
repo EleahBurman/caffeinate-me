@@ -73,6 +73,24 @@ body > main {
   border: 2px dashed #b7835e;
 }
 
+.profcard-nocafes{
+  color: #0191DA;
+  flex-wrap: wrap;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border: 1px #c2c1c1;
+  box-shadow: 0px 0px 2px 2px #c2c1c1;
+  border-radius: 10px;
+  padding: 10px;
+  width: 300px;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #b7835e;
+  margin: 0 auto;
+  height: 200px;
+}
+
 #profilepage {
   transform: scale(0.8, 0.8);
   -ms-transform: scale(0.8, 0.8); /* IE 9 */
