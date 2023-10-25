@@ -43,7 +43,6 @@ main{
   margin: 25px;
   width: 700px;
   height: fit-content;
-  padding-left: 35px;
   border: 2px dashed #b7835e;
 }
 
@@ -158,7 +157,7 @@ main {
 
 #reviews {
   margin: 0;
-  width: 70px;
+  width: 100px;
 }
 
 #remove.button {
