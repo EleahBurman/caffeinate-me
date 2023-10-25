@@ -66,7 +66,7 @@ body > main {
   box-shadow: 0px 0px 2px 2px #c2c1c1;
   border-radius: 10px;
   padding: 10px;
-  width: 190px;
+  width: 500px;
   height: fit-content;
   align-items: center;
   justify-content: center;
@@ -166,11 +166,8 @@ main {
 }
 
 .cafes:hover {
-  text-decoration: none;
-  background: #85ccfc;
+  text-decoration: underline;
   font-weight: bold;
-  box-shadow: 0px 7px 2px -2px #c6c6c6, inset 0 0 0 3px #ffffff;
-  outline: 3px solid #21a3fa;
   transition: 0.4s;
 }
 
@@ -194,7 +191,6 @@ main {
 
 .profcard, #lorelai {
   margin: 0 auto;
-  width: 200px;
   height: 200px;
 }
 
