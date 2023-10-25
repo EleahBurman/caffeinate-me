@@ -38,7 +38,12 @@
       <h2 id="title-coffee-gifs">Favorite Coffee GIFs</h2>
     <% } %>
     <% profile.gifs.forEach(gifPath => { %>
-      <img src="<%= gifPath %>" class="gif" alt="User's GIF">
+      <div class="each-gif">
+        <img src="<%= gifPath %>" class="gif" alt="User's GIF">
+        <form action="/profiles/<%= profile._id %>/removeOneGif?gifPath=<%= gifPath %>" method="POST">
+          <button class="button delete-gif-button" type="submit">Delete <i class="fa-solid fa-trash-can"></i></button>
+        </form>
+      </div>
     <% }) %>
     
         <!-- Add a form for clearing GIFs -->
@@ -46,7 +51,7 @@
     <% if (profile.gifs.length > 0) { %>
       <div>
         <form action="/profiles/<%= profile._id %>/clearGifs" method="POST">
-          <button class="button" id="clear" type="submit">Delete <i class="fa-solid fa-trash-can"></i></button>
+          <button class="button" id="clear" type="submit">Delete All Gifs <i class="fa-solid fa-trash-can"></i></button>
         </form>
       </div>
     <% } %>

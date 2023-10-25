@@ -236,6 +236,42 @@ function addGif(req, res) {
     });
 }
 
+function removeOneGif(req, res) {
+  // Find the user profile and check if the user has permission
+  Profile.findById(req.params.profileId)
+    .then((userProfile) => {
+      if (!userProfile) {
+        console.error('User profile not found');
+        return res.redirect('/profiles');
+      }
+
+      if (!userProfile.equals(req.user.profile)) {
+        console.error('User does not have permission to clear GIFs');
+        return res.redirect('/profiles');
+      }
+
+      // Get the gifPath to remove from the query parameters
+      const gifPathToRemove = req.query.gifPath;
+
+      // Remove the specified gifPath from the userProfile.gifs array
+      userProfile.gifs = userProfile.gifs.filter(gifPath => gifPath !== gifPathToRemove);
+
+      // Save the changes to the user's profile
+      userProfile.save()
+        .then(() => {
+          res.redirect('/profiles'); // Redirect to the user's profile page
+        })
+        .catch((err) => {
+          console.error(err);
+          res.redirect('/profiles');
+        });
+    })
+    .catch((err) => {
+      console.error(err);
+      res.redirect('/profiles');
+    });
+}
+
 function clearGifs(req, res) {
   Profile.findById(req.params.profileId)
     .then((userProfile) => {
@@ -250,8 +286,11 @@ function clearGifs(req, res) {
         return res.redirect('/profiles');
       }
 
-      // Clear the user's gifs array
-      userProfile.gifs = [];
+      // Get the gifPath to remove from the query parameters
+      const gifPathToRemove = req.query.gifPath;
+
+      // Remove the specified gifPath from the userProfile.gifs array
+      userProfile.gifs = userProfile.gifs.filter(gifPath => gifPath !== gifPathToRemove);
 
       // Save the changes to the user's profile
       userProfile.save()
@@ -277,5 +316,6 @@ export {
   acceptFriend,
   removeFriend,
   addGif,
-  clearGifs
+  clearGifs,
+  removeOneGif,
 }

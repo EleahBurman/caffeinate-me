@@ -13,5 +13,6 @@ router.patch('/acceptFriend/:profileId', isLoggedIn, profilesCtrl.acceptFriend)
 router.delete('/removeFriend/:profileId', isLoggedIn, profilesCtrl.removeFriend)
 router.post('/:profileId/addGif', isLoggedIn, profilesCtrl.addGif);
 router.post('/:profileId/clearGifs', isLoggedIn, profilesCtrl.clearGifs);
+router.post('/:profileId/removeOneGif', isLoggedIn, profilesCtrl.removeOneGif);
 
 export { router }
