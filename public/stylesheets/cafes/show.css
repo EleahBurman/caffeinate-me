@@ -171,13 +171,17 @@ main {
 .textbox {
   width: 300px; 
   border-radius:10px;
-  border: 1px solid #c6c6c6;
-  background: #f0f9fb;
+  border: 1px solid #919191;
+  background: white;
   padding: 2px;
   font-family: 'Abril-Fatface';
   font-size: 16px;
   height: 28px;
   margin: 0px 5px 4px 0px;
+}
+
+.textbox::placeholder{
+  color:#c3c3c3;
 }
 
 #remove {
