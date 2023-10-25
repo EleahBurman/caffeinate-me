@@ -21,6 +21,7 @@ const reviewSchema = new Schema({
 const cafeSchema = new Schema({
   name: String,
   location: String,
+  city: String,
   reviews: [reviewSchema],
   owner: { type: Schema.Types.ObjectId, ref: 'Profile' },
 }, {

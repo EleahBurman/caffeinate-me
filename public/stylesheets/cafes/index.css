@@ -17,8 +17,8 @@ main{
 }
 
 .cafe-name,
-.location-name, #name-input,
-#location-select{
+.location-name, .city-name, #name-input,
+#location-select, #city-input{
   border-radius:10px;
   padding: 10px;
   font-family: 'Abril-Fatface';
@@ -31,7 +31,6 @@ main{
 #location-select{
   padding: 5px;
 }
-
 
 .border {
   flex-wrap: wrap;
@@ -62,9 +61,10 @@ body {
   letter-spacing: .08rem;
 }
 
-td.location-name, td.cafe-name{
+td.location-name, td.cafe-name, td.city-name{
   margin-left: 5px;
   margin-bottom: 15px;
+  justify-content: space-between;
 }
 
 tr{
@@ -140,7 +140,7 @@ main {
   font-weight: bold;
   font-family: 'Puritan', sans-serif;
   font-size: 15px;
-  width: fit-content;
+  width: 70px;
   justify-content: center;
   height: 30px;
   border-radius: 10px;
@@ -158,16 +158,19 @@ main {
 
 #reviews {
   margin: 0;
-  width: fit-content;
+  width: 70px;
 }
 
-#remove {
-  margin-right: 170px;
-  width: fit-content;
+#remove.button {
+  width: 80px;
 }
 
 .textbox {
   width: 140px; 
   height: 20px;
   border-radius: 10px;
+}
+
+.add {
+  margin-top: 10px;
 }

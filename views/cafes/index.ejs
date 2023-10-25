@@ -8,13 +8,15 @@
       <thead>
         <tr>
           <th class="namelocation">Name</th>
-          <th class="namelocation">Location</th>
+          <th class="namelocation">City</th>
+          <th class="namelocation">State</th>
         </tr>
       </thead>
       <tbody>
         <% cafes.forEach((cafe) => {  %>
           <tr>
             <td class="cafe-name"><%= cafe.name %></td>
+            <td class="city-name"><%= cafe.city %></cafe></td>
             <td class="location-name"><%= cafe.location %></td>
             <%# button for reviews %>
             <td>
@@ -35,6 +37,8 @@
     <form id="new-form" action="/cafes" method="POST" autocomplete="off">
       <label for="name-input">Name:</label>
       <input type="text" class="textbox" name="name" id="name-input" placeholder="Luke's Diner">
+      <label for="city-input">City:</label>
+      <input type="text" class="textbox" name="city" id="city-input" placeholder="Stars Hollow">
       <label for="location-select">Location:</label>
       <select name="location" id="location-select">
         <option value="AL">AL</option>
@@ -86,7 +90,7 @@
         <option value="WI">WI</option>
         <option value="WY">WY</option>
       </select>
-      <button class="button" type="submit">Add <i class="fa-solid fa-plus"></i></button>
+      <button class="button add" type="submit">Add <i class="fa-solid fa-plus"></i></button>
     </form>
   </div>
 </main>
