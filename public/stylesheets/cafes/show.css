@@ -219,11 +219,16 @@ main {
   text-align: left;
   padding: 25px;
   width: 500px;
-  margin-left: 50px;
+  margin-left: 100px;
   margin-top: 50px;
   border-radius: 10px;
   border: 2px dashed #b7835e;
 }
+
+.cafe-name{
+  margin-top:30px;
+}
+
 .eachreview{
   border-radius: 10px;
   padding: 50px;
