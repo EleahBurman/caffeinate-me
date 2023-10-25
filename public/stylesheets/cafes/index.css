@@ -191,3 +191,21 @@ main {
 .emptydiv{
   height: 20px;
 }
+
+.owner-name {
+  color: #0156d2;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.owner-name:visited{
+  color: #0156d2;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.owner-name:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  transition: 0.4s;
+}
