@@ -3,19 +3,20 @@ import { Profile } from '../models/profile.js';
 
 function index(req, res) {
   Cafe.find({})
-  .populate('reviews')
-  .then(cafes => {
-    res.render('cafes/index', {
-      cafes: cafes,
-      title: 'All Cafes',
-      nav: 'cafes'
+    .populate('owner') // Add this line to populate the owner field
+    .then(cafes => {
+      res.render('cafes/index', {
+        cafes: cafes,
+        title: 'All Cafes',
+        nav: 'cafes'
+      })
     })
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect('/cafes')
-  })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/cafes')
+    })
 }
+
 
 function newCafe(req, res) {
   res.render('cafes', {

@@ -7,7 +7,7 @@
     <table id="listnames">
       <thead>
         <tr>
-          <th class="namelocation">Name</th>
+          <th class="namelocation th-notfilter">Name</th>
           <th class="namelocation">
             <label for="city-filter">Filter by City:</label>
             <select id="city-filter">
@@ -70,6 +70,7 @@
               <option value="WY">Wyoming</option>
             </select>
           </th>
+          <th class="namelocation created-by">Created By:</th>
         </tr>
       </thead>
       <tbody>
@@ -78,6 +79,7 @@
             <td class="cafe-name"><%= cafe.name %></td>
             <td class="city-name"><%= cafe.city %></cafe></td>
             <td class="location-name"><%= cafe.location %></td>
+            <td class="owner-name"><%= cafe.owner.name %></td>
             <%# button for reviews %>
             <td>
               <form id="reviews" action="/cafes/<%= cafe._id %>" method="GET"><button class="button" id="reviews">Edit <i class="fa-regular fa-newspaper"></i></button>

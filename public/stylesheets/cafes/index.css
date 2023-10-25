@@ -17,7 +17,7 @@ main{
 }
 
 .cafe-name,
-.location-name, .city-name, #name-input,
+.location-name, .city-name, .owner-name, #name-input,
 #location-select, #city-input{
   border-radius:10px;
   padding: 10px;
@@ -41,7 +41,7 @@ main{
   border-radius: 10px;
   padding: 10px;
   margin: 25px;
-  width: 600px;
+  width: 700px;
   height: fit-content;
   padding-left: 35px;
   border: 2px dashed #b7835e;
@@ -178,4 +178,16 @@ main {
 
 .add {
   margin-top: 10px;
+}
+
+.th-notfilter{
+  padding-bottom:37px;
+}
+
+.created-by{
+  padding-bottom:22px;
+}
+
+.emptydiv{
+  height: 20px;
 }
