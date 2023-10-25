@@ -8,8 +8,13 @@
       <thead>
         <tr>
           <th class="namelocation">Name</th>
-          <th class="namelocation">City</th>
-          <th class="statelocation"> <!-- Unique class for "State" column -->
+          <th class="namelocation">
+            <label for="city-filter">Filter by City:</label>
+            <select id="city-filter">
+              <option value="all">All</option>
+            </select>
+          </th>
+          <th class="statelocation"> 
             <label for="state-filter">Filter by State:</label>
             <select id="state-filter">
               <option value="all">All</option>
@@ -151,21 +156,48 @@
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       const stateFilter = document.getElementById("state-filter");
+      const cityFilter = document.getElementById("city-filter");
       const tableRows = document.querySelectorAll("#listnames tbody tr");
   
-      stateFilter.addEventListener("change", function() {
+      // Populate the city filter options
+      const cityOptions = new Set();
+      tableRows.forEach((row) => {
+        const cityCell = row.querySelector(".city-name");
+        cityOptions.add(cityCell.textContent.trim());
+      });
+      cityOptions.forEach((city) => {
+        const option = document.createElement("option");
+        option.value = city;
+        option.textContent = city;
+        cityFilter.appendChild(option);
+      });
+  
+      // Event listener for the state filter
+      stateFilter.addEventListener("change", filterTable);
+  
+      // Event listener for the city filter
+      cityFilter.addEventListener("change", filterTable);
+  
+      function filterTable() {
         const selectedState = stateFilter.value;
+        const selectedCity = cityFilter.value;
   
         tableRows.forEach((row) => {
-          const locationCell = row.querySelector(".location-name");
-          if (selectedState === "all" || locationCell.textContent.trim() === selectedState) {
+          const stateCell = row.querySelector(".location-name");
+          const cityCell = row.querySelector(".city-name");
+  
+          const stateMatch = selectedState === "all" || stateCell.textContent.trim() === selectedState;
+          const cityMatch = selectedCity === "all" || cityCell.textContent.trim() === selectedCity;
+  
+          if (stateMatch && cityMatch) {
             row.style.display = "";
           } else {
             row.style.display = "none";
           }
         });
-      });
+      }
     });
-  </script>  
+  </script>
+  
 </main>
 <%- include('../partials/footer') %>
