@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="/stylesheets/profiles/show.css" />
 <%- include('../partials/nav') %>
 <main>
+
   <div class="border">
     <h1 class="animate__animated animate__lightSpeedInLeft">☕️<%= profile.name %>'s Profile☕️</h1>
     <div id="emptyspace">
@@ -58,7 +59,6 @@
   <% } %>
 
     <% if (userProfile && userProfile.equals(profile._id)) { %>
-      <!-- Render this section only if the logged-in user is viewing their own profile -->
       <h2 class="add-title">Add a GIF</h2>
       <form action="/profiles/<%= profile._id %>/addGif" method="POST">
         <select name="selectedGif">
@@ -71,9 +71,23 @@
                   
         <button class="button" type="submit">Add <i class="fa-solid fa-plus"></i></button>
       </form>
+      <br/>
+      <h2> Add a Background Color</h2>
+      <form action="/profiles/<%= profile._id %>/updateBackgroundColor" method="POST">
+        <label for="backgroundColor">Choose Background Color:</label>
+        <input type="color" id="backgroundColor" name="backgroundColor" value="<%= profile.backgroundColor || '#ebe9e9' %>">
+        <button class="button" type="submit">Save Background Color</button>
+      </form>
     <% } %>
 
     <a href="/profiles/index"><button class="button profilesbutton">All Profiles <i class="fa-regular fa-user"></i></button></a>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const profileBackgroundColor = '<%= profile.backgroundColor || "#ebe9e9" %>';
+      const borderDiv = document.querySelector('.border');
+      borderDiv.style.backgroundColor = profileBackgroundColor;
+    });
+  </script>
 </main>
 <%- include('../partials/footer') %>

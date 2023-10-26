@@ -308,6 +308,38 @@ function clearGifs(req, res) {
     });
 }
 
+function updateBackgroundColor(req, res) {
+  // Find the user's profile
+  Profile.findById(req.params.profileId)
+    .then(userProfile => {
+      if (!userProfile) {
+        console.error('User profile not found');
+        return res.redirect('/profiles');
+      }
+
+      // Get the selected background color from the request body
+      const backgroundColor = req.body.backgroundColor;
+
+      // Update the user's profile with the new background color
+      userProfile.backgroundColor = backgroundColor;
+
+      // Save the changes to the user's profile
+      userProfile.save()
+        .then(() => {
+          res.redirect(`/profiles/${req.params.profileId}`);
+        })
+        .catch(err => {
+          console.error(err);
+          res.redirect('/profiles');
+        });
+    })
+    .catch(err => {
+      console.error(err);
+      res.redirect('/profiles');
+    });
+}
+
+
 
 export {
   index,
@@ -318,4 +350,5 @@ export {
   addGif,
   clearGifs,
   removeOneGif,
+  updateBackgroundColor
 }

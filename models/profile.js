@@ -5,6 +5,7 @@ const Schema = mongoose.Schema
 const profileSchema = new Schema({
   name: String,
   avatar: String,
+  backgroundColor: String,
   //profile has an array of multiple cafe objects attached
   cafes: [{type: Schema.Types.ObjectId, ref: 'Cafe'}],
   reviews: [{type: Schema.Types.ObjectId, ref: 'Cafe'}],
