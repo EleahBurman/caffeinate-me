@@ -5,39 +5,83 @@
   <div class="border" id="editcafe">
     <h1 class="animate__animated animate__lightSpeedInLeft">☕️Edit Review☕️</h1>
     <form id="update-review" action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>?_method=PUT" method="POST">
-      <% cafe.reviews.forEach(review => { %>
-        <div id="column">
-          <label for="favoriteCoffee">Favorite Coffee:</label>
-          <input type="text" class="textbox" name="favoriteCoffee" id="favoriteCoffee" value="<%= review.favoriteCoffee %>"></input> 
-          <label for="leastCoffee">Least Favorite Coffee:</label>
-          <input type="text" class="textbox" name="leastCoffee" id="leastCoffee" value="<%= review.leastCoffee %>"></input>
-          <label for="milk-select">Milk:</label>
-          <select style="width: 100px" name="milk" id="milk-select">
-            <option value="Whole" <%= review.milk === 'Whole' ? 'selected' : '' %>>Whole</option>
-            <option value="Oat" <%= review.milk === 'Oat' ? 'selected' : '' %>>Oat</option>
-            <option value="Skim" <%= review.milk === 'Skim' ? 'selected' : '' %>>Skim</option>
-            <option value="Soy" <%= review.milk === 'Soy' ? 'selected' : '' %>>Soy</option>
-            <option value="Almond" <%= review.milk === 'Almond' ? 'selected' : '' %>>Almond</option>
-          </select>          
-          <label for="priceLatte">Price of Latte: $</label>
-          <input type="number" class="textbox" name="priceLatte" id="priceLatte" value="<%= review.priceLatte %>"></input>
-          <!-- Star Rating Selector -->
-          <label for="rating">Rating:</label>
-          <div class="star-rating" id="rating">
-            <input type="radio" id="star1" name="rating" value="1" onclick="updateStarRating(1)" /><label for="star1"></label>
+      <div id="column">
+        <label for="favoriteCoffee">Favorite Coffee:</label>
+        <select name="favoriteCoffee" id="favoriteCoffee" class="textbox">
+          <option value="Espresso" <%= review.favoriteCoffee === 'Espresso' ? 'selected' : '' %>>Espresso</option>
+          <option value="Latte" <%= review.favoriteCoffee === 'Latte' ? 'selected' : '' %>>Latte</option>
+          <option value="Iced Latte" <%= review.favoriteCoffee === 'Iced Latte' ? 'selected' : '' %>>Iced Latte</option>
+          <option value="Cappuccino" <%= review.favoriteCoffee === 'Cappuccino' ? 'selected' : '' %>>Cappuccino</option>
+          <option value="Mocha" <%= review.favoriteCoffee === 'Mocha' ? 'selected' : '' %>>Mocha</option>
+          <option value="Hot Chocolate" <%= review.favoriteCoffee === 'Hot Chocolate' ? 'selected' : '' %>>Hot Chocolate</option>
+          <option value="Peppermint Hot Chocolate" <%= review.favoriteCoffee === 'Peppermint Hot Chocolate' ? 'selected' : '' %>>Peppermint Hot Chocolate</option>
+          <option value="Chai Latte" <%= review.favoriteCoffee === 'Chai Latte' ? 'selected' : '' %>>Chai Latte</option>
+          <option value="Vanilla Chai Latte" <%= review.favoriteCoffee === 'Vanilla Chai Latte' ? 'selected' : '' %>>Vanilla Chai Latte</option>
+          <option value="Matcha" <%= review.favoriteCoffee === 'Matcha' ? 'selected' : '' %>>Matcha</option>
+          <option value="Vanilla Matcha" <%= review.favoriteCoffee === 'Vanilla Matcha' ? 'selected' : '' %>>Vanilla Matcha</option>
+          <option value="Hazelnut Matcha" <%= review.favoriteCoffee === 'Hazelnut Matcha' ? 'selected' : '' %>>Hazelnut Matcha</option>
+          <option value="Pumpkin Spice Latte" <%= review.favoriteCoffee === 'Pumpkin Spice Latte' ? 'selected' : '' %>>Pumpkin Spice Latte</option>
+          <option value="Vanilla Latte" <%= review.favoriteCoffee === 'Vanilla Latte' ? 'selected' : '' %>>Vanilla Latte</option>
+          <option value="Vanilla Iced Latte" <%= review.favoriteCoffee === 'Vanilla Iced Latte' ? 'selected' : '' %>>Vanilla Iced Latte</option>
+          <option value="Vanilla Cappuccino" <%= review.favoriteCoffee === 'Vanilla Cappuccino' ? 'selected' : '' %>>Vanilla Cappuccino</option>
+          <option value="Vanilla Iced Cappuccino" <%= review.favoriteCoffee === 'Vanilla Iced Cappuccino' ? 'selected' : '' %>>Vanilla Iced Cappuccino</option>
+          <option value="Hazelnut Latte" <%= review.favoriteCoffee === 'Hazelnut Latte' ? 'selected' : '' %>>Hazelnut Latte</option>
+          <option value="Hazelnut Iced Latte" <%= review.favoriteCoffee === 'Hazelnut Iced Latte' ? 'selected' : '' %>>Hazelnut Iced Latte</option>
+          <option value="Hazelnut Cappuccino" <%= review.favoriteCoffee === 'Hazelnut Cappuccino' ? 'selected' : '' %>>Hazelnut Cappuccino</option>
+          <option value="Hazelnut Iced Cappuccino" <%= review.favoriteCoffee === 'Hazelnut Iced Cappuccino' ? 'selected' : '' %>>Hazelnut Iced Cappuccino</option>
+          <option value="Macchiato" <%= review.favoriteCoffee === 'Macchiato' ? 'selected' : '' %>>Macchiato</option>
+        </select>
+
+        <label for="leastCoffee">Least Favorite Coffee:</label>
+        <select name="leastCoffee" id="leastCoffee" class="textbox">
+          <option value="Espresso" <%= review.leastCoffee === 'Espresso' ? 'selected' : '' %>>Espresso</option>
+          <option value="Latte" <%= review.leastCoffee === 'Latte' ? 'selected' : '' %>>Latte</option>
+          <option value="Iced Latte" <%= review.leastCoffee === 'Iced Latte' ? 'selected' : '' %>>Iced Latte</option>
+          <option value="Cappuccino" <%= review.leastCoffee === 'Cappuccino' ? 'selected' : '' %>>Cappuccino</option>
+          <option value="Mocha" <%= review.leastCoffee === 'Mocha' ? 'selected' : '' %>>Mocha</option>
+          <option value="Hot Chocolate" <%= review.leastCoffee === 'Hot Chocolate' ? 'selected' : '' %>>Hot Chocolate</option>
+          <option value="Peppermint Hot Chocolate" <%= review.leastCoffee === 'Peppermint Hot Chocolate' ? 'selected' : '' %>>Peppermint Hot Chocolate</option>
+          <option value="Chai Latte" <%= review.leastCoffee === 'Chai Latte' ? 'selected' : '' %>>Chai Latte</option>
+          <option value="Vanilla Chai Latte" <%= review.leastCoffee === 'Vanilla Chai Latte' ? 'selected' : '' %>>Vanilla Chai Latte</option>
+          <option value="Matcha" <%= review.leastCoffee === 'Matcha' ? 'selected' : '' %>>Matcha</option>
+          <option value="Vanilla Matcha" <%= review.leastCoffee === 'Vanilla Matcha' ? 'selected' : '' %>>Vanilla Matcha</option>
+          <option value="Hazelnut Matcha" <%= review.leastCoffee === 'Hazelnut Matcha' ? 'selected' : '' %>>Hazelnut Matcha</option>
+          <option value="Pumpkin Spice Latte" <%= review.leastCoffee === 'Pumpkin Spice Latte' ? 'selected' : '' %>>Pumpkin Spice Latte</option>
+          <option value="Vanilla Latte" <%= review.leastCoffee === 'Vanilla Latte' ? 'selected' : '' %>>Vanilla Latte</option>
+          <option value="Vanilla Iced Latte" <%= review.leastCoffee === 'Vanilla Iced Latte' ? 'selected' : '' %>>Vanilla Iced Latte</option>
+          <option value="Vanilla Cappuccino" <%= review.leastCoffee === 'Vanilla Cappuccino' ? 'selected' : '' %>>Vanilla Cappuccino</option>
+          <option value="Vanilla Iced Cappuccino" <%= review.leastCoffee === 'Vanilla Iced Cappuccino' ? 'selected' : '' %>>Vanilla Iced Cappuccino</option>
+          <option value="Hazelnut Latte" <%= review.leastCoffee === 'Hazelnut Latte' ? 'selected' : '' %>>Hazelnut Latte</option>
+          <option value="Hazelnut Iced Latte" <%= review.leastCoffee === 'Hazelnut Iced Latte' ? 'selected' : '' %>>Hazelnut Iced Latte</option>
+          <option value="Hazelnut Cappuccino" <%= review.leastCoffee === 'Hazelnut Cappuccino' ? 'selected' : '' %>>Hazelnut Cappuccino</option>
+          <option value="Hazelnut Iced Cappuccino" <%= review.leastCoffee === 'Hazelnut Iced Cappuccino' ? 'selected' : '' %>>Hazelnut Iced Cappuccino</option>
+          <option value="Macchiato" <%= review.leastCoffee === 'Macchiato' ? 'selected' : '' %>>Macchiato</option>
+        </select>
+
+        <label for="milk-select">Milk:</label>
+        <select style="width: 100px" name="milk" id="milk-select">
+          <option value="Whole" <%= review.milk === 'Whole' ? 'selected' : '' %>>Whole</option>
+          <option value="Oat" <%= review.milk === 'Oat' ? 'selected' : '' %>>Oat</option>
+          <option value="Skim" <%= review.milk === 'Skim' ? 'selected' : '' %>>Skim</option>
+          <option value="Soy" <%= review.milk === 'Soy' ? 'selected' : '' %>>Soy</option>
+          <option value="Almond" <%= review.milk === 'Almond' ? 'selected' : '' %>>Almond</option>
+        </select>
+        <label for="priceLatte">Price of Latte: $</label>
+        <input type="number" class="textbox" name="priceLatte" id="priceLatte" value="<%= review.priceLatte %>"></input>
+        <div class="star-rating" id="rating">
+          <input type="radio" id="star1" name="rating" value="1" onclick="updateStarRating(1)" /><label for="star1"></label>
             <input type="radio" id="star2" name="rating" value="2" onclick="updateStarRating(2)" /><label for="star2"></label>
             <input type="radio" id="star3" name="rating" value="3" onclick="updateStarRating(3)" /><label for="star3"></label>
             <input type="radio" id="star4" name="rating" value="4" onclick="updateStarRating(4)" /><label for="star4"></label>
             <input type="radio" id="star5" name="rating" value="5" onclick="updateStarRating(5)" /><label for="star5"></label>
-          </div>
-                  
         </div>
-      <% }) %>
-      <button type="submit" id="save">Add <i class="fa-solid fa-plus button"></i></button>
+      </div>
+      <button type="submit" id="save">Save Changes <i class="fa-solid fa-plus button"></i></button>
     </form>
     <br></br>
     <img class="darkness" id="hellodarkness" src="/images/HelloDarkness.png" alt="Hello Darkness">
   </div>
+
   <script>
     function updateStarRating(rating) {
       const starRating = document.querySelector('.star-rating');
@@ -51,6 +95,8 @@
         }
       });
     }
-  </script> 
+
+
+  </script>
 </main>
 <%- include('../partials/footer') %>

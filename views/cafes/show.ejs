@@ -51,9 +51,56 @@
         </div>
         <form id="add-review-form" action="/cafes/<%= cafe._id%>/reviews" method="POST" autocomplete="off">
           <label for="favoriteCoffee">Favorite Coffee:</label>
-          <input type="text" class="textbox" name="favoriteCoffee" class="rowtwo" id="favoriteCoffee" placeholder="Vanilla Latte"></input>
+          <label for="favoriteCoffee">Favorite Coffee:</label>
+          <select name="favoriteCoffee" id="favoriteCoffee" class="textbox">
+            <option value="Espresso">Espresso</option>
+            <option value="Latte">Latte</option>
+            <option value="Iced Latte">Iced Latte</option>
+            <option value="Cappuccino">Cappuccino</option>
+            <option value="Mocha">Mocha</option>
+            <option value="Hot Chocolate">Hot Chocolate</option>
+            <option value="Peppermint Hot Chocolate">Peppermint Hot Chocolate</option>
+            <option value="Chai Latte">Chai Latte</option>
+            <option value="Vanilla Chai Latte">Vanilla Chai Latte</option>
+            <option value="Matcha">Matcha</option>
+            <option value="Vanilla Matcha">Vanilla Matcha</option>
+            <option value="Hazelnut Matcha">Hazelnut Matcha</option>
+            <option value="Pumpkin Spice Latte">Pumpkin Spice Latte</option>
+            <option value="Vanilla Latte" selected>Vanilla Latte</option>
+            <option value="Vanilla Iced Latte">Vanilla Iced Latte</option>
+            <option value="Vanilla Cappuccino">Vanilla Cappuccino</option>
+            <option value="Vanilla Iced Cappuccino">Vanilla Iced Cappuccino</option>
+            <option value="Hazelnut Latte">Hazelnut Latte</option>
+            <option value="Hazelnut Iced Latte">Hazelnut Iced Latte</option>
+            <option value="Hazelnut Cappuccino">Hazelnut Cappuccino</option>
+            <option value="Hazelnut Iced Cappuccino">Hazelnut Iced Cappuccino</option>
+            <option value="Macchiato">Macchiato</option>
+          </select>
           <label for="leastCoffee">Least Favorite Coffee:</label>
-          <input type="text" class="textbox" name="leastCoffee" id="leastCoffee" class="rowtwo" placeholder="Black Coffee"></input>
+          <select name="leastCoffee" id="leastCoffee" class="textbox">
+            <option value="Espresso">Espresso</option>
+            <option value="Latte">Latte</option>
+            <option value="Iced Latte">Iced Latte</option>
+            <option value="Cappuccino">Cappuccino</option>
+            <option value="Mocha">Mocha</option>
+            <option value="Hot Chocolate">Hot Chocolate</option>
+            <option value="Peppermint Hot Chocolate">Peppermint Hot Chocolate</option>
+            <option value="Chai Latte">Chai Latte</option>
+            <option value="Vanilla Chai Latte">Vanilla Chai Latte</option>
+            <option value="Matcha">Matcha</option>
+            <option value="Vanilla Matcha">Vanilla Matcha</option>
+            <option value="Hazelnut Matcha">Hazelnut Matcha</option>
+            <option value="Pumpkin Spice Latte" selected>Pumpkin Spice Latte</option>
+            <option value="Vanilla Latte">Vanilla Latte</option>
+            <option value="Vanilla Iced Latte">Vanilla Iced Latte</option>
+            <option value="Vanilla Cappuccino">Vanilla Cappuccino</option>
+            <option value="Vanilla Iced Cappuccino">Vanilla Iced Cappuccino</option>
+            <option value="Hazelnut Latte">Hazelnut Latte</option>
+            <option value="Hazelnut Iced Latte">Hazelnut Iced Latte</option>
+            <option value="Hazelnut Cappuccino">Hazelnut Cappuccino</option>
+            <option value="Hazelnut Iced Cappuccino">Hazelnut Iced Cappuccino</option>
+            <option value="Macchiato">Macchiato</option>
+          </select>
           <label for="milk-select">Milk:</label>
           <select name="milk" id="milk-select" class="rowtwo">
             <option value="Whole">Whole</option>
@@ -77,8 +124,6 @@
         </form>
       </div>
     </div>
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/default.js"></script>
   <script>
     function updateStarRating(rating) {
       const starRating = document.querySelector('.star-rating');
@@ -92,6 +137,6 @@
         }
       });
     }
-</script>
+  </script>
 </main>
 <%- include('../partials/footer') %>
