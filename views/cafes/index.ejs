@@ -7,7 +7,15 @@
     <table id="listnames">
       <thead>
         <tr>
-          <th class="namelocation th-notfilter">Name</th>
+          <th class="sort-name">
+            <label for="sort-filter">Sort by <br/>Name:</label>
+            <br/>
+            <select id="sort-filter">
+              <option value ="">---</option>
+              <option value="asc">A-Z</option>
+              <option value="desc">Z-A</option>
+            </select>
+          </th>
           <th class="namelocation">
             <label for="city-filter">Filter by City:</label>
             <select id="city-filter">
@@ -161,6 +169,7 @@
     document.addEventListener("DOMContentLoaded", function() {
       const stateFilter = document.getElementById("state-filter");
       const cityFilter = document.getElementById("city-filter");
+      const sortFilter = document.getElementById("sort-filter");
       const tableRows = document.querySelectorAll("#listnames tbody tr");
   
       // Populate the city filter options
@@ -182,6 +191,38 @@
       // Event listener for the city filter
       cityFilter.addEventListener("change", filterTable);
   
+      // Event listener for the sort filter
+      sortFilter.addEventListener("change", sortTable);
+  
+      // Function to sort the table
+      function sortTable() {
+        const selectedSort = sortFilter.value;
+  
+        const sortedRows = Array.from(tableRows);
+  
+        if (selectedSort === "asc") {
+          sortedRows.sort((a, b) => {
+            const nameA = a.querySelector(".cafe-name").textContent.trim();
+            const nameB = b.querySelector(".cafe-name").textContent.trim();
+            return nameA.localeCompare(nameB);
+          });
+        } else if (selectedSort === "desc") {
+          sortedRows.sort((a, b) => {
+            const nameA = a.querySelector(".cafe-name").textContent.trim();
+            const nameB = b.querySelector(".cafe-name").textContent.trim();
+            return nameB.localeCompare(nameA);
+          });
+        }
+  
+        // Remove all rows from the table
+        tableRows.forEach(row => row.remove());
+  
+        // Append the sorted rows back to the table
+        sortedRows.forEach(row => {
+          document.querySelector("#listnames tbody").appendChild(row);
+        });
+      }
+  
       function filterTable() {
         const selectedState = stateFilter.value;
         const selectedCity = cityFilter.value;
@@ -201,7 +242,7 @@
         });
       }
     });
-  </script>
+  </script>  
   
 </main>
 <%- include('../partials/footer') %>
