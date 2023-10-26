@@ -69,12 +69,20 @@
         <label for="priceLatte">Price of Latte: $</label>
         <input type="number" class="textbox" name="priceLatte" id="priceLatte" value="<%= review.priceLatte %>"></input>
         <div class="star-rating" id="rating">
-          <input type="radio" id="star1" name="rating" value="1" onclick="updateStarRating(1)" /><label for="star1"></label>
-            <input type="radio" id="star2" name="rating" value="2" onclick="updateStarRating(2)" /><label for="star2"></label>
-            <input type="radio" id="star3" name="rating" value="3" onclick="updateStarRating(3)" /><label for="star3"></label>
-            <input type="radio" id="star4" name="rating" value="4" onclick="updateStarRating(4)" /><label for="star4"></label>
-            <input type="radio" id="star5" name="rating" value="5" onclick="updateStarRating(5)" /><label for="star5"></label>
+          <input type="radio" id="star1" name="rating" value="1" onclick="updateStarRating(1)" <%= review.rating === 1 ? 'active' : '' %> />
+          <label for="star1"></label>
+          <input type="radio" id="star2" name="rating" value="2" onclick="updateStarRating(2)" <%= review.rating === 2 ? 'active' : '' %> />
+          <label for="star2"></label>
+          <input type="radio" id="star3" name="rating" value="3" onclick="updateStarRating(3)" <%= review.rating === 3 ? 'active' : '' %> />
+          <label for="star3"></label>
+          <input type="radio" id="star4" name="rating" value="4" onclick="updateStarRating(4)" <%= review.rating === 4 ? 'active' : '' %> />
+          <label for="star4"></label>
+          <input type="radio" id="star5" name="rating" value="5" onclick="updateStarRating(5)" <%= review.rating === 5 ? 'active' : '' %> />
+          <label for="star5"></label>
         </div>
+        
+        
+        
       </div>
       <button type="submit" id="save">Save Changes <i class="fa-solid fa-plus button"></i></button>
     </form>
@@ -84,6 +92,7 @@
 
   <script>
     function updateStarRating(rating) {
+      
       const starRating = document.querySelector('.star-rating');
       const stars = starRating.querySelectorAll('label');
       
