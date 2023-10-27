@@ -37,6 +37,26 @@ main {
   border: 2px dashed #b7835e;
 }
 
+.gifs-border, .background-color-border{
+  background-color: white;
+  border: 2px dashed #b7835e;
+  box-shadow: 0px 0px 2px 2px #c2c1c1;
+  border-radius: 10px;
+}
+
+.gifs-border{
+  margin-top: 10px;
+}
+
+.background-color-border{
+  margin-bottom: 10px;
+}
+
+.flex-column{
+  display:flex;
+  flex-direction: column;
+  width: 100%;
+}
 body {
   background-color: #ebe9e9;
   color:#0e2a50;
@@ -83,7 +103,7 @@ body > main {
   box-shadow: 0px 0px 2px 2px #c2c1c1;
   border-radius: 10px;
   padding: 10px;
-  width: 300px;
+  width: 350px;
   align-items: center;
   justify-content: center;
   border: 2px dashed #b7835e;

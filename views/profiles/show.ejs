@@ -27,25 +27,29 @@
       <% } else { %>
         <div class="profcard-nocafes">
           <img id="profileimg" src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
-          <h2 class="profilefavecafes"><%= profile.name  %> Has No Favorite Cafes 😔</h2>
-          <a href="/cafes">
-            <button class="button" id="cafes-button">Add a Cafe ☕️</button>
-          </a>
+          <div class="flex-column">
+            <h2 class="profilefavecafes"><%= profile.name  %> Has No Favorite Cafes 😔</h2>
+            <a href="/cafes">
+              <button class="button" id="cafes-button">Add a Cafe ☕️</button>
+            </a>
+          </div>
         </div>
       <% } %>
     </div>
 
     <% if (profile.gifs.length > 0) { %>
-      <h2 id="title-coffee-gifs">Favorite Coffee GIFs</h2>
+      <div class="gifs-border">
+
+        <h2 id="title-coffee-gifs">Favorite Coffee GIFs</h2>
+        <% profile.gifs.forEach(gifPath => { %>
+          <div class="each-gif">
+            <img src="<%= gifPath %>" class="gif" alt="User's GIF">
+            <form action="/profiles/<%= profile._id %>/removeOneGif?gifPath=<%= gifPath %>" method="POST">
+              <button class="button delete-gif-button" type="submit">Delete <i class="fa-solid fa-trash-can"></i></button>
+            </form>
+          </div>
+        <% }) %>
     <% } %>
-    <% profile.gifs.forEach(gifPath => { %>
-      <div class="each-gif">
-        <img src="<%= gifPath %>" class="gif" alt="User's GIF">
-        <form action="/profiles/<%= profile._id %>/removeOneGif?gifPath=<%= gifPath %>" method="POST">
-          <button class="button delete-gif-button" type="submit">Delete <i class="fa-solid fa-trash-can"></i></button>
-        </form>
-      </div>
-    <% }) %>
     
         <!-- Add a form for clearing GIFs -->
   <% if (userProfile && userProfile.equals(profile._id)) { %>
@@ -71,13 +75,18 @@
                   
         <button class="button" type="submit">Add <i class="fa-solid fa-plus"></i></button>
       </form>
+
+    </div>
+
       <br/>
-      <h2> Add a Background Color</h2>
-      <form action="/profiles/<%= profile._id %>/updateBackgroundColor" method="POST">
-        <label for="backgroundColor">Choose Background Color:</label>
-        <input type="color" id="backgroundColor" name="backgroundColor" value="<%= profile.backgroundColor || '#ebe9e9' %>">
-        <button class="button" type="submit">Save Background Color</button>
-      </form>
+      <div class="background-color-border">
+        <h2> Add a Background Color</h2>
+        <form action="/profiles/<%= profile._id %>/updateBackgroundColor" method="POST">
+          <label for="backgroundColor">Choose Background Color:</label>
+          <input type="color" id="backgroundColor" name="backgroundColor" value="<%= profile.backgroundColor || '#ebe9e9' %>">
+          <button class="button" type="submit">Save Background Color</button>
+        </form>
+      </div>
     <% } %>
 
     <a href="/profiles/index"><button class="button profilesbutton">All Profiles <i class="fa-regular fa-user"></i></button></a>
