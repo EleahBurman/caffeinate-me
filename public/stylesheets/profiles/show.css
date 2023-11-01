@@ -94,7 +94,7 @@ body > main {
   border: 2px dashed #b7835e;
 }
 
-.user-bio{
+.user-bio, .add-gif-border, .update-bio-form{
   flex-wrap: wrap;
   background-color: white;
   display: flex;

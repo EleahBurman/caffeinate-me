@@ -280,17 +280,8 @@ function clearGifs(req, res) {
         return res.redirect('/profiles');
       }
 
-      // Check if the userProfile matches the currently logged-in user
-      if (!userProfile.equals(req.user.profile)) {
-        console.error('User does not have permission to clear GIFs');
-        return res.redirect('/profiles');
-      }
-
-      // Get the gifPath to remove from the query parameters
-      const gifPathToRemove = req.query.gifPath;
-
-      // Remove the specified gifPath from the userProfile.gifs array
-      userProfile.gifs = userProfile.gifs.filter(gifPath => gifPath !== gifPathToRemove);
+      // Clear all GIFs by setting the userProfile.gifs to an empty array
+      userProfile.gifs = [];
 
       // Save the changes to the user's profile
       userProfile.save()
@@ -307,6 +298,7 @@ function clearGifs(req, res) {
       res.redirect('/profiles');
     });
 }
+
 
 function updateBackgroundColor(req, res) {
   // Find the user's profile

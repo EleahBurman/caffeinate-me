@@ -37,6 +37,7 @@
 
     <!-- Allow users to update their bio -->
     <% if (userProfile && userProfile.equals(profile._id)) { %>
+      <br />
       <div class="update-bio-form">
         <h2>Add Your Bio</h2>
         <form action="/profiles/<%= profile._id %>/updateBio" method="POST">
@@ -92,34 +93,39 @@
             </form>
           </div>
         <% }) %>
+        <!-- Add a form for clearing GIFs -->
+      <% if (userProfile && userProfile.equals(profile._id)) { %>
+    
+        <div>
+          <form action="/profiles/<%= profile._id %>/clearGifs" method="POST">
+            <button class="button" id="clear" type="submit">Delete All Gifs <i class="fa-solid fa-trash-can"></i></button>
+          </form>
+        </div>
+      </br>
+
+      <% } %>
       </div>
     <% } %>
     
-        <!-- Add a form for clearing GIFs -->
-  <% if (userProfile && userProfile.equals(profile._id)) { %>
-    <% if (profile.gifs.length > 0) { %>
-      <div>
-        <form action="/profiles/<%= profile._id %>/clearGifs" method="POST">
-          <button class="button" id="clear" type="submit">Delete All Gifs <i class="fa-solid fa-trash-can"></i></button>
-        </form>
-      </div>
-    <% } %>
-  <% } %>
 
     <% if (userProfile && userProfile.equals(profile._id)) { %>
-      <h2 class="add-title">Add a GIF</h2>
-      <form action="/profiles/<%= profile._id %>/addGif" method="POST">
-        <select name="selectedGif">
-          <% availableGifs.forEach(gif => { %>
-            <% const gifName = gif.replace(/-/g, ' ').slice(0, -4); %>
-            <% const formattedGifName = gifName.replace(/(^\w|\s\w)/g, m => m.toUpperCase()); %>
-            <option value="<%= gif %>"><%= formattedGifName %></option>
-          <% }) %>
-        </select>
-                  
-        <button class="button" type="submit">Add <i class="fa-solid fa-plus"></i></button>
-      </form>
+      <br/>
+      <div class="add-gif-border">
 
+        <h2 class="add-title">Add a GIF</h2>
+        <form action="/profiles/<%= profile._id %>/addGif" method="POST">
+          <select name="selectedGif">
+            <% availableGifs.forEach(gif => { %>
+              <% const gifName = gif.replace(/-/g, ' ').slice(0, -4); %>
+              <% const formattedGifName = gifName.replace(/(^\w|\s\w)/g, m => m.toUpperCase()); %>
+              <option value="<%= gif %>"><%= formattedGifName %></option>
+            <% }) %>
+          </select>
+                    
+          <button class="button" type="submit">Add <i class="fa-solid fa-plus"></i></button>
+        </form>
+
+      </div>
       <br/>
 
       <!-- Add a form for background color -->
@@ -150,5 +156,6 @@
       borderDiv.style.backgroundColor = profileBackgroundColor;
     });
   </script>
+  
 </main>
 <%- include('../partials/footer') %>
