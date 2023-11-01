@@ -128,7 +128,7 @@
         <form action="/profiles/<%= profile._id %>/updateBackgroundColor" method="POST">
           <label for="backgroundColor">Choose Background Color:</label>
           <input type="color" id="backgroundColor" name="backgroundColor" value="<%= profile.backgroundColor || '#ebe9e9' %>">
-          <button class="button" type="submit">Save Background Color</button>
+          <button class="button" type="submit">Add <i class="fa-solid fa-plus"></i></button>
         </form>
       </div>
       <% } %>
