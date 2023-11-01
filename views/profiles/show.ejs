@@ -27,7 +27,9 @@
             <h2><%= profile.bio ? 'Update' : 'Add' %> Your Bio</h2>
             <form action="/profiles/<%= profile._id %>/updateBio" method="POST">
               <textarea name="bio" rows="4" cols="50"><%= profile.bio %></textarea>
-              <button class="button" type="submit"><%= profile.bio ? 'Update' : 'Add' %> <i class="fa-solid fa-pencil"></i></button>
+              <button class="button" type="submit">
+                <%= profile.bio ? 'Update' : 'Add' %> <i class="fa-solid <%= profile.bio ? 'fa-pencil' : 'fa-plus' %>"></i>
+              </button>
             </form>
           </div>
       <% } else { %>
