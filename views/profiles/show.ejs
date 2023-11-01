@@ -48,6 +48,7 @@
         <h2><%= profile.name %></h2>
         <p> Does Not Have a Bio </p>
       <% } %>
+
       <!-- Allow users to delete their bio -->
       <% if (userProfile && userProfile.equals(profile._id) && profile.bio) { %>
         <div class="delete-bio-button">
@@ -57,6 +58,7 @@
         </div>
       <% } %>
     </div>
+    
     <br />
         <!-- Allow users to update their bio -->
         <% if (userProfile && userProfile.equals(profile._id)) { %>
