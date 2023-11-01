@@ -331,9 +331,8 @@ function updateBackgroundColor(req, res) {
     });
 }
 
-// Add a new route handler for updating the user's bio
 function updateBio(req, res) {
-  const profileId = req.params.profileId; 
+  const profileId = req.params.profileId;
 
   // Find the user's profile by ID
   Profile.findById(profileId)
@@ -346,8 +345,14 @@ function updateBio(req, res) {
       // Get the bio from the request body
       const newBio = req.body.bio;
 
-      // Update the user's profile with the new bio
-      userProfile.bio = newBio;
+      // Check if the user already has a bio
+      if (userProfile.bio) {
+        // If a bio already exists, update it
+        userProfile.bio = newBio;
+      } else {
+        // If no bio exists, create a new one
+        userProfile.bio = newBio;
+      }
 
       // Save the changes to the user's profile
       userProfile.save()
@@ -366,18 +371,18 @@ function updateBio(req, res) {
 }
 
 function deleteBio(req, res) {
-  const profileId = req.params.profileId; // Assuming the route parameter is correctly named "profileId"
+  const profileId = req.params.profileId;
 
   // Find the user's profile by ID
-  Profile.findById(req.user.profile)
+  Profile.findById(profileId)
     .then(userProfile => {
       if (!userProfile) {
         console.error('User profile not found');
         return res.redirect('/profiles');
       }
 
-      // Set the user's bio to an empty string or null
-      userProfile.bio = null; // or userProfile.bio = '';
+      // Clear the user's bio
+      userProfile.bio = null;
 
       // Save the changes to the user's profile
       userProfile.save()

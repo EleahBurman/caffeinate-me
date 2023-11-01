@@ -8,44 +8,40 @@
     <!-- Display the user's bio(s) -->
     <div class="user-bio">
       <h2><%= profile.name %>'s Bio</h2>
-      <% if (profile.bio && profile.bio.length > 0) { %>
-        <% if (Array.isArray(profile.bio)) { %>
-          <% profile.bio.forEach((bio, index) => { %>
-            <p><%= bio %></p>
-            <!-- Allow users to delete this bio -->
-            <% if (userProfile && userProfile.equals(profile._id)) { %>
-              <div class="delete-bio-button">
-                <form action="/profiles/<%= profile._id %>/deleteBio?index=<%= index %>" method="POST">
-                  <button class="button" type="submit">Delete <i class="fa-solid fa-trash-can"></i></button>
-                </form>
-              </div>
-            <% } %>
-          <% }) %>
-        <% } else { %>
-          <p><%= profile.bio %></p>
-          <!-- Allow users to delete their bio -->
-          <% if (userProfile && userProfile.equals(profile._id)) { %>
-            <div class="delete-bio-button">
-              <form action="/profiles/<%= profile._id %>/deleteBio" method="POST">
-                <button class="button" type="submit">Delete <i class="fa-solid fa-trash-can"></i></button>
-              </form>
-            </div>
-          <% } %>
-        <% } %>
+      <% if (profile.bio) { %>
+        <p><%= profile.bio %></p>
+      <% } %>
+      <!-- Allow users to delete their bio -->
+      <% if (userProfile && userProfile.equals(profile._id) && profile.bio) { %>
+        <div class="delete-bio-button">
+          <form action="/profiles/<%= profile._id %>/deleteBio" method="POST">
+            <button class="button" type="submit">Delete <i class="fa-solid fa-trash-can"></i></button>
+          </form>
+        </div>
       <% } %>
     </div>
-
-    <!-- Allow users to update their bio -->
-    <% if (userProfile && userProfile.equals(profile._id)) { %>
-      <br />
-      <div class="update-bio-form">
-        <h2>Add Your Bio</h2>
-        <form action="/profiles/<%= profile._id %>/updateBio" method="POST">
-          <textarea name="bio" rows="4" cols="50"><%= Array.isArray(profile.bio) ? profile.bio[0] : profile.bio %></textarea>
-          <button class="button" type="submit">Add <i class="fa-solid fa-plus"></i></button>
-        </form>
-      </div>
-    <% } %>
+    <br />
+        <!-- Allow users to update their bio -->
+        <% if (userProfile && userProfile.equals(profile._id)) { %>
+          <div class="update-bio-form">
+            <h2><%= profile.bio ? 'Update' : 'Add' %> Your Bio</h2>
+            <form action="/profiles/<%= profile._id %>/updateBio" method="POST">
+              <textarea name="bio" rows="4" cols="50"><%= profile.bio %></textarea>
+              <button class="button" type="submit"><%= profile.bio ? 'Update' : 'Add' %> <i class="fa-solid fa-pencil"></i></button>
+            </form>
+          </div>
+      <% } else { %>
+        <!-- Allow users to add their bio -->
+        <% if (userProfile && userProfile.equals(profile._id)) { %>
+          <div class="update-bio-form">
+            <h2>Add Your Bio</h2>
+            <form action="/profiles/<%= profile._id %>/updateBio" method="POST">
+              <textarea name="bio" rows="4" cols="50"></textarea>
+              <button class="button" type="submit">Add <i class="fa-solid fa-plus"></i></button>
+            </form>
+          </div>
+        <% } %>
+      <% } %>
   
     <div id="emptyspace">
       <% if (profile.cafes && profile.cafes.length > 0) { %>
