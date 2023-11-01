@@ -32,7 +32,7 @@
             <% if(review.reviewer.equals(user?.profile._id)) { %>
               <div class="row-2">
                 <form action="/cafes/<%= cafe._id %>/reviews/<%= review._id %>/edit" method="GET">
-                  <button class="button" id="edit-review">Edit <i class="fa-regular fa-pen-to-square"></i></button>
+                  <button class="button" id="edit-review">Edit <i class="fa-regular fa-pencil"></i></button>
                 </form>
                 <form action="/cafes/<%= cafe._id %>/reviews/<%=review._id%>?_method=DELETE" method="POST">
                   <button class="button" id="delete">Delete <i class="fa-solid fa-trash-can"></i></button>
