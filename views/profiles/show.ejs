@@ -5,11 +5,48 @@
 
   <div class="border">
     <h1 class="animate__animated animate__lightSpeedInLeft">☕️<%= profile.name %>'s Profile☕️</h1>
+
+    <div id="emptyspace">
+      <% if (profile.cafes && profile.cafes.length > 0) { %>
+        <br />
+        <div class="profcard">
+          <img id="profileimg" src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
+          <div class="favorite-cafes">
+            <h2 class="profilefavecafes"><%= profile.name  %>'s Favorite Cafes</h2>
+            <% profile.cafes.forEach(cafe => { %>
+              <ul>
+                <div class="">
+                  <li class="list">
+                    ☕️<a class="cafes" href="/cafes/<%= cafe._id%>">
+                      <%= cafe.name%>
+                    </a>
+                  </li>
+                </div>
+              </ul>
+            <% }) %>
+          </div>
+        </div>
+      <% } else { %>
+        <div class="profcard-nocafes">
+          <img id="profileimg" src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
+          <div class="flex-column">
+            <h2 class="profilefavecafes"><%= profile.name  %> Has No Favorite Cafes 😔</h2>
+            <a href="/cafes">
+              <button class="button" id="cafes-button">Add a Cafe ☕️</button>
+            </a>
+          </div>
+        </div>
+      <% } %>
+    </div>
+    <br />
     <!-- Display the user's bio(s) -->
     <div class="user-bio">
-      <h2><%= profile.name %>'s Bio</h2>
       <% if (profile.bio) { %>
+        <h2><%= profile.name %>'s Bio</h2>
         <p><%= profile.bio %></p>
+      <% } else { %>
+        <h2><%= profile.name %></h2>
+        <p> Does Not Have a Bio </p>
       <% } %>
       <!-- Allow users to delete their bio -->
       <% if (userProfile && userProfile.equals(profile._id) && profile.bio) { %>
@@ -44,39 +81,6 @@
           </div>
         <% } %>
       <% } %>
-  
-    <div id="emptyspace">
-      <% if (profile.cafes && profile.cafes.length > 0) { %>
-        <br />
-        <div class="profcard">
-          <img id="profileimg" src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
-          <div class="favorite-cafes">
-            <h2 class="profilefavecafes"><%= profile.name  %>'s Favorite Cafes</h2>
-            <% profile.cafes.forEach(cafe => { %>
-              <ul>
-                <div class="">
-                  <li class="list">
-                    ☕️<a class="cafes" href="/cafes/<%= cafe._id%>">
-                      <%= cafe.name%>
-                    </a>
-                  </li>
-                </div>
-              </ul>
-            <% }) %>
-          </div>
-        </div>
-      <% } else { %>
-        <div class="profcard-nocafes">
-          <img id="profileimg" src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
-          <div class="flex-column">
-            <h2 class="profilefavecafes"><%= profile.name  %> Has No Favorite Cafes 😔</h2>
-            <a href="/cafes">
-              <button class="button" id="cafes-button">Add a Cafe ☕️</button>
-            </a>
-          </div>
-        </div>
-      <% } %>
-    </div>
 
     <!-- Allow users to update their gifs -->
     <% if (profile.gifs.length > 0) { %>
