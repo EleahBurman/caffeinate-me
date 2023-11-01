@@ -16,5 +16,7 @@ router.post('/:profileId/clearGifs', isLoggedIn, profilesCtrl.clearGifs);
 router.post('/:profileId/removeOneGif', isLoggedIn, profilesCtrl.removeOneGif);
 router.post('/:profileId/updateBackgroundColor', isLoggedIn, profilesCtrl.updateBackgroundColor);
 router.post('/:profileId/updateBio', isLoggedIn, profilesCtrl.updateBio);
+router.post('/:profileId/deleteBio', isLoggedIn, profilesCtrl.deleteBio);
+
 
 export { router }

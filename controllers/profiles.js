@@ -373,6 +373,36 @@ function updateBio(req, res) {
     });
 }
 
+function deleteBio(req, res) {
+  const profileId = req.params.profileId; // Assuming the route parameter is correctly named "profileId"
+
+  // Find the user's profile by ID
+  Profile.findById(req.user.profile)
+    .then(userProfile => {
+      if (!userProfile) {
+        console.error('User profile not found');
+        return res.redirect('/profiles');
+      }
+
+      // Set the user's bio to an empty string or null
+      userProfile.bio = null; // or userProfile.bio = '';
+
+      // Save the changes to the user's profile
+      userProfile.save()
+        .then(() => {
+          res.redirect(`/profiles/${profileId}`);
+        })
+        .catch(err => {
+          console.error(err);
+          res.redirect('/profiles');
+        });
+    })
+    .catch(err => {
+      console.error(err);
+      res.redirect('/profiles');
+    });
+}
+
 
 export {
   index,
@@ -385,4 +415,5 @@ export {
   removeOneGif,
   updateBackgroundColor,
   updateBio,
+  deleteBio,
 }
