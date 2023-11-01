@@ -5,6 +5,22 @@
 
   <div class="border">
     <h1 class="animate__animated animate__lightSpeedInLeft">☕️<%= profile.name %>'s Profile☕️</h1>
+    <div class="user-bio">
+      <h2>User Bio</h2>
+      <p><%= profile.bio %></p>
+    </div>
+    
+    <!-- Allow users to update their bio -->
+    <% if (userProfile && userProfile.equals(profile._id)) { %>
+      <div class="update-bio-form">
+        <h2>Update Your Bio</h2>
+        <form action="/profiles/<%= profile._id %>/updateBio" method="POST">
+          <textarea name="bio" rows="4" cols="50"><%= profile.bio %></textarea>
+          <button class="button" type="submit">Save Bio</button>
+        </form>
+      </div>
+    <% } %>
+    
     <div id="emptyspace">
       <% if (profile.cafes && profile.cafes.length > 0) { %>
         <div class="profcard">

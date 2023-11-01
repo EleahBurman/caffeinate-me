@@ -339,6 +339,39 @@ function updateBackgroundColor(req, res) {
     });
 }
 
+// Add a new route handler for updating the user's bio
+function updateBio(req, res) {
+  const profileId = req.params.profileId; 
+
+  // Find the user's profile by ID
+  Profile.findById(profileId)
+    .then(userProfile => {
+      if (!userProfile) {
+        console.error('User profile not found');
+        return res.redirect('/profiles');
+      }
+
+      // Get the bio from the request body
+      const newBio = req.body.bio;
+
+      // Update the user's profile with the new bio
+      userProfile.bio = newBio;
+
+      // Save the changes to the user's profile
+      userProfile.save()
+        .then(() => {
+          res.redirect(`/profiles/${profileId}`);
+        })
+        .catch(err => {
+          console.error(err);
+          res.redirect('/profiles');
+        });
+    })
+    .catch(err => {
+      console.error(err);
+      res.redirect('/profiles');
+    });
+}
 
 
 export {
@@ -350,5 +383,6 @@ export {
   addGif,
   clearGifs,
   removeOneGif,
-  updateBackgroundColor
+  updateBackgroundColor,
+  updateBio,
 }

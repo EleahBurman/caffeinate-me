@@ -13,6 +13,7 @@ const profileSchema = new Schema({
   pendingOutgoingInvites: [{type: Schema.Types.ObjectId, ref: 'Profile'}],
   pendingIncomingInvites: [{type: Schema.Types.ObjectId, ref: 'Profile'}],
   gifs: [{ type: String }],
+  bio: String,
 }, {
   timestamps: true
 });
