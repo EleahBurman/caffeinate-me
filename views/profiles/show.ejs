@@ -10,33 +10,29 @@
       <% if (profile.cafes && profile.cafes.length > 0) { %>
         <br />
         <div class="profcard">
-          <img id="profileimg" src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
-          <div class="favorite-cafes">
-            <h2 class="profilefavecafes"><%= profile.name  %>'s Favorite Cafes</h2>
-            <% profile.cafes.forEach(cafe => { %>
-              <ul>
-                <div class="">
-                  <li class="list">
-                    ☕️<a class="cafes" href="/cafes/<%= cafe._id%>">
-                      <%= cafe.name%>
-                    </a>
-                  </li>
-                </div>
-              </ul>
-            <% }) %>
+          <div class="row">
+            <img id="profileimg" src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
+            <h1><%= profile.name %></h>
+              
           </div>
-        </div>
-      <% } else { %>
-        <div class="profcard-nocafes">
-          <img id="profileimg" src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
-          <div class="flex-column">
-            <h2 class="profilefavecafes"><%= profile.name  %> Has No Favorite Cafes 😔</h2>
-            <a href="/cafes">
-              <button class="button" id="cafes-button">Add a Cafe ☕️</button>
-            </a>
+          <div class="row">
+            <div class="row">
+              <p>
+                <span class="number-of">
+                  <%= profile.cafes.length %>
+                </span> Favorite Cafes
+              </p>
+              <p>
+                <span class="number-of">
+                  &nbsp;<%= profile.cafes.reduce((totalReviews, cafe) => totalReviews + cafe.reviews.length, 0) %>
+                </span><%= (profile.cafes.reduce((totalReviews, cafe) => totalReviews + cafe.reviews.length, 0) === 1) ? 'Review' : 'Reviews' %>
+            
+              </p>
+            </div>
+            
+            
           </div>
-        </div>
-      <% } %>
+          
     </div>
     <br />
     <!-- Display the user's bio(s) -->
@@ -83,6 +79,34 @@
           </div>
         <% } %>
       <% } %>
+
+    <br/>
+
+    <div class="favorite-cafes">
+            <h2 class="profilefavecafes"><%= profile.name  %>'s Favorite Cafes</h2>
+            <% profile.cafes.forEach(cafe => { %>
+              <ul>
+                <div class="">
+                  <li class="list">
+                    ☕️<a class="cafes" href="/cafes/<%= cafe._id%>">
+                      <%= cafe.name%>
+                  </li>
+                </div>
+              </ul>
+            <% }) %>
+          </div>
+        </div>
+      <% } else { %>
+        <div class="profcard-nocafes">
+          <img id="profileimg" src="<%= profile.avatar %>" alt="<%= profile.name %>'s photo">
+          <div class="flex-column">
+            <h2 class="profilefavecafes"><%= profile.name  %> Has No Favorite Cafes 😔</h2>
+            <a href="/cafes">
+              <button class="button" id="cafes-button">Add a Cafe ☕️</button>
+            </a>
+          </div>
+        </div>
+      <% } %> 
 
     <!-- Allow users to update their gifs -->
     <% if (profile.gifs.length > 0) { %>
