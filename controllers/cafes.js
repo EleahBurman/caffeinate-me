@@ -197,23 +197,30 @@ function deleteReview(req, res) {
   })
 }
 
-function deleteCafe(req, res){
-    Cafe.findByIdAndDelete(req.params.cafeId)
-    .then(cafe =>{
-      if(cafe.owner.equals(req.user.profile._id)) {
-        cafe.deleteOne()
-        .then(() => {
-          res.redirect('/cafes')
-        })
+function deleteCafe(req, res) {
+  Cafe.findById(req.params.cafeId)
+    .then((cafe) => {
+      if (!cafe) {
+        throw new Error('Cafe not found.');
+      }
+
+      if (cafe.owner.equals(req.user.profile._id)) {
+        return Cafe.findByIdAndDelete(req.params.cafeId);
       } else {
-        throw new Error ('You did not create this review. Do not pass go. Do not collect $200.')
+        throw new Error(
+          'You did not create this cafe. Do not pass go. Do not collect $200.'
+        );
       }
     })
-    .catch(err => {
-      console.log(err)
-      res.redirect('/cafes')
+    .then(() => {
+      res.redirect('/cafes');
     })
-  }
+    .catch((err) => {
+      console.error(err);
+      res.redirect('/cafes');
+    });
+}
+
   
 export {
   index,
